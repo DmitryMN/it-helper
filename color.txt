@@ -6,8 +6,10 @@ rgba(21, 33, 73, 1) text color
 rgba(21, 33, 73, 0.1) button border
 rgba(255, 2, 57, 1) bg-color IS 
 rgb(255, 55, 122)  hover is
+rgba(222, 118, 0, 0.05) color pc main
 
-size 608 380
+
+
 
 PC 0
 print 1
@@ -20,4 +22,5 @@ Mail 7
 
 height mainbutton 115
 
-mainSize 815X640
+mainWindow 860X640
+mainBody 664X380

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
+    <width>860</width>
     <height>640</height>
    </rect>
   </property>
@@ -39,6 +39,10 @@ QPushButton {
 }
 #header {
     border-bottom: 1px solid rgba(21, 33, 73, 1);
+}
+#sectionTittlePc {
+    background-color: rgba(222, 118, 0, 0.05);
+    border-radius: 4px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -172,6 +176,11 @@ QPushButton {
                 </property>
                 <item>
                  <widget class="QPushButton" name="failureBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -201,6 +210,11 @@ color: rgba(21, 33, 73, 1);
                 </item>
                 <item>
                  <widget class="QPushButton" name="mailBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -230,6 +244,11 @@ color: rgba(21, 33, 73, 1);
                 </item>
                 <item>
                  <widget class="QPushButton" name="browserBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -259,6 +278,11 @@ color: rgba(21, 33, 73, 1);
                 </item>
                 <item>
                  <widget class="QPushButton" name="printBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -300,6 +324,11 @@ color: rgba(21, 33, 73, 1);
                     <height>16777215</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -329,6 +358,11 @@ color: rgba(21, 33, 73, 1);
                 </item>
                 <item>
                  <widget class="QPushButton" name="phishingBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -358,6 +392,11 @@ color: rgba(21, 33, 73, 1);
                 </item>
                 <item>
                  <widget class="QPushButton" name="vpnBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -410,7 +449,7 @@ color: rgba(21, 33, 73, 1);
            <rect>
             <x>9</x>
             <y>9</y>
-            <width>615</width>
+            <width>664</width>
             <height>380</height>
            </rect>
           </property>
@@ -423,20 +462,20 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
             <property name="minimumSize">
              <size>
-              <width>0</width>
-              <height>0</height>
+              <width>664</width>
+              <height>380</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>615</width>
-              <height>380</height>
+              <width>0</width>
+              <height>0</height>
              </size>
             </property>
             <property name="frameShape">
@@ -453,19 +492,136 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
              </property>
              <item>
               <widget class="QFrame" name="sectionTittlePc">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Shadow::Raised</enum>
                </property>
+               <layout class="QVBoxLayout" name="verticalLayout_12">
+                <item>
+                 <widget class="QFrame" name="frame_2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>26</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <widget class="QLabel" name="label">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>24</width>
+                     <height>24</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">text-align: center;</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="resources.qrc">:/icons/icons/alert-square-rounded.svg</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                   </property>
+                   <property name="indent">
+                    <number>-1</number>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>40</x>
+                     <y>0</y>
+                     <width>141</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <fontweight>DemiBold</fontweight>
+                    </font>
+                   </property>
+                   <property name="toolTipDuration">
+                    <number>-1</number>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgba(21, 33, 73, 1);
+font-weight: 600;</string>
+                   </property>
+                   <property name="text">
+                    <string>Не забывайте</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_3">
+                  <property name="frameShape">
+                   <enum>QFrame::Shape::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Shadow::Raised</enum>
+                  </property>
+                  <widget class="QLabel" name="label_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>591</width>
+                     <height>51</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgba(21, 33, 73, 0.66);
+padding-left: 35;</string>
+                   </property>
+                   <property name="text">
+                    <string>Периодически перезагружать ПК для корректной работы и применения
+настроек</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
@@ -509,6 +665,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -538,6 +699,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -564,6 +730,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -589,6 +760,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -630,7 +806,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -654,7 +830,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -710,6 +886,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -736,6 +917,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -764,6 +950,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -790,6 +981,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -832,7 +1028,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -856,7 +1052,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -1007,7 +1203,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -1031,7 +1227,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -1055,6 +1251,18 @@ color: rgba(21, 33, 73, 1);
                 <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QPushButton" name="reportIbPhishingBtn">
                   <property name="maximumSize">
@@ -1157,7 +1365,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -1181,7 +1389,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -1237,6 +1445,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -1263,6 +1476,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -1291,6 +1509,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -1317,6 +1540,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -1359,7 +1587,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -1383,7 +1611,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -1400,6 +1628,12 @@ color: rgba(21, 33, 73, 1);
              </item>
              <item>
               <widget class="QFrame" name="sectionButtonBrowser">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
                <property name="styleSheet">
                 <string notr="true">#sectionButtonBrowser &gt; QPushButton {
 border: 1px solid rgba(21, 33, 73, 0.1);
@@ -1537,7 +1771,7 @@ color: rgba(21, 33, 73, 1);
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>615</width>
+              <width>664</width>
               <height>380</height>
              </rect>
             </property>
@@ -1561,7 +1795,7 @@ color: rgba(21, 33, 73, 1);
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>0</number>
+              <number>10</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -1617,6 +1851,11 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
@@ -1644,8 +1883,16 @@ color: rgba(21, 33, 73, 1);
                     <height>115</height>
                    </size>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
                   </property>
                   <property name="text">
                    <string>Запуск Outlook
@@ -1670,6 +1917,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -1703,6 +1955,11 @@ color: rgba(21, 33, 73, 1);
                     <width>16777215</width>
                     <height>115</height>
                    </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -1746,7 +2003,254 @@ color: rgba(21, 33, 73, 1);
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="bottom" native="true"/>
+     <widget class="QWidget" name="bottom" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>112</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>0</y>
+            <width>96</width>
+            <height>106</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/icons/icons/logo_main.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="systemInfoBottom" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="blockInfoBottom" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QLabel" name="logoBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap resource="resources.qrc">:/icons/icons/info-square-rounded.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="userLabelBottom">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>УЗ:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="userBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="pcLabelBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>ПК:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="pcNameBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ipLabelBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>72</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>IP-adress:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ipBottom">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>24</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>140</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
    </layout>
   </widget>

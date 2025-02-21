@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/logo_main.png</file>
     <file>icons/square-rounded-x.svg</file>
     <file>icons/alert-square-rounded.svg</file>
     <file>icons/brand-edge.svg</file>
