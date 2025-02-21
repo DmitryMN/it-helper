@@ -1,0 +1,30 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/square-rounded-x.svg</file>
+    <file>icons/alert-square-rounded.svg</file>
+    <file>icons/brand-edge.svg</file>
+    <file>icons/brand-firefox.svg</file>
+    <file>icons/broom.svg</file>
+    <file>icons/device-desktop-share.svg</file>
+    <file>icons/download.svg</file>
+    <file>icons/headset.svg</file>
+    <file>icons/info-square-rounded.svg</file>
+    <file>icons/mail-exclamation.svg</file>
+    <file>icons/password.svg</file>
+    <file>icons/photo-x.svg</file>
+    <file>icons/school.svg</file>
+    <file>icons/signature.svg</file>
+    <file>icons/spy.svg</file>
+    <file>icons/square-rounded-plus.svg</file>
+    <file>icons/trash-x.svg</file>
+    <file>icons/xbox-y.svg</file>
+    <file>icons/activity.svg</file>
+    <file>icons/alert-triangle.svg</file>
+    <file>icons/cpu.svg</file>
+    <file>icons/globe.svg</file>
+    <file>icons/mail.svg</file>
+    <file>icons/printer.svg</file>
+    <file>icons/shield.svg</file>
+    <file>icons/shuffle.svg</file>
+  </qresource>
+</RCC>
