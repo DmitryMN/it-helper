@@ -2,6 +2,7 @@ from PySide6.QtWidgets import QMainWindow, QMenu
 from PySide6.QtGui import QAction
 from ui_interface import Ui_MainWindow
 import subprocess
+import socket
 
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -20,6 +21,8 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         #buttons main pages
         self.openDownloadPcBtn.clicked.connect(self.open_download_folderPc)
         self.openRecycleFolderPcBtn.clicked.connect(self.open_RecyclefolderPc)
+        self.get_system_info()
+
 
     #switch actions stackedWidget
     def switch_to_failure_pagePC(self):
@@ -43,5 +46,10 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def open_RecyclefolderPc(self):
         subprocess.Popen(["powershell", "Start-Process shell:RecycleBinFolder"], stdout=subprocess.PIPE)
+
+    def get_system_info(self):
+        hostName = socket.gethostname()
+        result = hostName or 'not name';
+        self.ipBottom.setText(result)
 
 
