@@ -1,0 +1,2 @@
+problemComndPc ="Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425475'"
+signatureComndMail = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=297259051&preview=/297259051/297259063/%D0%98%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B8%20%D0%B2%20MS%20Outlook%202016.docx'"

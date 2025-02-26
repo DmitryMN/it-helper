@@ -719,6 +719,12 @@ color: rgba(21, 33, 73, 1);
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Удалите из нее все то что вам не надо&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="toolTipDuration">
+                   <number>-2</number>
+                  </property>
                   <property name="text">
                    <string>Открыть загрузки</string>
                   </property>
@@ -749,6 +755,12 @@ color: rgba(21, 33, 73, 1);
                   </property>
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открыть корзину, nочистить при необходимости&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="toolTipDuration">
+                   <number>-3</number>
                   </property>
                   <property name="text">
                    <string>Открыть корзину</string>
@@ -781,6 +793,9 @@ color: rgba(21, 33, 73, 1);
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ссылка на заявку на портале СПП - Проблемы в работе ПК&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
                   <property name="text">
                    <string>СПП-проблемы с ПК</string>
                   </property>
@@ -800,7 +815,11 @@ color: rgba(21, 33, 73, 1);
               </widget>
              </item>
              <item>
-              <widget class="QWidget" name="sectionQuestionPc" native="true"/>
+              <widget class="QWidget" name="sectionQuestionPc" native="true">
+               <property name="toolTipDuration">
+                <number>-3</number>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -2804,154 +2823,262 @@ color: rgba(21, 33, 73, 1);
               <height>16777215</height>
              </size>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_11">
-             <item>
-              <widget class="QLabel" name="logoBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap resource="resources.qrc">:/icons/icons/info-square-rounded.svg</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="userLabelBottom">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>УЗ:</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="userBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="pcLabelBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>ПК:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="pcNameBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="ipLabelBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>72</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>IP-adress:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="ipBottom">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <widget class="QWidget" name="blockInformation" native="true">
+             <property name="geometry">
+              <rect>
+               <x>-1</x>
+               <y>30</y>
+               <width>551</width>
+               <height>60</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#blockInformation {
+    background-color: rgba(0, 122, 255, 0.05);
+    border-radius: 4px;
+}
+</string>
+             </property>
+             <widget class="QLabel" name="logoBottom">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>24</width>
+                <height>24</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="resources.qrc">:/icons/icons/info-square-rounded.svg</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="userLabelBottom">
+              <property name="geometry">
+               <rect>
+                <x>43</x>
+                <y>20</y>
+                <width>24</width>
+                <height>21</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 0.66);</string>
+              </property>
+              <property name="text">
+               <string>УЗ:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="userBottom">
+              <property name="geometry">
+               <rect>
+                <x>60</x>
+                <y>20</y>
+                <width>161</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <fontweight>DemiBold</fontweight>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 1);
+font-weight: 600;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="pcLabelBottom">
+              <property name="geometry">
+               <rect>
+                <x>230</x>
+                <y>20</y>
+                <width>24</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 0.66);</string>
+              </property>
+              <property name="text">
+               <string>ПК:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="pcNameBottom">
+              <property name="geometry">
+               <rect>
+                <x>250</x>
+                <y>20</y>
+                <width>121</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <fontweight>DemiBold</fontweight>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 1);
+font-weight: 600;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ipLabelBottom">
+              <property name="geometry">
+               <rect>
+                <x>370</x>
+                <y>20</y>
+                <width>61</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 0.66);</string>
+              </property>
+              <property name="text">
+               <string>IP-adress:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QLabel" name="ipBottom">
+              <property name="geometry">
+               <rect>
+                <x>430</x>
+                <y>20</y>
+                <width>111</width>
+                <height>22</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <fontweight>DemiBold</fontweight>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgba(21, 33, 73, 1);
+font-weight: 600;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::TextInteractionFlag::LinksAccessibleByMouse|Qt::TextInteractionFlag::TextSelectableByKeyboard|Qt::TextInteractionFlag::TextSelectableByMouse</set>
+              </property>
+             </widget>
+            </widget>
            </widget>
           </item>
           <item>
            <widget class="QWidget" name="widget_2" native="true">
             <property name="maximumSize">
              <size>
-              <width>140</width>
+              <width>130</width>
               <height>16777215</height>
              </size>
             </property>

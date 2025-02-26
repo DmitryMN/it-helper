@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceFfcRhn.ui'
+## Form generated from reading UI file 'interfacenxbKIu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -373,6 +373,7 @@ class Ui_MainWindow(object):
         self.openDownloadPcBtn.setMaximumSize(QSize(16777215, 115))
         self.openDownloadPcBtn.setFont(font1)
         self.openDownloadPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.openDownloadPcBtn.setToolTipDuration(-2)
         icon8 = QIcon()
         icon8.addFile(u":/icons/icons/download.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.openDownloadPcBtn.setIcon(icon8)
@@ -385,6 +386,7 @@ class Ui_MainWindow(object):
         self.openRecycleFolderPcBtn.setMaximumSize(QSize(16777215, 115))
         self.openRecycleFolderPcBtn.setFont(font1)
         self.openRecycleFolderPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.openRecycleFolderPcBtn.setToolTipDuration(-3)
         icon9 = QIcon()
         icon9.addFile(u":/icons/icons/trash-x.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.openRecycleFolderPcBtn.setIcon(icon9)
@@ -409,6 +411,7 @@ class Ui_MainWindow(object):
 
         self.sectionQuestionPc = QWidget(self.mainSectionPc)
         self.sectionQuestionPc.setObjectName(u"sectionQuestionPc")
+        self.sectionQuestionPc.setToolTipDuration(-3)
 
         self.verticalLayout_5.addWidget(self.sectionQuestionPc)
 
@@ -1147,67 +1150,80 @@ class Ui_MainWindow(object):
         self.blockInfoBottom = QWidget(self.systemInfoBottom)
         self.blockInfoBottom.setObjectName(u"blockInfoBottom")
         self.blockInfoBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.horizontalLayout_11 = QHBoxLayout(self.blockInfoBottom)
-        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.logoBottom = QLabel(self.blockInfoBottom)
+        self.blockInformation = QWidget(self.blockInfoBottom)
+        self.blockInformation.setObjectName(u"blockInformation")
+        self.blockInformation.setGeometry(QRect(-1, 30, 551, 60))
+        self.blockInformation.setStyleSheet(u"#blockInformation {\n"
+"    background-color: rgba(0, 122, 255, 0.05);\n"
+"    border-radius: 4px;\n"
+"}\n"
+"")
+        self.logoBottom = QLabel(self.blockInformation)
         self.logoBottom.setObjectName(u"logoBottom")
-        self.logoBottom.setMaximumSize(QSize(24, 24))
+        self.logoBottom.setGeometry(QRect(10, 20, 24, 24))
+        self.logoBottom.setMaximumSize(QSize(16777215, 16777215))
         self.logoBottom.setPixmap(QPixmap(u":/icons/icons/info-square-rounded.svg"))
         self.logoBottom.setScaledContents(True)
         self.logoBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.horizontalLayout_11.addWidget(self.logoBottom)
-
-        self.userLabelBottom = QLabel(self.blockInfoBottom)
+        self.userLabelBottom = QLabel(self.blockInformation)
         self.userLabelBottom.setObjectName(u"userLabelBottom")
+        self.userLabelBottom.setGeometry(QRect(43, 20, 24, 21))
         self.userLabelBottom.setMinimumSize(QSize(0, 0))
-        self.userLabelBottom.setMaximumSize(QSize(24, 24))
-        self.userLabelBottom.setFont(font4)
+        self.userLabelBottom.setMaximumSize(QSize(16777215, 16777215))
+        self.userLabelBottom.setFont(font1)
+        self.userLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.userLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.horizontalLayout_11.addWidget(self.userLabelBottom)
-
-        self.userBottom = QLabel(self.blockInfoBottom)
+        self.userBottom = QLabel(self.blockInformation)
         self.userBottom.setObjectName(u"userBottom")
-        self.userBottom.setMaximumSize(QSize(16777215, 24))
-        self.userBottom.setFont(font4)
-
-        self.horizontalLayout_11.addWidget(self.userBottom)
-
-        self.pcLabelBottom = QLabel(self.blockInfoBottom)
+        self.userBottom.setGeometry(QRect(60, 20, 161, 22))
+        self.userBottom.setMaximumSize(QSize(16777215, 16777215))
+        font5 = QFont()
+        font5.setPointSize(10)
+        font5.setWeight(QFont.DemiBold)
+        self.userBottom.setFont(font5)
+        self.userBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+        self.userBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.pcLabelBottom = QLabel(self.blockInformation)
         self.pcLabelBottom.setObjectName(u"pcLabelBottom")
-        self.pcLabelBottom.setMaximumSize(QSize(24, 24))
-        self.pcLabelBottom.setFont(font4)
-
-        self.horizontalLayout_11.addWidget(self.pcLabelBottom)
-
-        self.pcNameBottom = QLabel(self.blockInfoBottom)
+        self.pcLabelBottom.setGeometry(QRect(230, 20, 24, 20))
+        self.pcLabelBottom.setMaximumSize(QSize(16777215, 16777215))
+        self.pcLabelBottom.setFont(font1)
+        self.pcLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
+        self.pcLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.pcLabelBottom.setMargin(0)
+        self.pcNameBottom = QLabel(self.blockInformation)
         self.pcNameBottom.setObjectName(u"pcNameBottom")
-        self.pcNameBottom.setMaximumSize(QSize(16777215, 24))
-        self.pcNameBottom.setFont(font4)
-
-        self.horizontalLayout_11.addWidget(self.pcNameBottom)
-
-        self.ipLabelBottom = QLabel(self.blockInfoBottom)
+        self.pcNameBottom.setGeometry(QRect(250, 20, 121, 22))
+        self.pcNameBottom.setMaximumSize(QSize(16777215, 16777215))
+        self.pcNameBottom.setFont(font5)
+        self.pcNameBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+        self.pcNameBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.pcNameBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.ipLabelBottom = QLabel(self.blockInformation)
         self.ipLabelBottom.setObjectName(u"ipLabelBottom")
-        self.ipLabelBottom.setMaximumSize(QSize(72, 24))
-        self.ipLabelBottom.setFont(font4)
-
-        self.horizontalLayout_11.addWidget(self.ipLabelBottom)
-
-        self.ipBottom = QLabel(self.blockInfoBottom)
+        self.ipLabelBottom.setGeometry(QRect(370, 20, 61, 20))
+        self.ipLabelBottom.setMaximumSize(QSize(16777215, 16777215))
+        self.ipLabelBottom.setFont(font1)
+        self.ipLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
+        self.ipLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.ipBottom = QLabel(self.blockInformation)
         self.ipBottom.setObjectName(u"ipBottom")
-        self.ipBottom.setMaximumSize(QSize(16777215, 24))
-        self.ipBottom.setFont(font4)
-
-        self.horizontalLayout_11.addWidget(self.ipBottom)
-
+        self.ipBottom.setGeometry(QRect(430, 20, 111, 22))
+        self.ipBottom.setMaximumSize(QSize(16777215, 16777215))
+        self.ipBottom.setFont(font5)
+        self.ipBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+        self.ipBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.ipBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
 
         self.horizontalLayout_10.addWidget(self.blockInfoBottom)
 
         self.widget_21 = QWidget(self.systemInfoBottom)
         self.widget_21.setObjectName(u"widget_21")
-        self.widget_21.setMaximumSize(QSize(140, 16777215))
+        self.widget_21.setMaximumSize(QSize(130, 16777215))
 
         self.horizontalLayout_10.addWidget(self.widget_21)
 
@@ -1244,8 +1260,17 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0438\u043e\u0434\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044c \u041f\u041a \u0434\u043b\u044f \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0438\u00a0\u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f\n"
 "\u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a", None))
         self.clearCashePcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u041a\u044d\u0448", None))
+#if QT_CONFIG(tooltip)
+        self.openDownloadPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0438\u0442\u0435 \u0438\u0437 \u043d\u0435\u0435 \u0432\u0441\u0435 \u0442\u043e \u0447\u0442\u043e \u0432\u0430\u043c \u043d\u0435 \u043d\u0430\u0434\u043e</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.openDownloadPcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438", None))
+#if QT_CONFIG(tooltip)
+        self.openRecycleFolderPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443, n\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043f\u0440\u0438 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0441\u0442\u0438</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.openRecycleFolderPcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443", None))
+#if QT_CONFIG(tooltip)
+        self.problemSppPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u0432 \u0440\u0430\u0431\u043e\u0442\u0435 \u041f\u041a</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.problemSppPcBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f-\u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u0441 \u041f\u041a", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u0438 \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u0438 \u0437\u0430\u044f\u0432\u043a\u0438 \u0443\u043a\u0430\u0436\u0438\u0442\u0435 \u0438\u043c\u044f \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u0430 \u0432 \u0444\u043e\u0440\u043c\u0430\u0442\u0435 P00-XXXX-YYYY, \n"
 "\u0433\u0434\u0435 XXXX- \u043a\u043e\u0434 \u0444\u0438\u043b\u0438\u0430\u043b\u0430 \u0421\u041e\u0413\u0410\u0417, YYYY- \u043a\u043e\u0434 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430.\n"
