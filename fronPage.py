@@ -1,11 +1,13 @@
 import os
 import subprocess
 import socket
+import time
 from PySide6.QtWidgets import QMainWindow, QMenu
 from PySide6.QtGui import QAction
 from ui_interface import Ui_MainWindow
-from path_all import (path_temp, path_cookies, path_netCache)
-from command import problemComndPc, signatureComndMail
+from clearFirefox import clear_firefox_local, clear_firefox_cookies
+from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
+                    comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge, commandAddNewPrinterSpp)
 
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -27,13 +29,22 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         #buttons pc pages
         self.openDownloadPcBtn.clicked.connect(self.open_download_folderPc)
         self.openRecycleFolderPcBtn.clicked.connect(self.open_RecyclefolderPc)
-        self.clearCashePcBtn.clicked.connect(self.clear_cashHandler)
+        self.clearCashePcBtn.clicked.connect(self.clear_cacheHandler)
         self.problemSppPcBtn.clicked.connect(self.link_sppProblemPc)
         #buttons mail
         self.securityOutMailBtn.clicked.connect(self.runOutlookSecurity)
         self.runOutMailBtn.clicked.connect(self.runOutlook)
         self.fixOutMailBtn.clicked.connect(self.fixOutlookView)
         self.signatureMailBtn.clicked.connect(self.moveInstructionSignature)
+        #buttons browser
+        self.edgeBrowserBtn.clicked.connect(self.clearEdge)
+        self.firefoxBrowserBtn.clicked.connect(self.clearFirefox)
+        self.yandexBrowserBtn.clicked.connect(self.clearYandex)
+        #buttons printers
+        self.cartridgePrintBtn.clicked.connect(self.changeCartridge)
+        self.connectPrintBtn.clicked.connect(self.helpAddnewPrinterSpp)
+        self.myPrintersPrintBtn.clicked.connect(self.viewMyPrinter)
+        self.addPrinterPrintBtn.clicked.connect(self.addPrinter)
         #get system information
         self.get_hostName(self.hostName)
         self.get_IpAddress(self.hostName)
@@ -56,58 +67,74 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def switch_to_failure_pageVpn(self):
         self.stackedWidget.setCurrentIndex(4)
 
-    #handler PC pages
-    def open_download_folderPc(self):
-        subprocess.Popen(["powershell","Start-Process $env:USERPROFILE\Downloads"],stdout=subprocess.PIPE)
-
-    def open_RecyclefolderPc(self):
-        subprocess.Popen(["powershell", "Start-Process shell:RecycleBinFolder"], stdout=subprocess.PIPE)
-
-    def link_sppProblemPc(self):
-        print("Run")
-        subprocess.Popen(["powershell", problemComndPc], stdout=subprocess.PIPE)
-
-    def clear_cache(self, path):
-        command = f"Remove-Item {path} -Recurse -Force -ErrorAction SilentlyContinue"
+    #run ps shell
+    def run_command(self, command):
         with subprocess.Popen(["powershell", command]) as proc:
             try:
-                proc.wait(5)
+                proc.wait(3)
+                print("run script")
             except:
                 proc.terminate()
                 proc.wait()
+
+    #handler PC pages
+    def open_download_folderPc(self):
+        self.run_command("Start-Process $env:USERPROFILE\Downloads")
+
+    def open_RecyclefolderPc(self):
+        self.run_command("Start-Process shell:RecycleBinFolder")
+
+    def link_sppProblemPc(self):
+        self.run_command(comandProblemPc)
+
+    def clear_cacheHandler(self):
+        self.run_command(comandClearTemp)
+        self.run_command(comandNetCache)
+        self.run_command(comandCookies)
 
     #handler Mail pages
     def runOutlookSecurity(self):
-        with subprocess.Popen(["powershell", "Stop-Process -Name OUTLOOK"]) as proc:
-            try:
-                proc.wait(5)
-            except:
-                proc.terminate()
-                proc.wait()
-
-        subprocess.Popen(["powershell", "Start-Process outlook.exe /safe"], stdout=subprocess.PIPE)
+        self.run_command(commandStopOutlook)
+        self.run_command("Start-Process outlook.exe /safe")
 
     def runOutlook(self):
-        subprocess.Popen(["powershell", "Start-Process outlook.exe"], stdout=subprocess.PIPE)
+        self.run_command("Start-Process outlook.exe")
 
     def fixOutlookView(self):
-        with subprocess.Popen(["powershell", "Stop-Process -Name OUTLOOK"]) as proc:
-            try:
-                proc.wait(5)
-            except:
-                proc.terminate()
-                proc.wait()
-
-        subprocess.Popen(["powershell", "Start-Process outlook.exe /cleanviews"], stdout=subprocess.PIPE)
+        self.run_command(commandStopOutlook)
+        self.run_command("Start-Process outlook.exe /cleanviews")
 
     def moveInstructionSignature(self):
-        subprocess.Popen(["powershell", signatureComndMail], stdout=subprocess.PIPE)
+        self.run_command(comandSignature)
 
-    #handler clearCache
-    def clear_cashHandler(self):
-        self.clear_cache(path_temp)
-        self.clear_cache(path_netCache)
-        self.clear_cache(path_cookies)
+    #handler browser pages
+    def clearEdge(self):
+        self.run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
+        self.run_command(comandClearEdge)
+
+    def clearFirefox(self):
+        self.run_command("Get-Process firefox -ErrorAction SilentlyContinue | Stop-Process -Force")
+        clear_firefox_cookies()
+        time.sleep(2)
+        clear_firefox_local()
+
+
+    def clearYandex(self):
+        self.run_command("Get-Process browser -ErrorAction SilentlyContinue | Stop-Process -Force")
+        self.run_command(comandClearYandex)
+
+    #handler print pages
+    def changeCartridge(self):
+        self.run_command(commandChangeCartridge)
+
+    def helpAddnewPrinterSpp(self):
+        self.run_command(commandAddNewPrinterSpp)
+
+    def viewMyPrinter(self):
+        self.run_command("Start-Process 'control.exe' '/name Microsoft.DevicesAndPrinters'")
+
+    def addPrinter(self):
+        pass
 
     #actions for get system information
     def get_hostName(self, hostname):
