@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacenxbKIu.ui'
+## Form generated from reading UI file 'interfacetrKshu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -105,6 +105,11 @@ class Ui_MainWindow(object):
         font.setPointSize(18)
         self.Title.setFont(font)
         self.Title.setStyleSheet(u"")
+        self.informationField = QLabel(self.header)
+        self.informationField.setObjectName(u"informationField")
+        self.informationField.setGeometry(QRect(330, 40, 281, 26))
+        self.informationField.setFont(font)
+        self.informationField.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
 
         self.verticalLayout.addWidget(self.header)
 
@@ -690,7 +695,7 @@ class Ui_MainWindow(object):
         self.label_21.setFrameShape(QFrame.Shape.NoFrame)
         self.label_21.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_21.setOpenExternalLinks(False)
-        self.label_21.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse)
+        self.label_21.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
 
         self.verticalLayout_8.addWidget(self.sectionTittlePhishing)
 
@@ -1239,7 +1244,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1248,6 +1253,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.Title.setText(QCoreApplication.translate("MainWindow", u"IT-\u041f\u043e\u043c\u043e\u0449\u043d\u0438\u043a", None))
+        self.informationField.setText("")
         self.failureBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0431\u043e\u0439 \u041f\u041a", None))
         self.mailBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0447\u0442\u0430", None))
         self.browserBtn.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0440\u0430\u0443\u0437\u0435\u0440", None))

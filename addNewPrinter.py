@@ -1,168 +1,161 @@
-import subprocess
-
-
-def run_command(self, command):
-    with subprocess.Popen(["powershell", command]) as proc:
-        try:
-            proc.wait(3)
-            print("run script")
-        except:
-            proc.terminate()
-            proc.wait()
+from runCommand import run_command
 
 def add_new_printer(host_name):
     match host_name:
         case "W00-68":
-            pass
+            run_command('Start-Process "\\S00-6800-PX01\"')
         case "W00-54":
-            pass
+            run_command('Start-Process "\\S00-5400-PX01\"')
         case "W00-05":
-            pass
+            run_command('Start-Process "\\S00-0500-PX01\"')
         case "W00-46":
-            pass
+            run_command('Start-Process "\\S00-4600-PX01\"')
         case "W00-74":
-            pass
+            run_command('Start-Process "\\S00-7400-PX01\"')
         case "W00-47":
-            pass
+            run_command('Start-Process "\\S00-4700-PX01\"')
         case "W00-52":
-            pass
+            run_command('Start-Process "\\S00-5200-PX01\"')
         case "W00-14":
-            pass
+            run_command('Start-Process "\\S00-1400-PX1\"')
         case "W00-77":
-            pass
+            run_command('Start-Process "\\S00-7700-PX01\"')
         case "W00-01":
-            pass
+            run_command('Start-Process "\\S00-0100-PX01\"')
         case "W00-50":
-            pass
+            run_command('Start-Process "\\S00-5000-PX1\"')
         case "W00-13":
-            pass
+            run_command('Start-Process "\\S00-1300-PS02\"')
         case "W00-00":
-            pass
+            run_command('Start-Process "\\S00-0000-PS01\"')
         case "W00-49":
-            pass
+            run_command('Start-Process "\\S00-4900-PX01\"')
         case "W00-36":
-            pass
+            run_command('Start-Process "\\S00-3600-PX01\"')
         case "W00-10":
-            pass
+            run_command('Start-Process "\\S00-1000-PX01\"')
         case "W00-12":
-            pass
+            run_command('Start-Process "\\S00-1200-PX01\"')
         case "W00-59":
-            pass
+            run_command('Start-Process "\\S00-5900-PX01\"')
         case "W00-82":
-            pass
+            run_command('Start-Process "\\S00-8200-PX01\"')
         case "W00-62":
-            pass
+            run_command('Start-Process "\\S00-6200-PX01\"')
         case "W00-45":
-            pass
+            run_command('Start-Process "\\S00-4500-PX01\"')
         case "W00-75":
-            pass
+            run_command('Start-Process "\\S00-7500-PX01\"')
         case "W00-81":
-            pass
+            run_command('Start-Process "\\S00-8100-PX01\"')
         case "W00-04":
-            pass
+            run_command('Start-Process "\\S00-0400-PX01\"')
         case "W00-37":
-            pass
+            run_command('Start-Process "\\S00-3700-PX01\"')
         case "W00-79":
-            pass
+            run_command('Start-Process "\\S00-7900-PX01\"')
         case "W00-64":
-            pass
+            run_command('Start-Process "\\S00-6400-PX01\"')
         case "W00-48":
-            pass
+            run_command('Start-Process "\\S00-4800-PX01\"')
         case "W00-87":
-            pass
+            run_command('Start-Process "\\S00-8700-PX01\"')
         case "W00-92":
-            pass
+            run_command('Start-Process "\\S00-9200-PX01\"')
         case "W00-91":
-            pass
+            run_command('Start-Process "\\S00-9100-PX01\"')
         case "W00-55":
-            pass
+            run_command('Start-Process "\\S00-5500-PX01\"')
         case "W00-26":
-            pass
+            run_command('Start-Process "\\S00-2600-PX01\"')
         case "W00-44":
-            pass
+            run_command('Start-Process "\\S00-4400-PX01\"')
         case "W00-16":
-            pass
+            run_command('Start-Process "\\S00-1600-PX01\"')
         case "W00-39":
-            pass
+            run_command('Start-Process "\\S00-3900-PX01\"')
         case "W00-65":
-            pass
+            run_command('Start-Process "\\S00-6500-PX01\"')
         case "W00-38":
-            pass
+            run_command('Start-Process "\\S00-3800-PX01\"')
         case "W00-25":
-            pass
+            run_command('Start-Process "\\S00-2500-PX01\"')
         case "W00-29":
-            pass
+            run_command('Start-Process "\\S00-2900-PX01\"')
         case "W00-69":
-            pass
+            run_command('Start-Process "\\S00-6900-PX01\"')
         case "W00-03":
-            pass
+            run_command('Start-Process "\\S00-0300-PX01\"')
         case "W00-61":
-            pass
+            run_command('Start-Process "\\S00-6100-PX01\"')
         case "W00-86":
-            pass
+            run_command('Start-Process "\\S00-8600-PX1\"')
         case "W00-22":
-            pass
+            run_command('Start-Process "\\S00-2200-PX1\"')
         case "W00-66":
-            pass
+            run_command('Start-Process "\\S00-6600-PX1\"')
         case "W00-84":
-            pass
+            run_command('Start-Process "\\S00-8400-PX01\"')
         case "W00-23":
-            pass
+            run_command('Start-Process "\\S00-2300-PX01\"')
         case "W00-60":
-            pass
+            run_command('Start-Process "\\S00-6000-PX01\"')
         case "W00-21":
-            pass
+            run_command('Start-Process "\\S00-2100-PX01\"')
         case "W00-06":
-            pass
+            run_command('Start-Process "\\S00-0600-TS01\"')
         case "W00-07":
-            pass
+            run_command('Start-Process "\\S00-0700-PX01\"')
         case "W00-80":
-            pass
+            run_command('Start-Process "\\S00-8000-PX1\"')
         case "W00-02":
-            pass
+            run_command('Start-Process "\\S00-0200-PX01\"')
         case "W00-19":
-            pass
+            run_command('Start-Process "\\S00-1900-PX01\"')
         case "W00-34":
-            pass
+            run_command('Start-Process "\\S00-3400-PX01\"')
         case "W00-31":
-            pass
+            run_command('Start-Process "\\S00-3100-PX01\"')
         case "W00-85":
-            pass
+            run_command('Start-Process "\\S00-8500-PX01\"')
         case "W00-63":
-            pass
+            run_command('Start-Process "\\S00-6300-PX01\"')
         case "W00-08":
-            pass
+            run_command('Start-Process "\\S00-0800-PX01\"')
         case "W00-24":
-            pass
+            run_command('Start-Process "\\S00-2400-PX01\"')
         case "W00-15":
-            pass
+            run_command('Start-Process "\\S00-1500-PX01\"')
         case "W00-58":
-            pass
+            run_command('Start-Process "\\S00-5800-PX01\"')
         case "W00-27":
-            pass
+            run_command('Start-Process "\\S00-2700-AP01\"')
         case "W00-42":
-            pass
+            run_command('Start-Process "\\S00-4200-PX01\"')
         case "W00-41":
-            pass
+            run_command('Start-Process "\\S00-4100-PX01\"')
         case "W00-71":
-            pass
+            run_command('Start-Process "\\S00-7100-PX01\"')
         case "W00-35":
-            pass
+            run_command('Start-Process "\\S00-3500-PX01\"')
         case "W00-40":
-            pass
+            run_command('Start-Process "\\S00-4000-PX01\"')
         case "W00-57":
-            pass
+            run_command('Start-Process "\\S00-5700-PX01\"')
         case "W00-56":
-            pass
+            run_command('Start-Process "\\S00-5600-PX01\"')
         case "W00-73":
-            pass
+            run_command('Start-Process "\\S00-7300-PX01\"')
         case "W00-72":
-            pass
+            run_command('Start-Process "\\S00-7200-PX01\"')
         case "W00-28":
-            pass
+            run_command('Start-Process "\\S00-2800-PX01\"')
         case "W00-43":
-            pass
+            run_command('Start-Process "\\S00-4300-PX01\"')
         case "W00-70":
-            pass
+            run_command('Start-Process "\\S00-7000-PX01\"')
         case "W00-51":
-            pass
+            run_command('Start-Process "\\S00-5100-PX01\"')
+        case _:
+            print("Неопознаный компьютер")
+

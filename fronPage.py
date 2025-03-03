@@ -6,8 +6,12 @@ from PySide6.QtWidgets import QMainWindow, QMenu
 from PySide6.QtGui import QAction
 from ui_interface import Ui_MainWindow
 from clearFirefox import clear_firefox_local, clear_firefox_cookies
+from runCommand import run_command
+from addNewPrinter import add_new_printer
+from mail_utils import send_mail
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
-                    comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge, commandAddNewPrinterSpp)
+                    comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
+                     comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote)
 
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -15,8 +19,10 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle('IT-Helper')
         self.setFixedSize(860,640)
-        #get hostname
+        #hostname
         self.hostName = socket.gethostname()
+        #login
+        self.login =os.getlogin()
 
         #Connect buttons to switch to different page
         self.failureBtn.clicked.connect(self.switch_to_failure_pagePC)
@@ -45,11 +51,22 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.connectPrintBtn.clicked.connect(self.helpAddnewPrinterSpp)
         self.myPrintersPrintBtn.clicked.connect(self.viewMyPrinter)
         self.addPrinterPrintBtn.clicked.connect(self.addPrinter)
+        #button documentum
+        self.javaDocumentBtn.clicked.connect(self.clear_java_cache)
+        self.citrixDocumentBtn.clicked.connect(self.rerun_citrix)
+        self.clearCitrixDocumentBtn.clicked.connect(self.refresh_session_citrix)
+        #button phishing
+        self.reportIbPhishingBtn.clicked.connect(self.send_mail_ib)
+        self.teachIbCorsePhishingBtn.clicked.connect(self.teach_course_ib)
+        #button VPN
+        self.bidRemoteVpnBtn.clicked.connect()
+        self.problemVpnBtn.clicked.connect()
+        self.refreshVpnBtn.clicked.connect()
+        self.settingVpnBtn.clicked.connect()
         #get system information
-        self.get_hostName(self.hostName)
-        self.get_IpAddress(self.hostName)
-        self.get_userName()
-
+        self.set_hostName(self.hostName)
+        self.set_IpAddress(self.hostName)
+        self.set_userName()
 
     #switch actions stackedWidget
     def switch_to_failure_pagePC(self):
@@ -67,50 +84,40 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def switch_to_failure_pageVpn(self):
         self.stackedWidget.setCurrentIndex(4)
 
-    #run ps shell
-    def run_command(self, command):
-        with subprocess.Popen(["powershell", command]) as proc:
-            try:
-                proc.wait(3)
-                print("run script")
-            except:
-                proc.terminate()
-                proc.wait()
-
     #handler PC pages
     def open_download_folderPc(self):
-        self.run_command("Start-Process $env:USERPROFILE\Downloads")
+        run_command("Start-Process $env:USERPROFILE\Downloads")
 
     def open_RecyclefolderPc(self):
-        self.run_command("Start-Process shell:RecycleBinFolder")
+        run_command("Start-Process shell:RecycleBinFolder")
 
     def link_sppProblemPc(self):
-        self.run_command(comandProblemPc)
+        run_command(comandProblemPc)
 
     def clear_cacheHandler(self):
-        self.run_command(comandClearTemp)
-        self.run_command(comandNetCache)
-        self.run_command(comandCookies)
+        run_command(comandClearTemp)
+        run_command(comandNetCache)
+        run_command(comandCookies)
 
     #handler Mail pages
     def runOutlookSecurity(self):
-        self.run_command(commandStopOutlook)
-        self.run_command("Start-Process outlook.exe /safe")
+        run_command(commandStopOutlook)
+        run_command("Start-Process outlook.exe /safe")
 
     def runOutlook(self):
-        self.run_command("Start-Process outlook.exe")
+        run_command("Start-Process outlook.exe")
 
     def fixOutlookView(self):
-        self.run_command(commandStopOutlook)
-        self.run_command("Start-Process outlook.exe /cleanviews")
+        run_command(commandStopOutlook)
+        run_command("Start-Process outlook.exe /cleanviews")
 
     def moveInstructionSignature(self):
-        self.run_command(comandSignature)
+        run_command(comandSignature)
 
     #handler browser pages
     def clearEdge(self):
-        self.run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
-        self.run_command(comandClearEdge)
+        run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command(comandClearEdge)
 
     def clearFirefox(self):
         self.run_command("Get-Process firefox -ErrorAction SilentlyContinue | Stop-Process -Force")
@@ -118,34 +125,76 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         time.sleep(2)
         clear_firefox_local()
 
-
     def clearYandex(self):
-        self.run_command("Get-Process browser -ErrorAction SilentlyContinue | Stop-Process -Force")
-        self.run_command(comandClearYandex)
+        run_command("Get-Process browser -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command(comandClearYandex)
 
     #handler print pages
     def changeCartridge(self):
-        self.run_command(commandChangeCartridge)
+        run_command(commandChangeCartridge)
 
     def helpAddnewPrinterSpp(self):
-        self.run_command(commandAddNewPrinterSpp)
+        run_command(commandAddNewPrinterSpp)
 
     def viewMyPrinter(self):
-        self.run_command("Start-Process 'control.exe' '/name Microsoft.DevicesAndPrinters'")
+        run_command("Start-Process 'control.exe' '/name Microsoft.DevicesAndPrinters'")
 
     def addPrinter(self):
-        pass
+        if(len(self.hostName) != 0):
+            slice_hostname = self.hostName[:6].upper()
+            add_new_printer(slice_hostname)
+        else:
+            print("Name pc is absent")
 
+    #handler documentum,1C page
+    def clear_java_cache(self):
+        run_command("Get-Process java -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
+        time.sleep(2)
+        run_command(comandClearEdge)
+        run_command(comandNetCache)
+        run_command(comandCookies)
+        run_command(comandClearJava)
+        run_command("Start-Process java")
+        run_command("Start-Process msedge")
+
+    def rerun_citrix(self):
+        run_command("Get-Process concentr -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process receiver -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process wfcrun32 -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process pnamain -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process wfica32 -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command('Start-Process "C:\Program Files (x86)\Citrix\ICA Client\pnagent.exe"')
+
+    def refresh_session_citrix(self):
+        run_command(commandRejectCitrixSpp)
+
+    # handler phishing page
+    def send_mail_ib(self):
+        send_mail(self.login, 'inc@sogaz.ru')
+
+    def teach_course_ib(self):
+        print("Teach course")
+
+    #handler Vpn page
+    def send_bid_remote(self):
+        pass
+    def link_problem_vpn(self):
+        pass
+    def refresh_vpn(self):
+        pass
+    def settings_vpn(self):
+        pass
     #actions for get system information
-    def get_hostName(self, hostname):
+    def set_hostName(self, hostname):
         self.pcNameBottom.setText(hostname)
 
-    def get_IpAddress(self, hostname):
+    def set_IpAddress(self, hostname):
         ipaddr = socket.gethostbyname(hostname)
         self.ipBottom.setText(ipaddr)
 
-    def get_userName(self):
-        self.userBottom.setText(os.getlogin())
+    def set_userName(self):
+        self.userBottom.setText(self.login)
 
 
 

@@ -8,3 +8,6 @@ commandStopOutlook = "Stop-Process -Name OUTLOOK"
 comandClearYandex = r'Remove-Item "C:\Users\$env:UserName\AppData\Local\Yandex\YandexBrowser\User Data\Default\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue'
 commandChangeCartridge = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425395'"
 commandAddNewPrinterSpp = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425394'"
+comandClearJava = r"Remove-Item C:\Users\$env:UserName\AppData\LocalLow\Sun\Java\Deployment\cache\* -Recurse -Force -ErrorAction SilentlyContinue"
+commandRejectCitrixSpp = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425387'"
+commandBidRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425606'"
