@@ -11,3 +11,5 @@ commandAddNewPrinterSpp = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&si
 comandClearJava = r"Remove-Item C:\Users\$env:UserName\AppData\LocalLow\Sun\Java\Deployment\cache\* -Recurse -Force -ErrorAction SilentlyContinue"
 commandRejectCitrixSpp = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425387'"
 commandBidRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425606'"
+commandProblemRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425667'"
+commandSettingsRemote = "Start-Process https://confluence.sogaz.ru/pages/viewpage.action?pageId=269212220"

@@ -11,7 +11,8 @@ from addNewPrinter import add_new_printer
 from mail_utils import send_mail
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
                     comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
-                     comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote)
+                     comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
+                     commandProblemRemote, commandSettingsRemote)
 
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -59,10 +60,10 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.reportIbPhishingBtn.clicked.connect(self.send_mail_ib)
         self.teachIbCorsePhishingBtn.clicked.connect(self.teach_course_ib)
         #button VPN
-        self.bidRemoteVpnBtn.clicked.connect()
-        self.problemVpnBtn.clicked.connect()
-        self.refreshVpnBtn.clicked.connect()
-        self.settingVpnBtn.clicked.connect()
+        self.bidRemoteVpnBtn.clicked.connect(self.send_bid_remote)
+        self.problemVpnBtn.clicked.connect(self.link_problem_vpn)
+        self.refreshVpnBtn.clicked.connect(self.refresh_vpn)
+        self.settingVpnBtn.clicked.connect(self.settings_vpn)
         #get system information
         self.set_hostName(self.hostName)
         self.set_IpAddress(self.hostName)
@@ -178,13 +179,13 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     #handler Vpn page
     def send_bid_remote(self):
-        pass
+        run_command(commandBidRemote)
     def link_problem_vpn(self):
-        pass
+        run_command(commandProblemRemote)
     def refresh_vpn(self):
-        pass
+        send_mail(self.login, 'help@sogaz.ru')
     def settings_vpn(self):
-        pass
+        run_command(commandSettingsRemote)
     #actions for get system information
     def set_hostName(self, hostname):
         self.pcNameBottom.setText(hostname)
