@@ -1,12 +1,12 @@
 import os
-import subprocess
 import socket
 import time
 from PySide6.QtWidgets import QMainWindow, QMenu
 from PySide6.QtGui import QAction
+from PySide6.QtCore import QTimer
 from ui_interface import Ui_MainWindow
 from clearFirefox import clear_firefox_local, clear_firefox_cookies
-from runCommand import run_command
+from runCommand import run_command, run_lazy_command
 from addNewPrinter import add_new_printer
 from mail_utils import send_mail
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
@@ -19,6 +19,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle('IT-Helper')
+        #fix window size
         self.setFixedSize(860,640)
         #hostname
         self.hostName = socket.gethostname()
@@ -85,6 +86,10 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def switch_to_failure_pageVpn(self):
         self.stackedWidget.setCurrentIndex(4)
 
+    #change informationField with timeout
+    def loader(self, text, time=1000):
+        QTimer.singleShot(time, lambda: self.informationField.setText(text))
+
     #handler PC pages
     def open_download_folderPc(self):
         run_command("Start-Process $env:USERPROFILE\Downloads")
@@ -117,13 +122,16 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     #handler browser pages
     def clearEdge(self):
+        self.loader("Выполняется очистка кэша EDGE...")
         run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
         run_command(comandClearEdge)
+        self.loader('Кэш очищен!', 2000)
+        self.loader('', 5000)
+        run_lazy_command("Start-Process msedge", 4000)
 
     def clearFirefox(self):
-        self.run_command("Get-Process firefox -ErrorAction SilentlyContinue | Stop-Process -Force")
+        run_command("Get-Process firefox -ErrorAction SilentlyContinue | Stop-Process -Force")
         clear_firefox_cookies()
-        time.sleep(2)
         clear_firefox_local()
 
     def clearYandex(self):
@@ -151,7 +159,6 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def clear_java_cache(self):
         run_command("Get-Process java -ErrorAction SilentlyContinue | Stop-Process -Force")
         run_command("Get-Process msedge -ErrorAction SilentlyContinue | Stop-Process -Force")
-        time.sleep(2)
         run_command(comandClearEdge)
         run_command(comandNetCache)
         run_command(comandCookies)
@@ -196,6 +203,12 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def set_userName(self):
         self.userBottom.setText(self.login)
+
+
+
+
+
+
 
 
 

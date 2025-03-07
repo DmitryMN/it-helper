@@ -1,20 +1,23 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceXSUjDq.ui'
+## Form generated from reading UI file 'interfaceLbKLte.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect, QSize, Qt)
-from PySide6.QtGui import (QCursor,
-    QFont, QIcon, QPixmap)
-from PySide6.QtWidgets import (QFrame, QHBoxLayout, QLabel,
-                               QPushButton, QSizePolicy, QStackedWidget,
-                               QVBoxLayout, QWidget)
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QMainWindow, QPushButton, QSizePolicy, QStackedWidget,
+    QVBoxLayout, QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -103,8 +106,10 @@ class Ui_MainWindow(object):
         self.Title.setStyleSheet(u"")
         self.informationField = QLabel(self.header)
         self.informationField.setObjectName(u"informationField")
-        self.informationField.setGeometry(QRect(330, 40, 281, 26))
-        self.informationField.setFont(font)
+        self.informationField.setGeometry(QRect(250, 40, 521, 22))
+        font1 = QFont()
+        font1.setPointSize(14)
+        self.informationField.setFont(font1)
         self.informationField.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
 
         self.verticalLayout.addWidget(self.header)
@@ -113,6 +118,7 @@ class Ui_MainWindow(object):
         self.main.setObjectName(u"main")
         self.horizontalLayout = QHBoxLayout(self.main)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.leftMenuContainer = QWidget(self.main)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
         sizePolicy.setHeightForWidth(self.leftMenuContainer.sizePolicy().hasHeightForWidth())
@@ -123,7 +129,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(10, 10, 10, 10)
+        self.verticalLayout_2.setContentsMargins(10, 0, 10, 10)
         self.leftSubMenuContainer = QWidget(self.leftMenuContainer)
         self.leftSubMenuContainer.setObjectName(u"leftSubMenuContainer")
         self.leftSubMenuContainer.setMinimumSize(QSize(130, 0))
@@ -142,16 +148,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.failureBtn = QPushButton(self.frame)
         self.failureBtn.setObjectName(u"failureBtn")
-        font1 = QFont()
-        font1.setPointSize(10)
-        self.failureBtn.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(10)
+        self.failureBtn.setFont(font2)
         self.failureBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.failureBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
 "color: rgba(21, 33, 73, 1);\n"
 "}")
         icon = QIcon()
-        icon.addFile(u":/icons/icons/cpu.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u":/icons/icons/computer-err.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.failureBtn.setIcon(icon)
         self.failureBtn.setIconSize(QSize(24, 24))
         self.failureBtn.setCheckable(True)
@@ -160,7 +166,7 @@ class Ui_MainWindow(object):
 
         self.mailBtn = QPushButton(self.frame)
         self.mailBtn.setObjectName(u"mailBtn")
-        self.mailBtn.setFont(font1)
+        self.mailBtn.setFont(font2)
         self.mailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.mailBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -176,7 +182,7 @@ class Ui_MainWindow(object):
 
         self.browserBtn = QPushButton(self.frame)
         self.browserBtn.setObjectName(u"browserBtn")
-        self.browserBtn.setFont(font1)
+        self.browserBtn.setFont(font2)
         self.browserBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.browserBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -192,7 +198,7 @@ class Ui_MainWindow(object):
 
         self.printBtn = QPushButton(self.frame)
         self.printBtn.setObjectName(u"printBtn")
-        self.printBtn.setFont(font1)
+        self.printBtn.setFont(font2)
         self.printBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.printBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -210,14 +216,14 @@ class Ui_MainWindow(object):
         self.documentBtn.setObjectName(u"documentBtn")
         self.documentBtn.setMinimumSize(QSize(0, 0))
         self.documentBtn.setMaximumSize(QSize(16777215, 16777215))
-        self.documentBtn.setFont(font1)
+        self.documentBtn.setFont(font2)
         self.documentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.documentBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
 "color: rgba(21, 33, 73, 1);\n"
 "}")
         icon4 = QIcon()
-        icon4.addFile(u":/icons/icons/shuffle.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon4.addFile(u":/icons/icons/settings.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.documentBtn.setIcon(icon4)
         self.documentBtn.setIconSize(QSize(24, 24))
         self.documentBtn.setCheckable(True)
@@ -226,7 +232,7 @@ class Ui_MainWindow(object):
 
         self.phishingBtn = QPushButton(self.frame)
         self.phishingBtn.setObjectName(u"phishingBtn")
-        self.phishingBtn.setFont(font1)
+        self.phishingBtn.setFont(font2)
         self.phishingBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.phishingBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -242,7 +248,7 @@ class Ui_MainWindow(object):
 
         self.vpnBtn = QPushButton(self.frame)
         self.vpnBtn.setObjectName(u"vpnBtn")
-        self.vpnBtn.setFont(font1)
+        self.vpnBtn.setFont(font2)
         self.vpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.vpnBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -305,10 +311,10 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.widget_2)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(30, 0, 141, 24))
-        font2 = QFont()
-        font2.setPointSize(14)
-        font2.setWeight(QFont.DemiBold)
-        self.label_2.setFont(font2)
+        font3 = QFont()
+        font3.setPointSize(14)
+        font3.setWeight(QFont.DemiBold)
+        self.label_2.setFont(font3)
         self.label_2.setToolTipDuration(-1)
         self.label_2.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -327,10 +333,10 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
         self.label_3.setSizePolicy(sizePolicy2)
-        font3 = QFont()
-        font3.setPointSize(12)
-        font3.setBold(False)
-        self.label_3.setFont(font3)
+        font4 = QFont()
+        font4.setPointSize(12)
+        font4.setBold(False)
+        self.label_3.setFont(font4)
         self.label_3.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;\n"
 "padding-left: 35;")
@@ -359,7 +365,7 @@ class Ui_MainWindow(object):
         self.clearCashePcBtn = QPushButton(self.sectionButtonPc)
         self.clearCashePcBtn.setObjectName(u"clearCashePcBtn")
         self.clearCashePcBtn.setMaximumSize(QSize(16777215, 115))
-        self.clearCashePcBtn.setFont(font1)
+        self.clearCashePcBtn.setFont(font2)
         self.clearCashePcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.clearCashePcBtn.setStyleSheet(u"")
         icon7 = QIcon()
@@ -372,7 +378,7 @@ class Ui_MainWindow(object):
         self.openDownloadPcBtn = QPushButton(self.sectionButtonPc)
         self.openDownloadPcBtn.setObjectName(u"openDownloadPcBtn")
         self.openDownloadPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.openDownloadPcBtn.setFont(font1)
+        self.openDownloadPcBtn.setFont(font2)
         self.openDownloadPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openDownloadPcBtn.setToolTipDuration(-2)
         icon8 = QIcon()
@@ -385,7 +391,7 @@ class Ui_MainWindow(object):
         self.openRecycleFolderPcBtn = QPushButton(self.sectionButtonPc)
         self.openRecycleFolderPcBtn.setObjectName(u"openRecycleFolderPcBtn")
         self.openRecycleFolderPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.openRecycleFolderPcBtn.setFont(font1)
+        self.openRecycleFolderPcBtn.setFont(font2)
         self.openRecycleFolderPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openRecycleFolderPcBtn.setToolTipDuration(-3)
         icon9 = QIcon()
@@ -398,7 +404,7 @@ class Ui_MainWindow(object):
         self.problemSppPcBtn = QPushButton(self.sectionButtonPc)
         self.problemSppPcBtn.setObjectName(u"problemSppPcBtn")
         self.problemSppPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.problemSppPcBtn.setFont(font1)
+        self.problemSppPcBtn.setFont(font2)
         self.problemSppPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon10 = QIcon()
         icon10.addFile(u":/icons/icons/headset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -436,9 +442,9 @@ class Ui_MainWindow(object):
         self.label_10.setGeometry(QRect(0, 0, 621, 61))
         sizePolicy2.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
         self.label_10.setSizePolicy(sizePolicy2)
-        font4 = QFont()
-        font4.setPointSize(12)
-        self.label_10.setFont(font4)
+        font5 = QFont()
+        font5.setPointSize(12)
+        self.label_10.setFont(font5)
         self.label_10.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_10.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -457,7 +463,7 @@ class Ui_MainWindow(object):
         self.label_12 = QLabel(self.widget_8)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(40, 0, 281, 24))
-        self.label_12.setFont(font2)
+        self.label_12.setFont(font3)
         self.label_12.setToolTipDuration(-1)
         self.label_12.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -482,7 +488,7 @@ class Ui_MainWindow(object):
         self.addPrinterPrintBtn = QPushButton(self.sectionButtonPrint)
         self.addPrinterPrintBtn.setObjectName(u"addPrinterPrintBtn")
         self.addPrinterPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.addPrinterPrintBtn.setFont(font1)
+        self.addPrinterPrintBtn.setFont(font2)
         self.addPrinterPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon11 = QIcon()
         icon11.addFile(u":/icons/icons/square-rounded-plus.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -494,7 +500,7 @@ class Ui_MainWindow(object):
         self.myPrintersPrintBtn = QPushButton(self.sectionButtonPrint)
         self.myPrintersPrintBtn.setObjectName(u"myPrintersPrintBtn")
         self.myPrintersPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.myPrintersPrintBtn.setFont(font1)
+        self.myPrintersPrintBtn.setFont(font2)
         self.myPrintersPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.myPrintersPrintBtn.setIcon(icon3)
         self.myPrintersPrintBtn.setIconSize(QSize(20, 20))
@@ -504,7 +510,7 @@ class Ui_MainWindow(object):
         self.cartridgePrintBtn = QPushButton(self.sectionButtonPrint)
         self.cartridgePrintBtn.setObjectName(u"cartridgePrintBtn")
         self.cartridgePrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.cartridgePrintBtn.setFont(font1)
+        self.cartridgePrintBtn.setFont(font2)
         self.cartridgePrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.cartridgePrintBtn.setIcon(icon10)
         self.cartridgePrintBtn.setIconSize(QSize(20, 20))
@@ -514,7 +520,7 @@ class Ui_MainWindow(object):
         self.connectPrintBtn = QPushButton(self.sectionButtonPrint)
         self.connectPrintBtn.setObjectName(u"connectPrintBtn")
         self.connectPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.connectPrintBtn.setFont(font1)
+        self.connectPrintBtn.setFont(font2)
         self.connectPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.connectPrintBtn.setIcon(icon10)
         self.connectPrintBtn.setIconSize(QSize(20, 20))
@@ -561,7 +567,7 @@ class Ui_MainWindow(object):
         self.label_14 = QLabel(self.widget_9)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(30, 0, 591, 24))
-        self.label_14.setFont(font3)
+        self.label_14.setFont(font4)
         self.label_14.setToolTipDuration(-1)
         self.label_14.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "")
@@ -582,7 +588,7 @@ class Ui_MainWindow(object):
         self.label_16 = QLabel(self.widget_10)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(30, 0, 581, 51))
-        self.label_16.setFont(font3)
+        self.label_16.setFont(font4)
         self.label_16.setToolTipDuration(-1)
         self.label_16.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
 
@@ -665,7 +671,7 @@ class Ui_MainWindow(object):
         self.label_18 = QLabel(self.widget_11)
         self.label_18.setObjectName(u"label_18")
         self.label_18.setGeometry(QRect(40, 0, 491, 24))
-        self.label_18.setFont(font2)
+        self.label_18.setFont(font3)
         self.label_18.setToolTipDuration(-1)
         self.label_18.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -677,16 +683,16 @@ class Ui_MainWindow(object):
         self.label_19 = QLabel(self.frame_12)
         self.label_19.setObjectName(u"label_19")
         self.label_19.setGeometry(QRect(10, 0, 311, 44))
-        self.label_19.setFont(font4)
+        self.label_19.setFont(font5)
         self.label_20 = QLabel(self.frame_12)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setGeometry(QRect(10, 40, 266, 24))
-        self.label_20.setFont(font4)
+        self.label_20.setFont(font5)
         self.label_20.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.label_21 = QLabel(self.frame_12)
         self.label_21.setObjectName(u"label_21")
         self.label_21.setGeometry(QRect(280, 40, 99, 24))
-        self.label_21.setFont(font4)
+        self.label_21.setFont(font5)
         self.label_21.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
         self.label_21.setFrameShape(QFrame.Shape.NoFrame)
         self.label_21.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -782,14 +788,14 @@ class Ui_MainWindow(object):
         self.label_23 = QLabel(self.widget_12)
         self.label_23.setObjectName(u"label_23")
         self.label_23.setGeometry(QRect(40, 10, 281, 24))
-        self.label_23.setFont(font2)
+        self.label_23.setFont(font3)
         self.label_23.setToolTipDuration(-1)
         self.label_23.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_24 = QLabel(self.firtsTitleVpn)
         self.label_24.setObjectName(u"label_24")
         self.label_24.setGeometry(QRect(40, 40, 581, 43))
-        self.label_24.setFont(font4)
+        self.label_24.setFont(font5)
         self.secondTitleVpn = QWidget(self.sectionTittleVpn)
         self.secondTitleVpn.setObjectName(u"secondTitleVpn")
         self.secondTitleVpn.setGeometry(QRect(0, 100, 650, 113))
@@ -809,14 +815,14 @@ class Ui_MainWindow(object):
         self.label_26 = QLabel(self.widget_13)
         self.label_26.setObjectName(u"label_26")
         self.label_26.setGeometry(QRect(40, 10, 281, 24))
-        self.label_26.setFont(font2)
+        self.label_26.setFont(font3)
         self.label_26.setToolTipDuration(-1)
         self.label_26.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_27 = QLabel(self.secondTitleVpn)
         self.label_27.setObjectName(u"label_27")
         self.label_27.setGeometry(QRect(40, 40, 611, 65))
-        self.label_27.setFont(font4)
+        self.label_27.setFont(font5)
         self.label_27.setStyleSheet(u"")
 
         self.verticalLayout_6.addWidget(self.sectionTittleVpn)
@@ -840,7 +846,7 @@ class Ui_MainWindow(object):
         self.bidRemoteVpnBtn = QPushButton(self.sectionButtonVpn)
         self.bidRemoteVpnBtn.setObjectName(u"bidRemoteVpnBtn")
         self.bidRemoteVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.bidRemoteVpnBtn.setFont(font1)
+        self.bidRemoteVpnBtn.setFont(font2)
         self.bidRemoteVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.bidRemoteVpnBtn.setIcon(icon10)
         self.bidRemoteVpnBtn.setIconSize(QSize(20, 20))
@@ -850,7 +856,7 @@ class Ui_MainWindow(object):
         self.problemVpnBtn = QPushButton(self.sectionButtonVpn)
         self.problemVpnBtn.setObjectName(u"problemVpnBtn")
         self.problemVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.problemVpnBtn.setFont(font1)
+        self.problemVpnBtn.setFont(font2)
         self.problemVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.problemVpnBtn.setIcon(icon10)
         self.problemVpnBtn.setIconSize(QSize(20, 20))
@@ -860,7 +866,7 @@ class Ui_MainWindow(object):
         self.refreshVpnBtn = QPushButton(self.sectionButtonVpn)
         self.refreshVpnBtn.setObjectName(u"refreshVpnBtn")
         self.refreshVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.refreshVpnBtn.setFont(font1)
+        self.refreshVpnBtn.setFont(font2)
         self.refreshVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon14 = QIcon()
         icon14.addFile(u":/icons/icons/password.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -872,7 +878,7 @@ class Ui_MainWindow(object):
         self.settingVpnBtn = QPushButton(self.sectionButtonVpn)
         self.settingVpnBtn.setObjectName(u"settingVpnBtn")
         self.settingVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.settingVpnBtn.setFont(font1)
+        self.settingVpnBtn.setFont(font2)
         self.settingVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon15 = QIcon()
         icon15.addFile(u":/icons/icons/device-desktop-share.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -919,7 +925,7 @@ class Ui_MainWindow(object):
         self.label_8 = QLabel(self.widget_5)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(30, 0, 141, 20))
-        self.label_8.setFont(font2)
+        self.label_8.setFont(font3)
         self.label_8.setToolTipDuration(-1)
         self.label_8.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -933,7 +939,7 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QRect(-10, 0, 591, 24))
         sizePolicy2.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
         self.label_9.setSizePolicy(sizePolicy2)
-        self.label_9.setFont(font4)
+        self.label_9.setFont(font5)
         self.label_9.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_9.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -1031,7 +1037,7 @@ class Ui_MainWindow(object):
         self.label_6 = QLabel(self.widget_4)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(30, 0, 491, 24))
-        self.label_6.setFont(font3)
+        self.label_6.setFont(font4)
         self.label_6.setToolTipDuration(-1)
         self.label_6.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;")
@@ -1060,7 +1066,7 @@ class Ui_MainWindow(object):
         self.securityOutMailBtn = QPushButton(self.sectionButtonMail)
         self.securityOutMailBtn.setObjectName(u"securityOutMailBtn")
         self.securityOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.securityOutMailBtn.setFont(font1)
+        self.securityOutMailBtn.setFont(font2)
         self.securityOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon19 = QIcon()
         icon19.addFile(u":/icons/icons/mail-exclamation.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1072,7 +1078,7 @@ class Ui_MainWindow(object):
         self.runOutMailBtn = QPushButton(self.sectionButtonMail)
         self.runOutMailBtn.setObjectName(u"runOutMailBtn")
         self.runOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.runOutMailBtn.setFont(font1)
+        self.runOutMailBtn.setFont(font2)
         self.runOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.runOutMailBtn.setStyleSheet(u"")
         self.runOutMailBtn.setIcon(icon1)
@@ -1083,7 +1089,7 @@ class Ui_MainWindow(object):
         self.fixOutMailBtn = QPushButton(self.sectionButtonMail)
         self.fixOutMailBtn.setObjectName(u"fixOutMailBtn")
         self.fixOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.fixOutMailBtn.setFont(font1)
+        self.fixOutMailBtn.setFont(font2)
         self.fixOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon20 = QIcon()
         icon20.addFile(u":/icons/icons/photo-x.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1096,7 +1102,7 @@ class Ui_MainWindow(object):
         self.signatureMailBtn.setObjectName(u"signatureMailBtn")
         self.signatureMailBtn.setMinimumSize(QSize(0, 0))
         self.signatureMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.signatureMailBtn.setFont(font1)
+        self.signatureMailBtn.setFont(font2)
         self.signatureMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon21 = QIcon()
         icon21.addFile(u":/icons/icons/signature.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1131,7 +1137,7 @@ class Ui_MainWindow(object):
         self.widget_41.setMaximumSize(QSize(150, 16777215))
         self.label_4 = QLabel(self.widget_41)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(40, 0, 96, 106))
+        self.label_4.setGeometry(QRect(30, 0, 96, 106))
         sizePolicy.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
         self.label_4.setSizePolicy(sizePolicy)
         self.label_4.setStyleSheet(u"")
@@ -1153,7 +1159,7 @@ class Ui_MainWindow(object):
         self.blockInfoBottom.setMaximumSize(QSize(16777215, 16777215))
         self.blockInformation = QWidget(self.blockInfoBottom)
         self.blockInformation.setObjectName(u"blockInformation")
-        self.blockInformation.setGeometry(QRect(-1, 30, 551, 60))
+        self.blockInformation.setGeometry(QRect(9, 10, 541, 91))
         self.blockInformation.setStyleSheet(u"#blockInformation {\n"
 "    background-color: rgba(0, 122, 255, 0.05);\n"
 "    border-radius: 4px;\n"
@@ -1168,29 +1174,31 @@ class Ui_MainWindow(object):
         self.logoBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.userLabelBottom = QLabel(self.blockInformation)
         self.userLabelBottom.setObjectName(u"userLabelBottom")
-        self.userLabelBottom.setGeometry(QRect(43, 20, 24, 21))
+        self.userLabelBottom.setGeometry(QRect(40, 20, 21, 21))
         self.userLabelBottom.setMinimumSize(QSize(0, 0))
         self.userLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.userLabelBottom.setFont(font1)
+        self.userLabelBottom.setFont(font2)
         self.userLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.userLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.userBottom = QLabel(self.blockInformation)
         self.userBottom.setObjectName(u"userBottom")
-        self.userBottom.setGeometry(QRect(60, 20, 161, 22))
+        self.userBottom.setGeometry(QRect(59, 20, 167, 22))
         self.userBottom.setMaximumSize(QSize(16777215, 16777215))
-        font5 = QFont()
-        font5.setPointSize(10)
-        font5.setWeight(QFont.DemiBold)
-        self.userBottom.setFont(font5)
+        font6 = QFont()
+        font6.setPointSize(10)
+        font6.setWeight(QFont.DemiBold)
+        self.userBottom.setFont(font6)
         self.userBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
-        self.userBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.userBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.userBottom.setMargin(0)
+        self.userBottom.setIndent(7)
+        self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
         self.pcLabelBottom = QLabel(self.blockInformation)
         self.pcLabelBottom.setObjectName(u"pcLabelBottom")
         self.pcLabelBottom.setGeometry(QRect(230, 20, 24, 20))
         self.pcLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.pcLabelBottom.setFont(font1)
+        self.pcLabelBottom.setFont(font2)
         self.pcLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.pcLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.pcLabelBottom.setMargin(0)
@@ -1198,33 +1206,68 @@ class Ui_MainWindow(object):
         self.pcNameBottom.setObjectName(u"pcNameBottom")
         self.pcNameBottom.setGeometry(QRect(250, 20, 121, 22))
         self.pcNameBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.pcNameBottom.setFont(font5)
+        self.pcNameBottom.setFont(font6)
         self.pcNameBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
-        self.pcNameBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.pcNameBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.pcNameBottom.setIndent(7)
         self.pcNameBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
         self.ipLabelBottom = QLabel(self.blockInformation)
         self.ipLabelBottom.setObjectName(u"ipLabelBottom")
         self.ipLabelBottom.setGeometry(QRect(370, 20, 61, 20))
         self.ipLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.ipLabelBottom.setFont(font1)
+        self.ipLabelBottom.setFont(font2)
         self.ipLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.ipLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.ipBottom = QLabel(self.blockInformation)
         self.ipBottom.setObjectName(u"ipBottom")
         self.ipBottom.setGeometry(QRect(430, 20, 111, 22))
         self.ipBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.ipBottom.setFont(font5)
+        self.ipBottom.setFont(font6)
         self.ipBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
-        self.ipBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.ipBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.ipBottom.setIndent(7)
         self.ipBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.label_28 = QLabel(self.blockInformation)
+        self.label_28.setObjectName(u"label_28")
+        self.label_28.setGeometry(QRect(10, 50, 24, 24))
+        self.label_28.setPixmap(QPixmap(u":/icons/icons/alert-square-rounded.svg"))
+        self.label_28.setScaledContents(True)
+        self.label_29 = QLabel(self.blockInformation)
+        self.label_29.setObjectName(u"label_29")
+        self.label_29.setGeometry(QRect(40, 50, 211, 22))
+        self.label_29.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
+        self.reloadInformation = QLabel(self.blockInformation)
+        self.reloadInformation.setObjectName(u"reloadInformation")
+        self.reloadInformation.setGeometry(QRect(248, 50, 101, 22))
+        self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
 
         self.horizontalLayout_10.addWidget(self.blockInfoBottom)
 
         self.widget_21 = QWidget(self.systemInfoBottom)
         self.widget_21.setObjectName(u"widget_21")
         self.widget_21.setMaximumSize(QSize(130, 16777215))
+        self.pushButton = QPushButton(self.widget_21)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(0, 40, 65, 28))
+        self.pushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.pushButton.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+"font-weight: 600;")
+        icon22 = QIcon()
+        icon22.addFile(u":/icons/icons/external-link.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton.setIcon(icon22)
+        self.pushButton.setIconSize(QSize(24, 24))
+        self.pushButton_2 = QPushButton(self.widget_21)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setGeometry(QRect(80, 40, 35, 24))
+        self.pushButton_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.pushButton_2.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+"font-weight: 600;")
+        icon23 = QIcon()
+        icon23.addFile(u":/icons/icons/circle-heart.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.pushButton_2.setIcon(icon23)
+        self.pushButton_2.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_10.addWidget(self.widget_21)
 
@@ -1288,9 +1331,9 @@ class Ui_MainWindow(object):
         self.connectPrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435\n"
 "\u0441\u0435\u0442\u0435\u0432\u043e\u0433\u043e \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u0430", None))
         self.label_13.setText("")
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0415\u0441\u043b\u0438 \u043d\u0435 \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b, \u0442\u043e \u043c\u043e\u0436\u0435\u0448\u044c \u043f\u043e\u043c\u043e\u0447\u044c \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u043a\u044d\u0448 JAVA", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0415\u0441\u043b\u0438 \u043d\u0435 \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b, \u0442\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043c\u043e\u0447\u044c \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u043a\u044d\u0448\u0430 JAVA", None))
         self.label_15.setText("")
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0439\u0442\u0435 \u0415\u0441\u043b\u0438 1\u0421 \u0441\u0442\u0430\u043b \u043d\u0435\u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c, \u0432 \u0442.\u0447. \u0437\u0430\u0432\u0438\u0441\u0430\u0442\u044c, \n"
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0439\u0442\u0435, \u0415\u0441\u043b\u0438 1\u0421 \u0441\u0442\u0430\u043b \u043d\u0435\u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c, \u0432 \u0442.\u0447. \u0437\u0430\u0432\u0438\u0441\u0430\u0442\u044c, \n"
 "\u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0435 CITRIX ", None))
         self.javaDocumentBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u044d\u0448 JAVA\n"
 "\u0438 \u0411\u0440\u0430\u0443\u0437\u0435\u0440\u0430 EDGE", None))
@@ -1350,10 +1393,21 @@ class Ui_MainWindow(object):
         self.label_4.setText("")
         self.logoBottom.setText("")
         self.userLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0417:", None))
-        self.userBottom.setText("")
+        self.userBottom.setText(QCoreApplication.translate("MainWindow", u"Nalenkov.dmitry.K", None))
         self.pcLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u041f\u041a:", None))
-        self.pcNameBottom.setText("")
+        self.pcNameBottom.setText(QCoreApplication.translate("MainWindow", u"W00-0000-0333", None))
         self.ipLabelBottom.setText(QCoreApplication.translate("MainWindow", u"IP-adress:", None))
-        self.ipBottom.setText("")
+        self.ipBottom.setText(QCoreApplication.translate("MainWindow", u"100.100.135.146", None))
+        self.label_28.setText("")
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u043d\u0435 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f:", None))
+        self.reloadInformation.setText("")
+#if QT_CONFIG(tooltip)
+        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b \u0421\u041f\u041f</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton_2.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton_2.setText("")
     # retranslateUi
 
