@@ -1,23 +1,19 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceLbKLte.ui'
+## Form generated from reading UI file 'interfacejmaReS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QMainWindow, QPushButton, QSizePolicy, QStackedWidget,
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect, QSize, Qt)
+from PySide6.QtGui import (QCursor, QFont, QIcon, QPixmap)
+from PySide6.QtWidgets import (QFrame, QHBoxLayout, QLabel,
+    QPushButton, QSizePolicy, QStackedWidget,
     QVBoxLayout, QWidget)
+
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -1236,11 +1232,12 @@ class Ui_MainWindow(object):
         self.label_28.setScaledContents(True)
         self.label_29 = QLabel(self.blockInformation)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setGeometry(QRect(40, 50, 211, 22))
+        self.label_29.setGeometry(QRect(40, 50, 241, 22))
+        self.label_29.setFont(font2)
         self.label_29.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.reloadInformation = QLabel(self.blockInformation)
         self.reloadInformation.setObjectName(u"reloadInformation")
-        self.reloadInformation.setGeometry(QRect(248, 50, 101, 22))
+        self.reloadInformation.setGeometry(QRect(290, 50, 121, 22))
         self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
 
         self.horizontalLayout_10.addWidget(self.blockInfoBottom)
@@ -1248,26 +1245,26 @@ class Ui_MainWindow(object):
         self.widget_21 = QWidget(self.systemInfoBottom)
         self.widget_21.setObjectName(u"widget_21")
         self.widget_21.setMaximumSize(QSize(130, 16777215))
-        self.pushButton = QPushButton(self.widget_21)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(0, 40, 65, 28))
-        self.pushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.pushButton.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+        self.portalSppBtn = QPushButton(self.widget_21)
+        self.portalSppBtn.setObjectName(u"portalSppBtn")
+        self.portalSppBtn.setGeometry(QRect(0, 40, 65, 28))
+        self.portalSppBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.portalSppBtn.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
 "font-weight: 600;")
         icon22 = QIcon()
         icon22.addFile(u":/icons/icons/external-link.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.pushButton.setIcon(icon22)
-        self.pushButton.setIconSize(QSize(24, 24))
-        self.pushButton_2 = QPushButton(self.widget_21)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(80, 40, 35, 24))
-        self.pushButton_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.pushButton_2.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+        self.portalSppBtn.setIcon(icon22)
+        self.portalSppBtn.setIconSize(QSize(24, 24))
+        self.feedbackBtn = QPushButton(self.widget_21)
+        self.feedbackBtn.setObjectName(u"feedbackBtn")
+        self.feedbackBtn.setGeometry(QRect(80, 40, 35, 24))
+        self.feedbackBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.feedbackBtn.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
 "font-weight: 600;")
         icon23 = QIcon()
         icon23.addFile(u":/icons/icons/circle-heart.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.pushButton_2.setIcon(icon23)
-        self.pushButton_2.setIconSize(QSize(24, 24))
+        self.feedbackBtn.setIcon(icon23)
+        self.feedbackBtn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_10.addWidget(self.widget_21)
 
@@ -1312,7 +1309,7 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.openRecycleFolderPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443, n\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043f\u0440\u0438 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0441\u0442\u0438</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.openRecycleFolderPcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443", None))
+        self.openRecycleFolderPcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u043e\u0440\u0437\u0438\u043d\u0443", None))
 #if QT_CONFIG(tooltip)
         self.problemSppPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u0432 \u0440\u0430\u0431\u043e\u0442\u0435 \u041f\u041a</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -1352,9 +1349,8 @@ class Ui_MainWindow(object):
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"inc@sogaz.ru", None))
         self.reportIbPhishingBtn.setText(QCoreApplication.translate("MainWindow", u"C\u043e\u043e\u0431\u0449\u0438\u0442\u044c\n"
 "\u0432 \u0418\u0411", None))
-        self.teachIbCorsePhishingBtn.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0443\u0440\u0441 \u043f\u043e\n"
-"\u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0439\n"
-"\u0431\u0437\u0435\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438", None))
+        self.teachIbCorsePhishingBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c\n"
+" \u0410\u041e \"\u0421\u041e\u0413\u0410\u0417\"", None))
         self.label_22.setText("")
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"AnyConnect", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"\u0422\u043e\u0447\u043a\u0430 \u043f\u0440\u043e\u0434\u0430\u0436 \u2014 RS3.SOGAZ.RU\u2028\u041b\u0438\u0447\u043d\u043e\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u2014 RS9.SOGAZ.RU", None))
@@ -1399,15 +1395,15 @@ class Ui_MainWindow(object):
         self.ipLabelBottom.setText(QCoreApplication.translate("MainWindow", u"IP-adress:", None))
         self.ipBottom.setText(QCoreApplication.translate("MainWindow", u"100.100.135.146", None))
         self.label_28.setText("")
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u043d\u0435 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f:", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u043d\u0435 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f c :", None))
         self.reloadInformation.setText("")
 #if QT_CONFIG(tooltip)
-        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b \u0421\u041f\u041f</p></body></html>", None))
+        self.portalSppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b \u0421\u041f\u041f</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f", None))
+        self.portalSppBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f", None))
 #if QT_CONFIG(tooltip)
-        self.pushButton_2.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c</p></body></html>", None))
+        self.feedbackBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_2.setText("")
+        self.feedbackBtn.setText("")
     # retranslateUi
 

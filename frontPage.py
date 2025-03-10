@@ -1,30 +1,31 @@
 import os
 import socket
-import time
 from PySide6.QtWidgets import QMainWindow, QMenu
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QIcon
 from PySide6.QtCore import QTimer
 from ui_interface import Ui_MainWindow
 from clearFirefox import clear_firefox_local, clear_firefox_cookies
 from runCommand import run_command, run_lazy_command
 from addNewPrinter import add_new_printer
-from mail_utils import send_mail
+from mail_utils import send_mail, reboot_information
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
                     comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
                      comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
-                     commandProblemRemote, commandSettingsRemote)
+                     commandProblemRemote, commandSettingsRemote, commandIBConfluence)
 
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle('IT-Helper')
+        self.setWindowIcon(QIcon("logo_main.ico"))
         #fix window size
         self.setFixedSize(860,640)
         #hostname
         self.hostName = socket.gethostname()
         #login
         self.login =os.getlogin()
+        #reload information
 
         #Connect buttons to switch to different page
         self.failureBtn.clicked.connect(self.switch_to_failure_pagePC)
@@ -65,10 +66,14 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.problemVpnBtn.clicked.connect(self.link_problem_vpn)
         self.refreshVpnBtn.clicked.connect(self.refresh_vpn)
         self.settingVpnBtn.clicked.connect(self.settings_vpn)
+        #buttons help
+        self.feedbackBtn.clicked.connect(self.feedback)
+        self.portalSppBtn.clicked.connect(self.link_PortalSpp)
         #get system information
         self.set_hostName(self.hostName)
         self.set_IpAddress(self.hostName)
         self.set_userName()
+        self.set_reloadInformation()
 
     #switch actions stackedWidget
     def switch_to_failure_pagePC(self):
@@ -130,13 +135,20 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         run_lazy_command("Start-Process msedge", 4000)
 
     def clearFirefox(self):
+        self.loader("Выполняется очистка кэша Firefox...")
         run_command("Get-Process firefox -ErrorAction SilentlyContinue | Stop-Process -Force")
         clear_firefox_cookies()
         clear_firefox_local()
+        self.loader('Кэш очищен!', 2000)
+        self.loader('', 5000)
+        run_lazy_command("Start-Process firefox", 4000)
 
     def clearYandex(self):
+        self.loader("Выполняется очистка кэша Yandex...")
         run_command("Get-Process browser -ErrorAction SilentlyContinue | Stop-Process -Force")
         run_command(comandClearYandex)
+        self.loader('Кэш очищен!', 2000)
+        self.loader('', 5000)
 
     #handler print pages
     def changeCartridge(self):
@@ -182,7 +194,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         send_mail(self.login, 'inc@sogaz.ru')
 
     def teach_course_ib(self):
-        print("Teach course")
+        run_command(commandIBConfluence)
 
     #handler Vpn page
     def send_bid_remote(self):
@@ -193,6 +205,14 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         send_mail(self.login, 'help@sogaz.ru')
     def settings_vpn(self):
         run_command(commandSettingsRemote)
+
+    #handler help btn
+    def link_PortalSpp(self):
+        run_command(r'Start-Process https://help')
+
+    def feedback(self):
+        print("feedback")
+
     #actions for get system information
     def set_hostName(self, hostname):
         self.pcNameBottom.setText(hostname)
@@ -203,6 +223,9 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def set_userName(self):
         self.userBottom.setText(self.login)
+
+    def set_reloadInformation(self):
+        self.reloadInformation.setText(reboot_information())
 
 
 

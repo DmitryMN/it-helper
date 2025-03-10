@@ -2,6 +2,7 @@ import os
 import subprocess
 import psutil
 import win32com.client as win32
+import datetime
 
 #create mail
 def create_mail(login, to):
@@ -29,7 +30,7 @@ def search_process_outlook():
 #search outlook
 def search_outlook(path):
     return os.path.isfile(path)
-
+#send mail
 def send_mail(login, to):
     path_64bit = r'C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE'
     path_32bit = r'C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE'
@@ -45,3 +46,8 @@ def send_mail(login, to):
             open_outlook(path_32bit)
         else:
             print('Outlook is absent, install outlook')
+
+def reboot_information():
+    last_reboot = psutil.boot_time()
+    days = f'{datetime.date.fromtimestamp(last_reboot)}'
+    return days
