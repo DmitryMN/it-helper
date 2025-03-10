@@ -13,12 +13,16 @@ from command import (comandProblemPc, comandSignature, comandClearTemp, comandNe
                      comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
                      commandProblemRemote, commandSettingsRemote, commandIBConfluence)
 
+icon_filename = os.path.join(
+    os.path.dirname(__file__), "icon\logo_main.ico"
+)
+
 class MySideBar(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle('IT-Helper')
-        self.setWindowIcon(QIcon("logo_main.ico"))
+        self.setWindowIcon(QIcon(icon_filename))
         #fix window size
         self.setFixedSize(860,640)
         #hostname

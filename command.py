@@ -13,4 +13,4 @@ commandRejectCitrixSpp = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&sin
 commandBidRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425606'"
 commandProblemRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425667'"
 commandSettingsRemote = "Start-Process https://confluence.sogaz.ru/pages/viewpage.action?pageId=269212220"
-commandIBConfluence = "Start-Process 'https://confluence.sogaz.ru/spaces/viewspace.action?key=Processes"
+commandIBConfluence = r"Start-Process https://confluence.sogaz.ru/spaces/viewspace.action?key=Processes"
