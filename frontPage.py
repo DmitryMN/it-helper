@@ -11,7 +11,7 @@ from mail_utils import send_mail, reboot_information
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
                     comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
                      comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
-                     commandProblemRemote, commandSettingsRemote, commandIBConfluence)
+                     commandProblemRemote, commandSettingsRemote, commandIBConfluence, commandProblemScanPrint)
 
 icon_filename = os.path.join(
     os.path.dirname(__file__), "icon\logo_main.ico"
@@ -58,6 +58,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.connectPrintBtn.clicked.connect(self.helpAddnewPrinterSpp)
         self.myPrintersPrintBtn.clicked.connect(self.viewMyPrinter)
         self.addPrinterPrintBtn.clicked.connect(self.addPrinter)
+        self.problemScanPrintBtn.clicked.connect(self.problem_scan_print)
         #button documentum
         self.javaDocumentBtn.clicked.connect(self.clear_java_cache)
         self.citrixDocumentBtn.clicked.connect(self.rerun_citrix)
@@ -171,6 +172,9 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         else:
             print("Name pc is absent")
 
+    def problem_scan_print(self):
+        run_command(commandProblemScanPrint)
+
     #handler documentum,1C page
     def clear_java_cache(self):
         run_command("Get-Process java -ErrorAction SilentlyContinue | Stop-Process -Force")
@@ -195,7 +199,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     # handler phishing page
     def send_mail_ib(self):
-        send_mail(self.login, 'inc@sogaz.ru')
+        send_mail(self.login, 'inc@sogaz.ru', 'Письмо по теме ИБ')
 
     def teach_course_ib(self):
         run_command(commandIBConfluence)
@@ -206,7 +210,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def link_problem_vpn(self):
         run_command(commandProblemRemote)
     def refresh_vpn(self):
-        send_mail(self.login, 'help@sogaz.ru')
+        send_mail(self.login, 'help@sogaz.ru', 'Сброс 2 фактора')
     def settings_vpn(self):
         run_command(commandSettingsRemote)
 

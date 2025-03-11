@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacejmaReS.ui'
+## Form generated from reading UI file 'interfaceTNnYwe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -11,8 +11,7 @@
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect, QSize, Qt)
 from PySide6.QtGui import (QCursor, QFont, QIcon, QPixmap)
 from PySide6.QtWidgets import (QFrame, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QStackedWidget,
-    QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
 
 import resources_rc
 
@@ -102,11 +101,36 @@ class Ui_MainWindow(object):
         self.Title.setStyleSheet(u"")
         self.informationField = QLabel(self.header)
         self.informationField.setObjectName(u"informationField")
-        self.informationField.setGeometry(QRect(250, 40, 521, 22))
+        self.informationField.setGeometry(QRect(230, 40, 461, 22))
         font1 = QFont()
         font1.setPointSize(14)
         self.informationField.setFont(font1)
         self.informationField.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
+        self.informationField.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_30 = QLabel(self.header)
+        self.label_30.setObjectName(u"label_30")
+        self.label_30.setGeometry(QRect(750, 10, 81, 22))
+        font2 = QFont()
+        font2.setPointSize(10)
+        font2.setWeight(QFont.DemiBold)
+        self.label_30.setFont(font2)
+        self.label_30.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+"font-weight: 600;")
+        self.label_30.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_30.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.label_31 = QLabel(self.header)
+        self.label_31.setObjectName(u"label_31")
+        self.label_31.setGeometry(QRect(720, 10, 24, 24))
+        self.label_31.setPixmap(QPixmap(u":/icons/icons/phone-call.svg"))
+        self.label_31.setScaledContents(True)
+        self.label_32 = QLabel(self.header)
+        self.label_32.setObjectName(u"label_32")
+        self.label_32.setGeometry(QRect(730, 40, 101, 22))
+        self.label_32.setFont(font2)
+        self.label_32.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
+"font-weight: 600;")
+        self.label_32.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_32.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
 
         self.verticalLayout.addWidget(self.header)
 
@@ -144,9 +168,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.failureBtn = QPushButton(self.frame)
         self.failureBtn.setObjectName(u"failureBtn")
-        font2 = QFont()
-        font2.setPointSize(10)
-        self.failureBtn.setFont(font2)
+        font3 = QFont()
+        font3.setPointSize(10)
+        self.failureBtn.setFont(font3)
         self.failureBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.failureBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -162,7 +186,7 @@ class Ui_MainWindow(object):
 
         self.mailBtn = QPushButton(self.frame)
         self.mailBtn.setObjectName(u"mailBtn")
-        self.mailBtn.setFont(font2)
+        self.mailBtn.setFont(font3)
         self.mailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.mailBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -178,7 +202,7 @@ class Ui_MainWindow(object):
 
         self.browserBtn = QPushButton(self.frame)
         self.browserBtn.setObjectName(u"browserBtn")
-        self.browserBtn.setFont(font2)
+        self.browserBtn.setFont(font3)
         self.browserBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.browserBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -194,7 +218,7 @@ class Ui_MainWindow(object):
 
         self.printBtn = QPushButton(self.frame)
         self.printBtn.setObjectName(u"printBtn")
-        self.printBtn.setFont(font2)
+        self.printBtn.setFont(font3)
         self.printBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.printBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -212,7 +236,7 @@ class Ui_MainWindow(object):
         self.documentBtn.setObjectName(u"documentBtn")
         self.documentBtn.setMinimumSize(QSize(0, 0))
         self.documentBtn.setMaximumSize(QSize(16777215, 16777215))
-        self.documentBtn.setFont(font2)
+        self.documentBtn.setFont(font3)
         self.documentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.documentBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -228,7 +252,7 @@ class Ui_MainWindow(object):
 
         self.phishingBtn = QPushButton(self.frame)
         self.phishingBtn.setObjectName(u"phishingBtn")
-        self.phishingBtn.setFont(font2)
+        self.phishingBtn.setFont(font3)
         self.phishingBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.phishingBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -244,7 +268,7 @@ class Ui_MainWindow(object):
 
         self.vpnBtn = QPushButton(self.frame)
         self.vpnBtn.setObjectName(u"vpnBtn")
-        self.vpnBtn.setFont(font2)
+        self.vpnBtn.setFont(font3)
         self.vpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.vpnBtn.setStyleSheet(u"QPushButton:hover {\n"
 "font-size: 15px; \n"
@@ -307,10 +331,10 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.widget_2)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(30, 0, 141, 24))
-        font3 = QFont()
-        font3.setPointSize(14)
-        font3.setWeight(QFont.DemiBold)
-        self.label_2.setFont(font3)
+        font4 = QFont()
+        font4.setPointSize(14)
+        font4.setWeight(QFont.DemiBold)
+        self.label_2.setFont(font4)
         self.label_2.setToolTipDuration(-1)
         self.label_2.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -329,10 +353,10 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
         self.label_3.setSizePolicy(sizePolicy2)
-        font4 = QFont()
-        font4.setPointSize(12)
-        font4.setBold(False)
-        self.label_3.setFont(font4)
+        font5 = QFont()
+        font5.setPointSize(12)
+        font5.setBold(False)
+        self.label_3.setFont(font5)
         self.label_3.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;\n"
 "padding-left: 35;")
@@ -361,7 +385,7 @@ class Ui_MainWindow(object):
         self.clearCashePcBtn = QPushButton(self.sectionButtonPc)
         self.clearCashePcBtn.setObjectName(u"clearCashePcBtn")
         self.clearCashePcBtn.setMaximumSize(QSize(16777215, 115))
-        self.clearCashePcBtn.setFont(font2)
+        self.clearCashePcBtn.setFont(font3)
         self.clearCashePcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.clearCashePcBtn.setStyleSheet(u"")
         icon7 = QIcon()
@@ -374,7 +398,7 @@ class Ui_MainWindow(object):
         self.openDownloadPcBtn = QPushButton(self.sectionButtonPc)
         self.openDownloadPcBtn.setObjectName(u"openDownloadPcBtn")
         self.openDownloadPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.openDownloadPcBtn.setFont(font2)
+        self.openDownloadPcBtn.setFont(font3)
         self.openDownloadPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openDownloadPcBtn.setToolTipDuration(-2)
         icon8 = QIcon()
@@ -387,7 +411,7 @@ class Ui_MainWindow(object):
         self.openRecycleFolderPcBtn = QPushButton(self.sectionButtonPc)
         self.openRecycleFolderPcBtn.setObjectName(u"openRecycleFolderPcBtn")
         self.openRecycleFolderPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.openRecycleFolderPcBtn.setFont(font2)
+        self.openRecycleFolderPcBtn.setFont(font3)
         self.openRecycleFolderPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openRecycleFolderPcBtn.setToolTipDuration(-3)
         icon9 = QIcon()
@@ -400,7 +424,7 @@ class Ui_MainWindow(object):
         self.problemSppPcBtn = QPushButton(self.sectionButtonPc)
         self.problemSppPcBtn.setObjectName(u"problemSppPcBtn")
         self.problemSppPcBtn.setMaximumSize(QSize(16777215, 115))
-        self.problemSppPcBtn.setFont(font2)
+        self.problemSppPcBtn.setFont(font3)
         self.problemSppPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon10 = QIcon()
         icon10.addFile(u":/icons/icons/headset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -438,9 +462,9 @@ class Ui_MainWindow(object):
         self.label_10.setGeometry(QRect(0, 0, 621, 61))
         sizePolicy2.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
         self.label_10.setSizePolicy(sizePolicy2)
-        font5 = QFont()
-        font5.setPointSize(12)
-        self.label_10.setFont(font5)
+        font6 = QFont()
+        font6.setPointSize(12)
+        self.label_10.setFont(font6)
         self.label_10.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_10.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -459,7 +483,7 @@ class Ui_MainWindow(object):
         self.label_12 = QLabel(self.widget_8)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(40, 0, 281, 24))
-        self.label_12.setFont(font3)
+        self.label_12.setFont(font4)
         self.label_12.setToolTipDuration(-1)
         self.label_12.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -484,7 +508,7 @@ class Ui_MainWindow(object):
         self.addPrinterPrintBtn = QPushButton(self.sectionButtonPrint)
         self.addPrinterPrintBtn.setObjectName(u"addPrinterPrintBtn")
         self.addPrinterPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.addPrinterPrintBtn.setFont(font2)
+        self.addPrinterPrintBtn.setFont(font3)
         self.addPrinterPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon11 = QIcon()
         icon11.addFile(u":/icons/icons/square-rounded-plus.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -496,7 +520,7 @@ class Ui_MainWindow(object):
         self.myPrintersPrintBtn = QPushButton(self.sectionButtonPrint)
         self.myPrintersPrintBtn.setObjectName(u"myPrintersPrintBtn")
         self.myPrintersPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.myPrintersPrintBtn.setFont(font2)
+        self.myPrintersPrintBtn.setFont(font3)
         self.myPrintersPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.myPrintersPrintBtn.setIcon(icon3)
         self.myPrintersPrintBtn.setIconSize(QSize(20, 20))
@@ -506,7 +530,7 @@ class Ui_MainWindow(object):
         self.cartridgePrintBtn = QPushButton(self.sectionButtonPrint)
         self.cartridgePrintBtn.setObjectName(u"cartridgePrintBtn")
         self.cartridgePrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.cartridgePrintBtn.setFont(font2)
+        self.cartridgePrintBtn.setFont(font3)
         self.cartridgePrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.cartridgePrintBtn.setIcon(icon10)
         self.cartridgePrintBtn.setIconSize(QSize(20, 20))
@@ -516,7 +540,7 @@ class Ui_MainWindow(object):
         self.connectPrintBtn = QPushButton(self.sectionButtonPrint)
         self.connectPrintBtn.setObjectName(u"connectPrintBtn")
         self.connectPrintBtn.setMaximumSize(QSize(16777215, 115))
-        self.connectPrintBtn.setFont(font2)
+        self.connectPrintBtn.setFont(font3)
         self.connectPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.connectPrintBtn.setIcon(icon10)
         self.connectPrintBtn.setIconSize(QSize(20, 20))
@@ -528,6 +552,25 @@ class Ui_MainWindow(object):
 
         self.sectionQuestionPrint = QWidget(self.mainSectionPrint)
         self.sectionQuestionPrint.setObjectName(u"sectionQuestionPrint")
+        self.sectionQuestionPrint.setMaximumSize(QSize(16777215, 115))
+        self.sectionQuestionPrint.setStyleSheet(u"#sectionQuestionPrint > QPushButton {\n"
+"border: 1px solid rgba(21, 33, 73, 0.1);\n"
+"text-align: center;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"#sectionQuestionPrint > QPushButton:hover {\n"
+"background-color: rgba(26, 51, 115, 0.05);\n"
+"color: rgba(21, 33, 73, 1);\n"
+"}")
+        self.problemScanPrintBtn = QPushButton(self.sectionQuestionPrint)
+        self.problemScanPrintBtn.setObjectName(u"problemScanPrintBtn")
+        self.problemScanPrintBtn.setGeometry(QRect(0, 0, 159, 115))
+        self.problemScanPrintBtn.setMaximumSize(QSize(16777215, 115))
+        self.problemScanPrintBtn.setFont(font3)
+        self.problemScanPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.problemScanPrintBtn.setIcon(icon10)
+        self.problemScanPrintBtn.setIconSize(QSize(20, 20))
 
         self.verticalLayout_7.addWidget(self.sectionQuestionPrint)
 
@@ -563,7 +606,7 @@ class Ui_MainWindow(object):
         self.label_14 = QLabel(self.widget_9)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(30, 0, 591, 24))
-        self.label_14.setFont(font4)
+        self.label_14.setFont(font5)
         self.label_14.setToolTipDuration(-1)
         self.label_14.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "")
@@ -584,7 +627,7 @@ class Ui_MainWindow(object):
         self.label_16 = QLabel(self.widget_10)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(30, 0, 581, 51))
-        self.label_16.setFont(font4)
+        self.label_16.setFont(font5)
         self.label_16.setToolTipDuration(-1)
         self.label_16.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
 
@@ -667,7 +710,7 @@ class Ui_MainWindow(object):
         self.label_18 = QLabel(self.widget_11)
         self.label_18.setObjectName(u"label_18")
         self.label_18.setGeometry(QRect(40, 0, 491, 24))
-        self.label_18.setFont(font3)
+        self.label_18.setFont(font4)
         self.label_18.setToolTipDuration(-1)
         self.label_18.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -679,16 +722,16 @@ class Ui_MainWindow(object):
         self.label_19 = QLabel(self.frame_12)
         self.label_19.setObjectName(u"label_19")
         self.label_19.setGeometry(QRect(10, 0, 311, 44))
-        self.label_19.setFont(font5)
+        self.label_19.setFont(font6)
         self.label_20 = QLabel(self.frame_12)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setGeometry(QRect(10, 40, 266, 24))
-        self.label_20.setFont(font5)
+        self.label_20.setFont(font6)
         self.label_20.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.label_21 = QLabel(self.frame_12)
         self.label_21.setObjectName(u"label_21")
         self.label_21.setGeometry(QRect(280, 40, 99, 24))
-        self.label_21.setFont(font5)
+        self.label_21.setFont(font6)
         self.label_21.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
         self.label_21.setFrameShape(QFrame.Shape.NoFrame)
         self.label_21.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -784,14 +827,14 @@ class Ui_MainWindow(object):
         self.label_23 = QLabel(self.widget_12)
         self.label_23.setObjectName(u"label_23")
         self.label_23.setGeometry(QRect(40, 10, 281, 24))
-        self.label_23.setFont(font3)
+        self.label_23.setFont(font4)
         self.label_23.setToolTipDuration(-1)
         self.label_23.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_24 = QLabel(self.firtsTitleVpn)
         self.label_24.setObjectName(u"label_24")
         self.label_24.setGeometry(QRect(40, 40, 581, 43))
-        self.label_24.setFont(font5)
+        self.label_24.setFont(font6)
         self.secondTitleVpn = QWidget(self.sectionTittleVpn)
         self.secondTitleVpn.setObjectName(u"secondTitleVpn")
         self.secondTitleVpn.setGeometry(QRect(0, 100, 650, 113))
@@ -811,14 +854,14 @@ class Ui_MainWindow(object):
         self.label_26 = QLabel(self.widget_13)
         self.label_26.setObjectName(u"label_26")
         self.label_26.setGeometry(QRect(40, 10, 281, 24))
-        self.label_26.setFont(font3)
+        self.label_26.setFont(font4)
         self.label_26.setToolTipDuration(-1)
         self.label_26.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_27 = QLabel(self.secondTitleVpn)
         self.label_27.setObjectName(u"label_27")
         self.label_27.setGeometry(QRect(40, 40, 611, 65))
-        self.label_27.setFont(font5)
+        self.label_27.setFont(font6)
         self.label_27.setStyleSheet(u"")
 
         self.verticalLayout_6.addWidget(self.sectionTittleVpn)
@@ -842,7 +885,7 @@ class Ui_MainWindow(object):
         self.bidRemoteVpnBtn = QPushButton(self.sectionButtonVpn)
         self.bidRemoteVpnBtn.setObjectName(u"bidRemoteVpnBtn")
         self.bidRemoteVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.bidRemoteVpnBtn.setFont(font2)
+        self.bidRemoteVpnBtn.setFont(font3)
         self.bidRemoteVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.bidRemoteVpnBtn.setIcon(icon10)
         self.bidRemoteVpnBtn.setIconSize(QSize(20, 20))
@@ -852,7 +895,7 @@ class Ui_MainWindow(object):
         self.problemVpnBtn = QPushButton(self.sectionButtonVpn)
         self.problemVpnBtn.setObjectName(u"problemVpnBtn")
         self.problemVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.problemVpnBtn.setFont(font2)
+        self.problemVpnBtn.setFont(font3)
         self.problemVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.problemVpnBtn.setIcon(icon10)
         self.problemVpnBtn.setIconSize(QSize(20, 20))
@@ -862,7 +905,7 @@ class Ui_MainWindow(object):
         self.refreshVpnBtn = QPushButton(self.sectionButtonVpn)
         self.refreshVpnBtn.setObjectName(u"refreshVpnBtn")
         self.refreshVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.refreshVpnBtn.setFont(font2)
+        self.refreshVpnBtn.setFont(font3)
         self.refreshVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon14 = QIcon()
         icon14.addFile(u":/icons/icons/password.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -874,7 +917,7 @@ class Ui_MainWindow(object):
         self.settingVpnBtn = QPushButton(self.sectionButtonVpn)
         self.settingVpnBtn.setObjectName(u"settingVpnBtn")
         self.settingVpnBtn.setMaximumSize(QSize(16777215, 115))
-        self.settingVpnBtn.setFont(font2)
+        self.settingVpnBtn.setFont(font3)
         self.settingVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon15 = QIcon()
         icon15.addFile(u":/icons/icons/device-desktop-share.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -921,7 +964,7 @@ class Ui_MainWindow(object):
         self.label_8 = QLabel(self.widget_5)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(30, 0, 141, 20))
-        self.label_8.setFont(font3)
+        self.label_8.setFont(font4)
         self.label_8.setToolTipDuration(-1)
         self.label_8.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -935,7 +978,7 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QRect(-10, 0, 591, 24))
         sizePolicy2.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
         self.label_9.setSizePolicy(sizePolicy2)
-        self.label_9.setFont(font5)
+        self.label_9.setFont(font6)
         self.label_9.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_9.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -1033,7 +1076,7 @@ class Ui_MainWindow(object):
         self.label_6 = QLabel(self.widget_4)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(30, 0, 491, 24))
-        self.label_6.setFont(font4)
+        self.label_6.setFont(font5)
         self.label_6.setToolTipDuration(-1)
         self.label_6.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;")
@@ -1062,7 +1105,7 @@ class Ui_MainWindow(object):
         self.securityOutMailBtn = QPushButton(self.sectionButtonMail)
         self.securityOutMailBtn.setObjectName(u"securityOutMailBtn")
         self.securityOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.securityOutMailBtn.setFont(font2)
+        self.securityOutMailBtn.setFont(font3)
         self.securityOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon19 = QIcon()
         icon19.addFile(u":/icons/icons/mail-exclamation.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1074,7 +1117,7 @@ class Ui_MainWindow(object):
         self.runOutMailBtn = QPushButton(self.sectionButtonMail)
         self.runOutMailBtn.setObjectName(u"runOutMailBtn")
         self.runOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.runOutMailBtn.setFont(font2)
+        self.runOutMailBtn.setFont(font3)
         self.runOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.runOutMailBtn.setStyleSheet(u"")
         self.runOutMailBtn.setIcon(icon1)
@@ -1085,7 +1128,7 @@ class Ui_MainWindow(object):
         self.fixOutMailBtn = QPushButton(self.sectionButtonMail)
         self.fixOutMailBtn.setObjectName(u"fixOutMailBtn")
         self.fixOutMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.fixOutMailBtn.setFont(font2)
+        self.fixOutMailBtn.setFont(font3)
         self.fixOutMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon20 = QIcon()
         icon20.addFile(u":/icons/icons/photo-x.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1098,7 +1141,7 @@ class Ui_MainWindow(object):
         self.signatureMailBtn.setObjectName(u"signatureMailBtn")
         self.signatureMailBtn.setMinimumSize(QSize(0, 0))
         self.signatureMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.signatureMailBtn.setFont(font2)
+        self.signatureMailBtn.setFont(font3)
         self.signatureMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         icon21 = QIcon()
         icon21.addFile(u":/icons/icons/signature.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1173,28 +1216,25 @@ class Ui_MainWindow(object):
         self.userLabelBottom.setGeometry(QRect(40, 20, 21, 21))
         self.userLabelBottom.setMinimumSize(QSize(0, 0))
         self.userLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.userLabelBottom.setFont(font2)
+        self.userLabelBottom.setFont(font3)
         self.userLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.userLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.userBottom = QLabel(self.blockInformation)
         self.userBottom.setObjectName(u"userBottom")
         self.userBottom.setGeometry(QRect(59, 20, 167, 22))
         self.userBottom.setMaximumSize(QSize(16777215, 16777215))
-        font6 = QFont()
-        font6.setPointSize(10)
-        font6.setWeight(QFont.DemiBold)
-        self.userBottom.setFont(font6)
+        self.userBottom.setFont(font2)
         self.userBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.userBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.userBottom.setMargin(0)
         self.userBottom.setIndent(7)
-        self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.pcLabelBottom = QLabel(self.blockInformation)
         self.pcLabelBottom.setObjectName(u"pcLabelBottom")
         self.pcLabelBottom.setGeometry(QRect(230, 20, 24, 20))
         self.pcLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.pcLabelBottom.setFont(font2)
+        self.pcLabelBottom.setFont(font3)
         self.pcLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.pcLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.pcLabelBottom.setMargin(0)
@@ -1202,29 +1242,29 @@ class Ui_MainWindow(object):
         self.pcNameBottom.setObjectName(u"pcNameBottom")
         self.pcNameBottom.setGeometry(QRect(250, 20, 121, 22))
         self.pcNameBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.pcNameBottom.setFont(font6)
+        self.pcNameBottom.setFont(font2)
         self.pcNameBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.pcNameBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.pcNameBottom.setIndent(7)
-        self.pcNameBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.pcNameBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.ipLabelBottom = QLabel(self.blockInformation)
         self.ipLabelBottom.setObjectName(u"ipLabelBottom")
         self.ipLabelBottom.setGeometry(QRect(370, 20, 61, 20))
         self.ipLabelBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.ipLabelBottom.setFont(font2)
+        self.ipLabelBottom.setFont(font3)
         self.ipLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.ipLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.ipBottom = QLabel(self.blockInformation)
         self.ipBottom.setObjectName(u"ipBottom")
         self.ipBottom.setGeometry(QRect(430, 20, 111, 22))
         self.ipBottom.setMaximumSize(QSize(16777215, 16777215))
-        self.ipBottom.setFont(font6)
+        self.ipBottom.setFont(font2)
         self.ipBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.ipBottom.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.ipBottom.setIndent(7)
-        self.ipBottom.setTextInteractionFlags(Qt.TextInteractionFlag.LinksAccessibleByMouse|Qt.TextInteractionFlag.TextSelectableByKeyboard|Qt.TextInteractionFlag.TextSelectableByMouse)
+        self.ipBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.label_28 = QLabel(self.blockInformation)
         self.label_28.setObjectName(u"label_28")
         self.label_28.setGeometry(QRect(10, 50, 24, 24))
@@ -1234,11 +1274,13 @@ class Ui_MainWindow(object):
         self.label_29.setObjectName(u"label_29")
         self.label_29.setGeometry(QRect(40, 50, 241, 22))
         self.label_29.setFont(font2)
-        self.label_29.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
+        self.label_29.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
         self.reloadInformation = QLabel(self.blockInformation)
         self.reloadInformation.setObjectName(u"reloadInformation")
         self.reloadInformation.setGeometry(QRect(290, 50, 121, 22))
-        self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
+        self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
 
         self.horizontalLayout_10.addWidget(self.blockInfoBottom)
 
@@ -1290,6 +1332,9 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.Title.setText(QCoreApplication.translate("MainWindow", u"IT-\u041f\u043e\u043c\u043e\u0449\u043d\u0438\u043a", None))
         self.informationField.setText("")
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"700002-911", None))
+        self.label_31.setText("")
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"8(495)739-21-41", None))
         self.failureBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0431\u043e\u0439 \u041f\u041a", None))
         self.mailBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0447\u0442\u0430", None))
         self.browserBtn.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0440\u0430\u0443\u0437\u0435\u0440", None))
@@ -1301,6 +1346,9 @@ class Ui_MainWindow(object):
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0439\u0442\u0435", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0438\u043e\u0434\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044c \u041f\u041a \u0434\u043b\u044f \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0438\u00a0\u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f\n"
 "\u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a", None))
+#if QT_CONFIG(tooltip)
+        self.clearCashePcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 \u041f\u041a, \u043d\u0435 \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u041a\u042d\u0428\u0430 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.clearCashePcBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u041a\u044d\u0448", None))
 #if QT_CONFIG(tooltip)
         self.openDownloadPcBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0438\u0442\u0435 \u0438\u0437 \u043d\u0435\u0435 \u0432\u0441\u0435 \u0442\u043e \u0447\u0442\u043e \u0432\u0430\u043c \u043d\u0435 \u043d\u0430\u0434\u043e</p></body></html>", None))
@@ -1319,23 +1367,50 @@ class Ui_MainWindow(object):
 "\u0415\u0441\u043b\u0438 \u0441\u043f\u0438\u0441\u043e\u043a \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u043e\u0432 \u043d\u0435 \u043e\u0442\u043a\u0440\u044b\u043b\u0441\u044f, \u043e\u0444\u043e\u0440\u043c\u0438\u0442\u0435 \u0437\u0430\u044f\u0432\u043a\u0443 \u0432 \u0421\u041f\u041f", None))
         self.label_11.setText("")
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u044f\u0432\u043a\u0438 \u0432 \u0421\u041f\u041f", None))
+#if QT_CONFIG(tooltip)
+        self.addPrinterPrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0412\u044b\u0431\u0438\u0440\u0438\u0442\u0435 \u0438\u0437 \u043e\u0442\u043a\u0440\u044b\u0432\u0448\u0435\u0433\u043e\u0441\u044f \u0441\u043f\u0438\u0441\u043a\u0430 \u043d\u0443\u0436\u043d\u044b\u0439, \u0434\u0432\u043e\u0439\u043d\u044b\u043c \u043a\u043b\u0438\u043a\u043e\u043c \u043c\u044b\u0448\u043a\u0438</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.addPrinterPrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439\n"
 "\u043f\u0440\u0438\u043d\u0442\u0435\u0440", None))
+#if QT_CONFIG(tooltip)
+        self.myPrintersPrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u043f\u0438\u0441\u043e\u043a \u0432\u0430\u0448\u0438\u0445 \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u043e\u0432. \u0415\u0441\u043b\u0438 \u043d\u0430\u0434\u043e \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u043d\u0435\u043d\u0443\u0436\u043d\u044b\u0439, \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043f\u0440\u0430\u0432\u043e\u0439 \u043a\u043d\u043e\u043f\u043a\u043e\u0439 \u043c\u044b\u0448\u043a\u0438 \u0438 \u0432\u044b\u0431\u0438\u0440\u0438\u0442\u0435 '\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e'</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.myPrintersPrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u041c\u043e\u0438 \n"
 "\u043f\u0440\u0438\u043d\u0442\u0435\u0440\u044b", None))
+#if QT_CONFIG(tooltip)
+        self.cartridgePrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u0417\u0430\u043c\u0435\u043d\u0430 \u043a\u0430\u0440\u0442\u0440\u0438\u0434\u0436\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.cartridgePrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u0437\u0430\u043c\u0435\u043d\u0430\n"
 "\u043a\u0430\u0440\u0442\u0440\u0438\u0434\u0436\u0430", None))
+#if QT_CONFIG(tooltip)
+        self.connectPrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0441\u0435\u0442\u0435\u0432\u043e\u0433\u043e \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.connectPrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435\n"
 "\u0441\u0435\u0442\u0435\u0432\u043e\u0433\u043e \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u0430", None))
+#if QT_CONFIG(tooltip)
+        self.problemScanPrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u0441 \u043f\u0435\u0447\u0430\u0442\u044c\u044e \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435\u043c</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.problemScanPrintBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430\n"
+"\u0441 \u043f\u0435\u0447\u0430\u0442\u044c\u044e\n"
+"\u0438 \u0441\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435\u043c", None))
         self.label_13.setText("")
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0415\u0441\u043b\u0438 \u043d\u0435 \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b, \u0442\u043e \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043c\u043e\u0447\u044c \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u043a\u044d\u0448\u0430 JAVA", None))
         self.label_15.setText("")
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0439\u0442\u0435, \u0415\u0441\u043b\u0438 1\u0421 \u0441\u0442\u0430\u043b \u043d\u0435\u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c, \u0432 \u0442.\u0447. \u0437\u0430\u0432\u0438\u0441\u0430\u0442\u044c, \n"
 "\u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0435 CITRIX ", None))
+#if QT_CONFIG(tooltip)
+        self.javaDocumentBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041a\u043d\u043e\u043f\u043a\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u041e\u0447\u0438\u0441\u0442\u043a\u0443 \u041a\u042d\u0428\u0430 JAVA \u0438 \u041a\u042d\u0428 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 EDGE</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.javaDocumentBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u043a\u044d\u0448 JAVA\n"
 "\u0438 \u0411\u0440\u0430\u0443\u0437\u0435\u0440\u0430 EDGE", None))
+#if QT_CONFIG(tooltip)
+        self.citrixDocumentBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041a\u043d\u043e\u043f\u043a\u0430 \u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0435\u0442 CITRIX</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.citrixDocumentBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u043a CITRIX\n"
 "\u0434\u043b\u044f 1\u0421", None))
+#if QT_CONFIG(tooltip)
+        self.clearCitrixDocumentBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>C\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0421\u041f\u041f \u043f\u043e \u0441\u0431\u0440\u043e\u0441\u0443 \u0441\u0435\u0441\u0441\u0438\u0438 CITRIX \u0432\u0440\u0443\u0447\u043d\u0443\u044e</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.clearCitrixDocumentBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f \u2014 \u0421\u0431\u0440\u043e\u0441 \u0441\u0435\u0441\u0441\u0438\u0438\n"
 "1\u0421 CITRIX ", None))
         self.label_17.setText("")
@@ -1347,8 +1422,14 @@ class Ui_MainWindow(object):
         self.label_21.setAccessibleDescription(QCoreApplication.translate("MainWindow", u"<a>inc@sogaz.ru</a>", None))
 #endif // QT_CONFIG(accessibility)
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"inc@sogaz.ru", None))
+#if QT_CONFIG(tooltip)
+        self.reportIbPhishingBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u0434\u043b\u044f \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u043f\u0438\u0441\u044c\u043c\u0430 \u043d\u0430 \u0430\u0434\u0440\u0435\u0441 \u0418\u0411</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.reportIbPhishingBtn.setText(QCoreApplication.translate("MainWindow", u"C\u043e\u043e\u0431\u0449\u0438\u0442\u044c\n"
 "\u0432 \u0418\u0411", None))
+#if QT_CONFIG(tooltip)
+        self.teachIbCorsePhishingBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u0418\u0411</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.teachIbCorsePhishingBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c\n"
 " \u0410\u041e \"\u0421\u041e\u0413\u0410\u0417\"", None))
         self.label_22.setText("")
@@ -1359,33 +1440,66 @@ class Ui_MainWindow(object):
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0442\u043e\u043b\u044c\u043a\u043e \u043f\u043e\u0441\u043b\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u0438\u044f \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044f.\n"
 "\u0414\u0432\u0443\u0445\u0444\u0430\u043a\u0442\u043e\u0440\u043d\u0443\u044e \u0430\u0443\u0442\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044e (\u0432\u0442\u043e\u0440\u043e\u0439 \u0444\u0430\u043a\u0442\u043e\u0440) \u043d\u0430\u0441\u0442\u0440\u043e\u0438\u0442\u044c \u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0432 \u043e\u0444\u0438\u0441\u0435!\n"
 "\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0432 \u0440\u0435\u0448\u0435\u043d\u0438\u0438 \u043f\u043e \u0437\u0430\u044f\u0432\u043a\u0435 \u0438 \u043d\u0438\u0436\u0435 \u043f\u043e \u043a\u043d\u043e\u043f\u043a\u0435", None))
+#if QT_CONFIG(tooltip)
+        self.bidRemoteVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u0443\u0434\u0430\u043b\u0435\u043d\u043a\u0430 \u0438 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.bidRemoteVpnBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u0417\u0430\u044f\u0432\u043a\u0430 \u043d\u0430\n"
 " \u0443\u0434\u0430\u043b\u0451\u043d\u043d\u044b\u0439 \u0434\u043e\u0441\u0442\u0443\u043f", None))
+#if QT_CONFIG(tooltip)
+        self.problemVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u0441 \u0443\u0434\u0430\u043b\u0435\u043d\u043a\u043e\u0439</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.problemVpnBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u043d\u0430\n"
 "\u0443\u0434\u0430\u043b\u0451\u043d\u043a\u0435", None))
+#if QT_CONFIG(tooltip)
+        self.refreshVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0444\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043f\u0438\u0441\u044c\u043c\u043e \u043d\u0430 \u0430\u0434\u0440\u0435\u0441 \u0421\u041f\u041f \u0434\u043b\u044f \u0441\u0431\u0440\u043e\u0441\u0430 2 \u0444\u0430\u043a\u0442\u043e\u0440\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.refreshVpnBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0431\u0440\u043e\u0441 \u0432\u0442\u043e\u0440\u043e\u0433\u043e \n"
 "\u0444\u0430\u043a\u0442\u043e\u0440\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438", None))
+#if QT_CONFIG(tooltip)
+        self.settingVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\u043c\u0438 \u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u0433\u043e \u0434\u043e\u0441\u0442\u0443\u043f\u0430</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.settingVpnBtn.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0443\u0434\u0430\u043b\u0451\u043d\u043d\u043e\u0433\u043e \n"
 "\u0434\u043e\u0441\u0442\u0443\u043f\u0430", None))
         self.label_7.setText("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"\u0427\u0438\u0441\u0442\u0438\u0442\u0435 \u043a\u044d\u0448", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043b\u044f \u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430", None))
+#if QT_CONFIG(tooltip)
+        self.edgeBrowserBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043a\u044d\u0448\u0430 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 EDGE, \u0435\u0441\u043b\u0438 \u043d\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0444\u0430\u0439\u043b\u044b \u0438\u043b\u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b. \u0411\u0440\u0430\u0443\u0437\u0435\u0440 \u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0441\u044f \u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0438\u0442 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0432\u043a\u043b\u0430\u0434\u043a\u0438</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.edgeBrowserBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u2028\u043a\u044d\u0448 EDGE", None))
+#if QT_CONFIG(tooltip)
+        self.firefoxBrowserBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043a\u044d\u0448\u0430 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 FireFox, \u0435\u0441\u043b\u0438 \u043d\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0444\u0430\u0439\u043b\u044b \u0438\u043b\u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b. \u0411\u0440\u0430\u0443\u0437\u0435\u0440 \u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0441\u044f \u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0438\u0442 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0432\u043a\u043b\u0430\u0434\u043a\u0438</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.firefoxBrowserBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u2028\u043a\u044d\u0448 FireFox", None))
+#if QT_CONFIG(tooltip)
+        self.yandexBrowserBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043a\u044d\u0448\u0430 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 Yandex, \u0435\u0441\u043b\u0438 \u043d\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0444\u0430\u0439\u043b\u044b \u0438\u043b\u0438 \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u044e\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b. \u0411\u0440\u0430\u0443\u0437\u0435\u0440 \u043f\u0435\u0440\u0435\u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u0441\u044f \u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0438\u0442 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0432\u043a\u043b\u0430\u0434\u043a\u0438</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.yandexBrowserBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u2028\u043a\u044d\u0448 Yandex Browser", None))
         self.label_5.setText("")
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0432\u0435\u0434\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443, \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0447\u0438\u0442\u0430\u0442\u044c \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435", None))
 #if QT_CONFIG(tooltip)
-        self.securityOutMailBtn.setToolTip("")
+        self.securityOutMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0415\u0441\u043b\u0438 \u043f\u043e\u0447\u0442\u0430 \u043f\u0435\u0440\u0435\u0441\u0442\u0430\u043b\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c\u0441\u044f \u0438\u043b\u0438 \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u043b\u0430\u0441\u044c \u0441 \u043e\u0448\u0438\u0431\u043a\u0430\u043c\u0438. \u041f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u043d\u0430\u0436\u0430\u0442\u044c \u041e\u041a</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.securityOutMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043f\u0443\u0441\u043a Outlook\n"
 "\u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435", None))
+#if QT_CONFIG(tooltip)
+        self.runOutMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435, \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442 Outlook \u0432 \u043e\u0431\u044b\u0447\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.runOutMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043f\u0443\u0441\u043a Outlook\n"
 "\u0432 \u043e\u0431\u044b\u0447\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435", None))
+#if QT_CONFIG(tooltip)
+        self.fixOutMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u042d\u0442\u0430 \u043a\u043d\u043e\u043f\u043a\u0430 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442 \u0432\u0438\u0434 \u043f\u043e\u0447\u0442\u044b \u043d\u0430 \u043f\u0435\u0440\u0432\u043e\u043d\u0430\u0447\u0430\u043b\u044c\u043d\u044b\u0439, \u043d\u043e \u0441\u043d\u0430\u0447\u0430\u043b\u0430 \u0437\u0430\u043a\u0440\u043e\u0439\u0442\u0435 Outlook</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.fixOutMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0447\u0438\u043d\u0438\u0442\u044c \u0432\u043d\u0435\u0448\u043d\u0438\u0439\n"
 "\u0432\u0438\u0434 Outlook", None))
+#if QT_CONFIG(tooltip)
+        self.signatureMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0435\u0439 \u0434\u043b\u044f \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u043f\u043e\u0434\u043f\u0438\u0441\u0438 \u0432 Outlook</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.signatureMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435\n"
 "\u043f\u043e\u0434\u043f\u0438\u0441\u0438", None))
+#if QT_CONFIG(tooltip)
+        self.sectionQuestionMail.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
         self.label_4.setText("")
         self.logoBottom.setText("")
         self.userLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0417:", None))

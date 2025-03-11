@@ -14,3 +14,4 @@ commandBidRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton
 commandProblemRemote = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425667'"
 commandSettingsRemote = "Start-Process https://confluence.sogaz.ru/pages/viewpage.action?pageId=269212220"
 commandIBConfluence = r"Start-Process https://confluence.sogaz.ru/spaces/viewspace.action?key=Processes"
+commandProblemScanPrint = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&singleton=3&guestlogin=1&tzo=1000&id=25425651'"

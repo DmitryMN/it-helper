@@ -5,11 +5,11 @@ import win32com.client as win32
 import datetime
 
 #create mail
-def create_mail(login, to):
+def create_mail(login, to, subject):
     outlook = win32.Dispatch('outlook.application')
     mail = outlook.CreateItem(0)
     mail.To = to
-    mail.Subject = f'Сброс 2 фактора от {login}'
+    mail.Subject = f'{subject} от {login}'
     mail.Display()
 #open outlook app
 def open_outlook(path):
@@ -31,18 +31,17 @@ def search_process_outlook():
 def search_outlook(path):
     return os.path.isfile(path)
 #send mail
-def send_mail(login, to):
+def send_mail(login, to, subject):
     path_64bit = r'C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE'
     path_32bit = r'C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE'
-    print(f'Send mail {login}')
     if search_process_outlook():
-        create_mail(login, to)
+        create_mail(login, to, subject)
     else:
         if search_outlook(path_64bit):
-            create_mail(login, to)
+            create_mail(login, to, subject)
             open_outlook(path_64bit)
         elif search_outlook(path_32bit):
-            create_mail(login, to)
+            create_mail(login, to, subject)
             open_outlook(path_32bit)
         else:
             print('Outlook is absent, install outlook')

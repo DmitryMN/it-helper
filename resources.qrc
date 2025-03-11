@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="icons">
     <file>icons/computer-err.svg</file>
+    <file>icons/phone-call.svg</file>
     <file>icons/circle-heart.svg</file>
     <file>icons/external-link.svg</file>
     <file>icons/settings.svg</file>
