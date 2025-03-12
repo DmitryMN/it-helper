@@ -3,6 +3,7 @@ import subprocess
 import psutil
 import win32com.client as win32
 import datetime
+from utils import find_directory
 
 #create mail
 def create_mail(login, to, subject):
@@ -27,9 +28,7 @@ def search_process_outlook():
             result = True
 
     return  result
-#search outlook
-def search_outlook(path):
-    return os.path.isfile(path)
+
 #send mail
 def send_mail(login, to, subject):
     path_64bit = r'C:\Program Files\Microsoft Office\Office16\OUTLOOK.EXE'
@@ -37,10 +36,10 @@ def send_mail(login, to, subject):
     if search_process_outlook():
         create_mail(login, to, subject)
     else:
-        if search_outlook(path_64bit):
+        if find_directory(path_64bit):
             create_mail(login, to, subject)
             open_outlook(path_64bit)
-        elif search_outlook(path_32bit):
+        elif find_directory(path_32bit):
             create_mail(login, to, subject)
             open_outlook(path_32bit)
         else:

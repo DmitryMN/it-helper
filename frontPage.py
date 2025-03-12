@@ -8,6 +8,7 @@ from clearFirefox import clear_firefox_local, clear_firefox_cookies
 from runCommand import run_command, run_lazy_command
 from addNewPrinter import add_new_printer
 from mail_utils import send_mail, reboot_information
+from utils import create_empty_file, create_folder, find_directory, get_path, logging
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
                     comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
                      comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
@@ -29,7 +30,10 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.hostName = socket.gethostname()
         #login
         self.login =os.getlogin()
-        #reload information
+        #ipaddr
+        self.ipaddr = socket.gethostbyname(self.hostName)
+        #file path
+        self.file_path = f'{self.hostName}.txt'
 
         #Connect buttons to switch to different page
         self.failureBtn.clicked.connect(self.switch_to_failure_pagePC)
@@ -76,9 +80,13 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.portalSppBtn.clicked.connect(self.link_PortalSpp)
         #get system information
         self.set_hostName(self.hostName)
-        self.set_IpAddress(self.hostName)
+        self.set_IpAddress(self.ipaddr)
         self.set_userName()
         self.set_reloadInformation()
+        #create folder and file
+        self.init_folder(self.file_path)
+        #start log
+        self.write_log('ithelper-start', self.login, self.hostName, self.ipaddr)
 
     #switch actions stackedWidget
     def switch_to_failure_pagePC(self):
@@ -100,9 +108,21 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def loader(self, text, time=1000):
         QTimer.singleShot(time, lambda: self.informationField.setText(text))
 
+    #create folder for loagging
+    def init_folder(self, file_name):
+        if not find_directory(get_path()):
+            create_folder(get_path())
+            create_empty_file(get_path(file_name))
+
+    # write log
+    def write_log(self, command, login, hostname, ip):
+        if find_directory(get_path(self.file_path)):
+            logging(get_path(self.file_path), command, login, hostname, ip)
+
     #handler PC pages
     def open_download_folderPc(self):
         run_command("Start-Process $env:USERPROFILE\Downloads")
+        self.write_log('Button-Downloads', self.login, self.hostName, self.ipaddr)
 
     def open_RecyclefolderPc(self):
         run_command("Start-Process shell:RecycleBinFolder")
@@ -225,8 +245,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def set_hostName(self, hostname):
         self.pcNameBottom.setText(hostname)
 
-    def set_IpAddress(self, hostname):
-        ipaddr = socket.gethostbyname(hostname)
+    def set_IpAddress(self, ipaddr):
         self.ipBottom.setText(ipaddr)
 
     def set_userName(self):
