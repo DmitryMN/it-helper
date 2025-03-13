@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceTNnYwe.ui'
+## Form generated from reading UI file 'interfacetfEUhn.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -104,8 +104,10 @@ class Ui_MainWindow(object):
         self.informationField.setGeometry(QRect(230, 40, 461, 22))
         font1 = QFont()
         font1.setPointSize(14)
+        font1.setWeight(QFont.DemiBold)
         self.informationField.setFont(font1)
-        self.informationField.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
+        self.informationField.setStyleSheet(u"color: rgba(255, 2, 57, 1);\n"
+"font-weight: 600;")
         self.informationField.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_30 = QLabel(self.header)
         self.label_30.setObjectName(u"label_30")
@@ -331,10 +333,7 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.widget_2)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(30, 0, 141, 24))
-        font4 = QFont()
-        font4.setPointSize(14)
-        font4.setWeight(QFont.DemiBold)
-        self.label_2.setFont(font4)
+        self.label_2.setFont(font1)
         self.label_2.setToolTipDuration(-1)
         self.label_2.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -353,10 +352,10 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
         self.label_3.setSizePolicy(sizePolicy2)
-        font5 = QFont()
-        font5.setPointSize(12)
-        font5.setBold(False)
-        self.label_3.setFont(font5)
+        font4 = QFont()
+        font4.setPointSize(12)
+        font4.setBold(False)
+        self.label_3.setFont(font4)
         self.label_3.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;\n"
 "padding-left: 35;")
@@ -438,7 +437,9 @@ class Ui_MainWindow(object):
 
         self.sectionQuestionPc = QWidget(self.mainSectionPc)
         self.sectionQuestionPc.setObjectName(u"sectionQuestionPc")
+        self.sectionQuestionPc.setMaximumSize(QSize(16777215, 115))
         self.sectionQuestionPc.setToolTipDuration(-3)
+        self.sectionQuestionPc.setStyleSheet(u"")
 
         self.verticalLayout_5.addWidget(self.sectionQuestionPc)
 
@@ -462,9 +463,9 @@ class Ui_MainWindow(object):
         self.label_10.setGeometry(QRect(0, 0, 621, 61))
         sizePolicy2.setHeightForWidth(self.label_10.sizePolicy().hasHeightForWidth())
         self.label_10.setSizePolicy(sizePolicy2)
-        font6 = QFont()
-        font6.setPointSize(12)
-        self.label_10.setFont(font6)
+        font5 = QFont()
+        font5.setPointSize(12)
+        self.label_10.setFont(font5)
         self.label_10.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_10.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -483,7 +484,7 @@ class Ui_MainWindow(object):
         self.label_12 = QLabel(self.widget_8)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setGeometry(QRect(40, 0, 281, 24))
-        self.label_12.setFont(font4)
+        self.label_12.setFont(font1)
         self.label_12.setToolTipDuration(-1)
         self.label_12.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -606,7 +607,7 @@ class Ui_MainWindow(object):
         self.label_14 = QLabel(self.widget_9)
         self.label_14.setObjectName(u"label_14")
         self.label_14.setGeometry(QRect(30, 0, 591, 24))
-        self.label_14.setFont(font5)
+        self.label_14.setFont(font4)
         self.label_14.setToolTipDuration(-1)
         self.label_14.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "")
@@ -627,7 +628,7 @@ class Ui_MainWindow(object):
         self.label_16 = QLabel(self.widget_10)
         self.label_16.setObjectName(u"label_16")
         self.label_16.setGeometry(QRect(30, 0, 581, 51))
-        self.label_16.setFont(font5)
+        self.label_16.setFont(font4)
         self.label_16.setToolTipDuration(-1)
         self.label_16.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
 
@@ -710,7 +711,7 @@ class Ui_MainWindow(object):
         self.label_18 = QLabel(self.widget_11)
         self.label_18.setObjectName(u"label_18")
         self.label_18.setGeometry(QRect(40, 0, 491, 24))
-        self.label_18.setFont(font4)
+        self.label_18.setFont(font1)
         self.label_18.setToolTipDuration(-1)
         self.label_18.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -722,16 +723,16 @@ class Ui_MainWindow(object):
         self.label_19 = QLabel(self.frame_12)
         self.label_19.setObjectName(u"label_19")
         self.label_19.setGeometry(QRect(10, 0, 311, 44))
-        self.label_19.setFont(font6)
+        self.label_19.setFont(font5)
         self.label_20 = QLabel(self.frame_12)
         self.label_20.setObjectName(u"label_20")
         self.label_20.setGeometry(QRect(10, 40, 266, 24))
-        self.label_20.setFont(font6)
+        self.label_20.setFont(font5)
         self.label_20.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.label_21 = QLabel(self.frame_12)
         self.label_21.setObjectName(u"label_21")
         self.label_21.setGeometry(QRect(280, 40, 99, 24))
-        self.label_21.setFont(font6)
+        self.label_21.setFont(font5)
         self.label_21.setStyleSheet(u"color: rgba(24, 77, 229, 1);")
         self.label_21.setFrameShape(QFrame.Shape.NoFrame)
         self.label_21.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -827,14 +828,14 @@ class Ui_MainWindow(object):
         self.label_23 = QLabel(self.widget_12)
         self.label_23.setObjectName(u"label_23")
         self.label_23.setGeometry(QRect(40, 10, 281, 24))
-        self.label_23.setFont(font4)
+        self.label_23.setFont(font1)
         self.label_23.setToolTipDuration(-1)
         self.label_23.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_24 = QLabel(self.firtsTitleVpn)
         self.label_24.setObjectName(u"label_24")
         self.label_24.setGeometry(QRect(40, 40, 581, 43))
-        self.label_24.setFont(font6)
+        self.label_24.setFont(font5)
         self.secondTitleVpn = QWidget(self.sectionTittleVpn)
         self.secondTitleVpn.setObjectName(u"secondTitleVpn")
         self.secondTitleVpn.setGeometry(QRect(0, 100, 650, 113))
@@ -854,14 +855,14 @@ class Ui_MainWindow(object):
         self.label_26 = QLabel(self.widget_13)
         self.label_26.setObjectName(u"label_26")
         self.label_26.setGeometry(QRect(40, 10, 281, 24))
-        self.label_26.setFont(font4)
+        self.label_26.setFont(font1)
         self.label_26.setToolTipDuration(-1)
         self.label_26.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.label_27 = QLabel(self.secondTitleVpn)
         self.label_27.setObjectName(u"label_27")
         self.label_27.setGeometry(QRect(40, 40, 611, 65))
-        self.label_27.setFont(font6)
+        self.label_27.setFont(font5)
         self.label_27.setStyleSheet(u"")
 
         self.verticalLayout_6.addWidget(self.sectionTittleVpn)
@@ -964,7 +965,7 @@ class Ui_MainWindow(object):
         self.label_8 = QLabel(self.widget_5)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(30, 0, 141, 20))
-        self.label_8.setFont(font4)
+        self.label_8.setFont(font1)
         self.label_8.setToolTipDuration(-1)
         self.label_8.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
@@ -978,7 +979,7 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QRect(-10, 0, 591, 24))
         sizePolicy2.setHeightForWidth(self.label_9.sizePolicy().hasHeightForWidth())
         self.label_9.setSizePolicy(sizePolicy2)
-        self.label_9.setFont(font6)
+        self.label_9.setFont(font5)
         self.label_9.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "padding-left: 35;")
         self.label_9.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
@@ -1076,7 +1077,7 @@ class Ui_MainWindow(object):
         self.label_6 = QLabel(self.widget_4)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(30, 0, 491, 24))
-        self.label_6.setFont(font5)
+        self.label_6.setFont(font4)
         self.label_6.setToolTipDuration(-1)
         self.label_6.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);\n"
 "font-weight: 400;")
@@ -1155,6 +1156,50 @@ class Ui_MainWindow(object):
 
         self.sectionQuestionMail = QWidget(self.mainSectionMail)
         self.sectionQuestionMail.setObjectName(u"sectionQuestionMail")
+        self.sectionQuestionMail.setMaximumSize(QSize(16777215, 115))
+        self.sectionQuestionMail.setStyleSheet(u"#sectionQuestionMail > QPushButton {\n"
+"border: 1px solid rgba(21, 33, 73, 0.1);\n"
+"text-align: center;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"#sectionQuestionMail > QPushButton:hover {\n"
+"background-color: rgba(26, 51, 115, 0.05);\n"
+"color: rgba(21, 33, 73, 1);\n"
+"}")
+        self.archiveMailBtn = QPushButton(self.sectionQuestionMail)
+        self.archiveMailBtn.setObjectName(u"archiveMailBtn")
+        self.archiveMailBtn.setGeometry(QRect(0, 0, 159, 115))
+        self.archiveMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.archiveMailBtn.setFont(font3)
+        self.archiveMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.archiveMailBtn.setStyleSheet(u"")
+        icon22 = QIcon()
+        icon22.addFile(u":/icons/icons/mail-open.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.archiveMailBtn.setIcon(icon22)
+        self.archiveMailBtn.setIconSize(QSize(20, 20))
+        self.autoReplayMailBtn = QPushButton(self.sectionQuestionMail)
+        self.autoReplayMailBtn.setObjectName(u"autoReplayMailBtn")
+        self.autoReplayMailBtn.setGeometry(QRect(166, 0, 159, 115))
+        self.autoReplayMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.autoReplayMailBtn.setFont(font3)
+        self.autoReplayMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.autoReplayMailBtn.setStyleSheet(u"")
+        icon23 = QIcon()
+        icon23.addFile(u":/icons/icons/answer.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.autoReplayMailBtn.setIcon(icon23)
+        self.autoReplayMailBtn.setIconSize(QSize(20, 20))
+        self.offlineModeMailBtn = QPushButton(self.sectionQuestionMail)
+        self.offlineModeMailBtn.setObjectName(u"offlineModeMailBtn")
+        self.offlineModeMailBtn.setGeometry(QRect(330, 0, 159, 115))
+        self.offlineModeMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.offlineModeMailBtn.setFont(font3)
+        self.offlineModeMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.offlineModeMailBtn.setStyleSheet(u"")
+        icon24 = QIcon()
+        icon24.addFile(u":/icons/icons/worldwide.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.offlineModeMailBtn.setIcon(icon24)
+        self.offlineModeMailBtn.setIconSize(QSize(20, 20))
 
         self.verticalLayout_9.addWidget(self.sectionQuestionMail)
 
@@ -1279,6 +1324,7 @@ class Ui_MainWindow(object):
         self.reloadInformation = QLabel(self.blockInformation)
         self.reloadInformation.setObjectName(u"reloadInformation")
         self.reloadInformation.setGeometry(QRect(290, 50, 121, 22))
+        self.reloadInformation.setFont(font2)
         self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
 
@@ -1293,9 +1339,9 @@ class Ui_MainWindow(object):
         self.portalSppBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.portalSppBtn.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
 "font-weight: 600;")
-        icon22 = QIcon()
-        icon22.addFile(u":/icons/icons/external-link.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.portalSppBtn.setIcon(icon22)
+        icon25 = QIcon()
+        icon25.addFile(u":/icons/icons/external-link.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.portalSppBtn.setIcon(icon25)
         self.portalSppBtn.setIconSize(QSize(24, 24))
         self.feedbackBtn = QPushButton(self.widget_21)
         self.feedbackBtn.setObjectName(u"feedbackBtn")
@@ -1303,9 +1349,9 @@ class Ui_MainWindow(object):
         self.feedbackBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.feedbackBtn.setStyleSheet(u"color: rgba(24, 77, 229, 1);\n"
 "font-weight: 600;")
-        icon23 = QIcon()
-        icon23.addFile(u":/icons/icons/circle-heart.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.feedbackBtn.setIcon(icon23)
+        icon26 = QIcon()
+        icon26.addFile(u":/icons/icons/circle-heart.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.feedbackBtn.setIcon(icon26)
         self.feedbackBtn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_10.addWidget(self.widget_21)
@@ -1481,7 +1527,8 @@ class Ui_MainWindow(object):
         self.securityOutMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0415\u0441\u043b\u0438 \u043f\u043e\u0447\u0442\u0430 \u043f\u0435\u0440\u0435\u0441\u0442\u0430\u043b\u0430 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0442\u044c\u0441\u044f \u0438\u043b\u0438 \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u043b\u0430\u0441\u044c \u0441 \u043e\u0448\u0438\u0431\u043a\u0430\u043c\u0438. \u041f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u043d\u0430\u0436\u0430\u0442\u044c \u041e\u041a</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.securityOutMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u043f\u0443\u0441\u043a Outlook\n"
-"\u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435", None))
+"\u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u043c\n"
+"\u0440\u0435\u0436\u0438\u043c\u0435", None))
 #if QT_CONFIG(tooltip)
         self.runOutMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430 \u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435, \u0437\u0430\u043f\u0443\u0441\u0442\u0438\u0442 Outlook \u0432 \u043e\u0431\u044b\u0447\u043d\u043e\u043c \u0440\u0435\u0436\u0438\u043c\u0435</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -1498,8 +1545,29 @@ class Ui_MainWindow(object):
         self.signatureMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435\n"
 "\u043f\u043e\u0434\u043f\u0438\u0441\u0438", None))
 #if QT_CONFIG(tooltip)
-        self.sectionQuestionMail.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.sectionQuestionMail.setToolTip("")
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.archiveMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0435\u0439 \u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 \u0430\u0440\u0445\u0438\u0432\u0430\u0446\u0438\u0438 \u0432 Outlook</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.archiveMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\n"
+"\u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435\n"
+"\u0430\u0440\u0445\u0438\u0432\u0430\u0446\u0438\u0438 \u0432\n"
+"Outlook", None))
+#if QT_CONFIG(tooltip)
+        self.autoReplayMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0435\u0439 \u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 \u0430\u0432\u0442\u043e\u043e\u0442\u0432\u0435\u0442\u0430 \u0432 Outlook</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.autoReplayMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\n"
+"\u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435\n"
+"\u0430\u0432\u0442\u043e\u043e\u0442\u0432\u0435\u0442\u0430 \u0432\n"
+"Outlook", None))
+#if QT_CONFIG(tooltip)
+        self.offlineModeMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0435\u0439 \u043f\u043e \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044e \u0410\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0433\u043e \u0440\u0435\u0436\u0438\u043c\u0430 \u0432 Outlook</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.offlineModeMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\n"
+"\u043f\u043e \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044e\n"
+"\u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0433\u043e\n"
+"\u0440\u0435\u0436\u0438\u043c\u0430 \u0432 Outlook", None))
         self.label_4.setText("")
         self.logoBottom.setText("")
         self.userLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0417:", None))

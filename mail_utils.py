@@ -1,4 +1,3 @@
-import os
 import subprocess
 import psutil
 import win32com.client as win32
@@ -47,5 +46,5 @@ def send_mail(login, to, subject):
 
 def reboot_information():
     last_reboot = psutil.boot_time()
-    days = f'{datetime.date.fromtimestamp(last_reboot)}'
+    days = f'{datetime.date.fromtimestamp(last_reboot).strftime("%d-%m-%Y")}'
     return days

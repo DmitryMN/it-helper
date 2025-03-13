@@ -1,8 +1,12 @@
 import pathlib
 import datetime
 
-PATH_DIRECTORY = r"C:\it-help\log"
+PATH_DIRECTORY = r"C:\ithelper\logs"
 #find directory or file
+
+def get_path_home(path):
+    return pathlib.Path.home().joinpath(path)
+
 def find_directory(path):
     return pathlib.Path(path).exists()
 #get path for logging

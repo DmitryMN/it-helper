@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/mail-open.svg</file>
+    <file>icons/answer.svg</file>
+    <file>icons/worldwide.svg</file>
     <file>icons/computer-err.svg</file>
     <file>icons/phone-call.svg</file>
     <file>icons/circle-heart.svg</file>
@@ -31,6 +34,5 @@
     <file>icons/mail.svg</file>
     <file>icons/printer.svg</file>
     <file>icons/shield.svg</file>
-    <file>icons/shuffle.svg</file>
   </qresource>
 </RCC>
