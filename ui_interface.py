@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacetfEUhn.ui'
+## Form generated from reading UI file 'interfaceKeAIkx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -10,8 +10,8 @@
 
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect, QSize, Qt)
 from PySide6.QtGui import (QCursor, QFont, QIcon, QPixmap)
-from PySide6.QtWidgets import (QFrame, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QFrame, QHBoxLayout, QLabel, QPushButton, QSizePolicy, QStackedWidget,
+    QVBoxLayout, QWidget)
 
 import resources_rc
 
@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    text-align: left;\n"
 "    padding: 5px;\n"
-"    color: rgba(21, 33, 73, 0.5);\n"
+"    color: rgba(21, 33, 73, 1);\n"
 "}\n"
 "#Title {\n"
 "    color: rgba(21, 33, 73, 1);\n"
@@ -63,8 +63,8 @@ class Ui_MainWindow(object):
 "    border-radius: 4px;\n"
 "}\n"
 "#sectionTittleDocument {\n"
-"    background-color: rgba(222, 1"
-                        "18, 0, 0.05);\n"
+"    background-color: rgba(222, 118"
+                        ", 0, 0.05);\n"
 "    border-radius: 4px;\n"
 "}\n"
 "#firtsTitleVpn {\n"
@@ -162,6 +162,11 @@ class Ui_MainWindow(object):
         self.frame = QFrame(self.leftSubMenuContainer)
         self.frame.setObjectName(u"frame")
         self.frame.setMaximumSize(QSize(16777215, 16777215))
+        self.frame.setStyleSheet(u"#frame>QPushButton:hover {\n"
+"font-size: 15px; \n"
+"color: rgba(21, 33, 73, 0.6);\n"
+"font-weight: 600;\n"
+"}")
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.frame)
@@ -174,10 +179,7 @@ class Ui_MainWindow(object):
         font3.setPointSize(10)
         self.failureBtn.setFont(font3)
         self.failureBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.failureBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.failureBtn.setStyleSheet(u"")
         icon = QIcon()
         icon.addFile(u":/icons/icons/computer-err.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.failureBtn.setIcon(icon)
@@ -190,10 +192,7 @@ class Ui_MainWindow(object):
         self.mailBtn.setObjectName(u"mailBtn")
         self.mailBtn.setFont(font3)
         self.mailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.mailBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.mailBtn.setStyleSheet(u"")
         icon1 = QIcon()
         icon1.addFile(u":/icons/icons/mail.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.mailBtn.setIcon(icon1)
@@ -206,10 +205,7 @@ class Ui_MainWindow(object):
         self.browserBtn.setObjectName(u"browserBtn")
         self.browserBtn.setFont(font3)
         self.browserBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.browserBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.browserBtn.setStyleSheet(u"")
         icon2 = QIcon()
         icon2.addFile(u":/icons/icons/globe.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.browserBtn.setIcon(icon2)
@@ -222,10 +218,7 @@ class Ui_MainWindow(object):
         self.printBtn.setObjectName(u"printBtn")
         self.printBtn.setFont(font3)
         self.printBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.printBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.printBtn.setStyleSheet(u"")
         icon3 = QIcon()
         icon3.addFile(u":/icons/icons/printer.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.printBtn.setIcon(icon3)
@@ -240,10 +233,7 @@ class Ui_MainWindow(object):
         self.documentBtn.setMaximumSize(QSize(16777215, 16777215))
         self.documentBtn.setFont(font3)
         self.documentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.documentBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.documentBtn.setStyleSheet(u"")
         icon4 = QIcon()
         icon4.addFile(u":/icons/icons/settings.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.documentBtn.setIcon(icon4)
@@ -256,10 +246,7 @@ class Ui_MainWindow(object):
         self.phishingBtn.setObjectName(u"phishingBtn")
         self.phishingBtn.setFont(font3)
         self.phishingBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.phishingBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.phishingBtn.setStyleSheet(u"")
         icon5 = QIcon()
         icon5.addFile(u":/icons/icons/alert-triangle.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.phishingBtn.setIcon(icon5)
@@ -272,10 +259,7 @@ class Ui_MainWindow(object):
         self.vpnBtn.setObjectName(u"vpnBtn")
         self.vpnBtn.setFont(font3)
         self.vpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.vpnBtn.setStyleSheet(u"QPushButton:hover {\n"
-"font-size: 15px; \n"
-"color: rgba(21, 33, 73, 1);\n"
-"}")
+        self.vpnBtn.setStyleSheet(u"")
         icon6 = QIcon()
         icon6.addFile(u":/icons/icons/shield.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.vpnBtn.setIcon(icon6)
@@ -376,7 +360,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonPc > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_2 = QHBoxLayout(self.sectionButtonPc)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -501,7 +485,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonPrint > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_4 = QHBoxLayout(self.sectionButtonPrint)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -562,7 +546,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionQuestionPrint > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.problemScanPrintBtn = QPushButton(self.sectionQuestionPrint)
         self.problemScanPrintBtn.setObjectName(u"problemScanPrintBtn")
@@ -644,7 +628,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonDocument > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_7 = QHBoxLayout(self.sectionButtonDocument)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
@@ -780,7 +764,7 @@ class Ui_MainWindow(object):
 "\n"
 "QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         icon13 = QIcon()
         icon13.addFile(u":/icons/icons/school.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -878,7 +862,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonVpn > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_3 = QHBoxLayout(self.sectionButtonVpn)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
@@ -1000,7 +984,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonBrowser > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_8 = QHBoxLayout(self.sectionButtonBrowser)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
@@ -1098,7 +1082,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionButtonMail > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.horizontalLayout_6 = QHBoxLayout(self.sectionButtonMail)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
@@ -1165,7 +1149,7 @@ class Ui_MainWindow(object):
 "\n"
 "#sectionQuestionMail > QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 1);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
 "}")
         self.archiveMailBtn = QPushButton(self.sectionQuestionMail)
         self.archiveMailBtn.setObjectName(u"archiveMailBtn")

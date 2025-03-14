@@ -77,7 +77,7 @@ def add_new_printer(host_name):
         case "W00-65":
             run_command(r'Start-Process "\\S00-6500-PX01\"')
         case "W00-38":
-            run_command(r'Start-Process "\\S00-3800-PX01\"')
+            run_command(r'Start-Process "\\S00-3800-PX01"')
         case "W00-25":
             run_command(r'Start-Process "\\S00-2500-PX01\"')
         case "W00-29":
