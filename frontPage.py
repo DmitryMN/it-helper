@@ -273,11 +273,11 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def clear_java_cache(self):
         self.loader("Выполняется...")
         run_command("Get-Process java -ErrorAction SilentlyContinue | Stop-Process -Force")
-        self.loader('', 5000)
         run_command(comandNetCache)
         run_command(comandCookies)
         run_command(comandClearJava)
         run_command("Start-Process java")
+        self.loader('', 3000)
         self.clearEdge()
         self.write_log('Button-CacheJava+CacheEdge', self.login, self.hostName, self.ipaddr)
 
