@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceIQfkjU.ui'
+## Form generated from reading UI file 'interfacekrGSBr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -151,7 +151,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(10, 0, 10, 10)
+        self.verticalLayout_2.setContentsMargins(7, 0, 7, 0)
         self.leftSubMenuContainer = QWidget(self.leftMenuContainer)
         self.leftSubMenuContainer.setObjectName(u"leftSubMenuContainer")
         self.leftSubMenuContainer.setMinimumSize(QSize(130, 0))
@@ -163,9 +163,10 @@ class Ui_MainWindow(object):
         self.frame.setObjectName(u"frame")
         self.frame.setMaximumSize(QSize(16777215, 16777215))
         self.frame.setStyleSheet(u"#frame>QPushButton:hover {\n"
-"font-size: 15px; \n"
 "color: rgba(21, 33, 73, 0.6);\n"
 "font-weight: 600;\n"
+"background-color: rgba(128, 128, 128, 0.2);\n"
+"border-radius: 4px;\n"
 "}")
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
@@ -284,16 +285,16 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.mainBody.sizePolicy().hasHeightForWidth())
         self.mainBody.setSizePolicy(sizePolicy1)
-        self.stackedWidget = QStackedWidget(self.mainBody)
-        self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setEnabled(True)
-        self.stackedWidget.setGeometry(QRect(9, 9, 664, 380))
+        self.mainStacked = QStackedWidget(self.mainBody)
+        self.mainStacked.setObjectName(u"mainStacked")
+        self.mainStacked.setEnabled(True)
+        self.mainStacked.setGeometry(QRect(9, 0, 678, 418))
         self.pagePC = QWidget()
         self.pagePC.setObjectName(u"pagePC")
         self.mainSectionPc = QWidget(self.pagePC)
         self.mainSectionPc.setObjectName(u"mainSectionPc")
-        self.mainSectionPc.setGeometry(QRect(0, 0, 664, 380))
-        self.mainSectionPc.setMinimumSize(QSize(664, 380))
+        self.mainSectionPc.setGeometry(QRect(0, 0, 678, 418))
+        self.mainSectionPc.setMinimumSize(QSize(678, 418))
         self.mainSectionPc.setMaximumSize(QSize(0, 0))
         self.verticalLayout_5 = QVBoxLayout(self.mainSectionPc)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
@@ -427,12 +428,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.sectionQuestionPc)
 
-        self.stackedWidget.addWidget(self.pagePC)
+        self.mainStacked.addWidget(self.pagePC)
         self.pagePrint = QWidget()
         self.pagePrint.setObjectName(u"pagePrint")
         self.mainSectionPrint = QWidget(self.pagePrint)
         self.mainSectionPrint.setObjectName(u"mainSectionPrint")
-        self.mainSectionPrint.setGeometry(QRect(0, 0, 664, 380))
+        self.mainSectionPrint.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionPrint.setMinimumSize(QSize(0, 0))
         self.verticalLayout_7 = QVBoxLayout(self.mainSectionPrint)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
@@ -477,20 +478,45 @@ class Ui_MainWindow(object):
 
         self.sectionButtonPrint = QWidget(self.mainSectionPrint)
         self.sectionButtonPrint.setObjectName(u"sectionButtonPrint")
-        self.sectionButtonPrint.setStyleSheet(u"#sectionButtonPrint > QPushButton {\n"
+        self.sectionButtonPrint.setStyleSheet(u"#sectionButtonPrint  QPushButton {\n"
 "border: 1px solid rgba(21, 33, 73, 0.1);\n"
 "text-align: center;\n"
 "border-radius: 4px;\n"
 "}\n"
 "\n"
-"#sectionButtonPrint > QPushButton:hover {\n"
+"#sectionButtonPrint  QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
 "color: rgba(21, 33, 73, 0.6);\n"
+"}\n"
+"\n"
+"#sectionButtonPrint > QPushButton {\n"
+"background-color: rgba(26, 51, 115, 0.05);\n"
+"}\n"
+"#sectionButtonPrint > QPushButton:hover {\n"
+"font-weight: 600;\n"
+"background-color: rgba(128, 128, 128, 0.4);\n"
 "}")
-        self.horizontalLayout_4 = QHBoxLayout(self.sectionButtonPrint)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.addPrinterPrintBtn = QPushButton(self.sectionButtonPrint)
+        self.returnPrintBtn = QPushButton(self.sectionButtonPrint)
+        self.returnPrintBtn.setObjectName(u"returnPrintBtn")
+        self.returnPrintBtn.setGeometry(QRect(0, 50, 21, 50))
+        self.returnPrintBtn.setFont(font5)
+        self.returnPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.nextPrintBtn = QPushButton(self.sectionButtonPrint)
+        self.nextPrintBtn.setObjectName(u"nextPrintBtn")
+        self.nextPrintBtn.setGeometry(QRect(647, 50, 21, 50))
+        self.nextPrintBtn.setFont(font5)
+        self.nextPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.printStacked = QStackedWidget(self.sectionButtonPrint)
+        self.printStacked.setObjectName(u"printStacked")
+        self.printStacked.setGeometry(QRect(20, 0, 628, 145))
+        self.pageFirstPrint = QWidget()
+        self.pageFirstPrint.setObjectName(u"pageFirstPrint")
+        self.widget_14 = QWidget(self.pageFirstPrint)
+        self.widget_14.setObjectName(u"widget_14")
+        self.widget_14.setGeometry(QRect(0, 0, 628, 145))
+        self.horizontalLayout_12 = QHBoxLayout(self.widget_14)
+        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.addPrinterPrintBtn = QPushButton(self.widget_14)
         self.addPrinterPrintBtn.setObjectName(u"addPrinterPrintBtn")
         self.addPrinterPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.addPrinterPrintBtn.setFont(font3)
@@ -500,9 +526,9 @@ class Ui_MainWindow(object):
         self.addPrinterPrintBtn.setIcon(icon11)
         self.addPrinterPrintBtn.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout_4.addWidget(self.addPrinterPrintBtn)
+        self.horizontalLayout_12.addWidget(self.addPrinterPrintBtn)
 
-        self.myPrintersPrintBtn = QPushButton(self.sectionButtonPrint)
+        self.myPrintersPrintBtn = QPushButton(self.widget_14)
         self.myPrintersPrintBtn.setObjectName(u"myPrintersPrintBtn")
         self.myPrintersPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.myPrintersPrintBtn.setFont(font3)
@@ -510,9 +536,9 @@ class Ui_MainWindow(object):
         self.myPrintersPrintBtn.setIcon(icon3)
         self.myPrintersPrintBtn.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout_4.addWidget(self.myPrintersPrintBtn)
+        self.horizontalLayout_12.addWidget(self.myPrintersPrintBtn)
 
-        self.cartridgePrintBtn = QPushButton(self.sectionButtonPrint)
+        self.cartridgePrintBtn = QPushButton(self.widget_14)
         self.cartridgePrintBtn.setObjectName(u"cartridgePrintBtn")
         self.cartridgePrintBtn.setMaximumSize(QSize(16777215, 115))
         self.cartridgePrintBtn.setFont(font3)
@@ -520,9 +546,17 @@ class Ui_MainWindow(object):
         self.cartridgePrintBtn.setIcon(icon10)
         self.cartridgePrintBtn.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout_4.addWidget(self.cartridgePrintBtn)
+        self.horizontalLayout_12.addWidget(self.cartridgePrintBtn)
 
-        self.connectPrintBtn = QPushButton(self.sectionButtonPrint)
+        self.printStacked.addWidget(self.pageFirstPrint)
+        self.pageSecondPrint = QWidget()
+        self.pageSecondPrint.setObjectName(u"pageSecondPrint")
+        self.widget_15 = QWidget(self.pageSecondPrint)
+        self.widget_15.setObjectName(u"widget_15")
+        self.widget_15.setGeometry(QRect(0, 0, 628, 145))
+        self.horizontalLayout_13 = QHBoxLayout(self.widget_15)
+        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
+        self.connectPrintBtn = QPushButton(self.widget_15)
         self.connectPrintBtn.setObjectName(u"connectPrintBtn")
         self.connectPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.connectPrintBtn.setFont(font3)
@@ -530,41 +564,36 @@ class Ui_MainWindow(object):
         self.connectPrintBtn.setIcon(icon10)
         self.connectPrintBtn.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout_4.addWidget(self.connectPrintBtn)
+        self.horizontalLayout_13.addWidget(self.connectPrintBtn)
 
-
-        self.verticalLayout_7.addWidget(self.sectionButtonPrint)
-
-        self.sectionQuestionPrint = QWidget(self.mainSectionPrint)
-        self.sectionQuestionPrint.setObjectName(u"sectionQuestionPrint")
-        self.sectionQuestionPrint.setMaximumSize(QSize(16777215, 115))
-        self.sectionQuestionPrint.setStyleSheet(u"#sectionQuestionPrint > QPushButton {\n"
-"border: 1px solid rgba(21, 33, 73, 0.1);\n"
-"text-align: center;\n"
-"border-radius: 4px;\n"
-"}\n"
-"\n"
-"#sectionQuestionPrint > QPushButton:hover {\n"
-"background-color: rgba(26, 51, 115, 0.05);\n"
-"color: rgba(21, 33, 73, 0.6);\n"
-"}")
-        self.problemScanPrintBtn = QPushButton(self.sectionQuestionPrint)
+        self.problemScanPrintBtn = QPushButton(self.widget_15)
         self.problemScanPrintBtn.setObjectName(u"problemScanPrintBtn")
-        self.problemScanPrintBtn.setGeometry(QRect(0, 0, 159, 115))
         self.problemScanPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.problemScanPrintBtn.setFont(font3)
         self.problemScanPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.problemScanPrintBtn.setIcon(icon10)
         self.problemScanPrintBtn.setIconSize(QSize(20, 20))
 
+        self.horizontalLayout_13.addWidget(self.problemScanPrintBtn)
+
+        self.printStacked.addWidget(self.pageSecondPrint)
+
+        self.verticalLayout_7.addWidget(self.sectionButtonPrint)
+
+        self.sectionQuestionPrint = QWidget(self.mainSectionPrint)
+        self.sectionQuestionPrint.setObjectName(u"sectionQuestionPrint")
+        self.sectionQuestionPrint.setMaximumSize(QSize(16777215, 115))
+        self.sectionQuestionPrint.setStyleSheet(u"")
+
         self.verticalLayout_7.addWidget(self.sectionQuestionPrint)
 
-        self.stackedWidget.addWidget(self.pagePrint)
+        self.mainStacked.addWidget(self.pagePrint)
         self.pageDocument = QWidget()
         self.pageDocument.setObjectName(u"pageDocument")
         self.mainSectionDocument = QWidget(self.pageDocument)
         self.mainSectionDocument.setObjectName(u"mainSectionDocument")
-        self.mainSectionDocument.setGeometry(QRect(0, -11, 664, 380))
+        self.mainSectionDocument.setEnabled(True)
+        self.mainSectionDocument.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionDocument.setMinimumSize(QSize(0, 0))
         self.verticalLayout_10 = QVBoxLayout(self.mainSectionDocument)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
@@ -668,12 +697,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.sectionQuestionDocument)
 
-        self.stackedWidget.addWidget(self.pageDocument)
+        self.mainStacked.addWidget(self.pageDocument)
         self.pagePhishing = QWidget()
         self.pagePhishing.setObjectName(u"pagePhishing")
         self.mainSectionPhishing = QWidget(self.pagePhishing)
         self.mainSectionPhishing.setObjectName(u"mainSectionPhishing")
-        self.mainSectionPhishing.setGeometry(QRect(0, 0, 664, 380))
+        self.mainSectionPhishing.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionPhishing.setMinimumSize(QSize(0, 0))
         self.verticalLayout_8 = QVBoxLayout(self.mainSectionPhishing)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
@@ -781,12 +810,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.sectionQuestionPhishing)
 
-        self.stackedWidget.addWidget(self.pagePhishing)
+        self.mainStacked.addWidget(self.pagePhishing)
         self.pageVpn = QWidget()
         self.pageVpn.setObjectName(u"pageVpn")
         self.mainSectionVpn = QWidget(self.pageVpn)
         self.mainSectionVpn.setObjectName(u"mainSectionVpn")
-        self.mainSectionVpn.setGeometry(QRect(0, 0, 664, 387))
+        self.mainSectionVpn.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionVpn.setMinimumSize(QSize(0, 0))
         self.verticalLayout_6 = QVBoxLayout(self.mainSectionVpn)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
@@ -795,7 +824,7 @@ class Ui_MainWindow(object):
         self.sectionTittleVpn.setObjectName(u"sectionTittleVpn")
         self.firtsTitleVpn = QWidget(self.sectionTittleVpn)
         self.firtsTitleVpn.setObjectName(u"firtsTitleVpn")
-        self.firtsTitleVpn.setGeometry(QRect(0, 0, 650, 91))
+        self.firtsTitleVpn.setGeometry(QRect(0, 0, 678, 91))
         self.widget_12 = QWidget(self.firtsTitleVpn)
         self.widget_12.setObjectName(u"widget_12")
         self.widget_12.setGeometry(QRect(0, 0, 621, 39))
@@ -822,7 +851,7 @@ class Ui_MainWindow(object):
         self.label_24.setFont(font5)
         self.secondTitleVpn = QWidget(self.sectionTittleVpn)
         self.secondTitleVpn.setObjectName(u"secondTitleVpn")
-        self.secondTitleVpn.setGeometry(QRect(0, 100, 650, 113))
+        self.secondTitleVpn.setGeometry(QRect(0, 100, 678, 113))
         self.widget_13 = QWidget(self.secondTitleVpn)
         self.widget_13.setObjectName(u"widget_13")
         self.widget_13.setGeometry(QRect(0, 0, 621, 35))
@@ -853,7 +882,7 @@ class Ui_MainWindow(object):
 
         self.sectionButtonVpn = QWidget(self.mainSectionVpn)
         self.sectionButtonVpn.setObjectName(u"sectionButtonVpn")
-        self.sectionButtonVpn.setMaximumSize(QSize(16777215, 90))
+        self.sectionButtonVpn.setMaximumSize(QSize(16777215, 120))
         self.sectionButtonVpn.setStyleSheet(u"#sectionButtonVpn > QPushButton {\n"
 "border: 1px solid rgba(21, 33, 73, 0.1);\n"
 "text-align: center;\n"
@@ -920,12 +949,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.sectionQuestionVpn)
 
-        self.stackedWidget.addWidget(self.pageVpn)
+        self.mainStacked.addWidget(self.pageVpn)
         self.pageBrowser = QWidget()
         self.pageBrowser.setObjectName(u"pageBrowser")
         self.mainSectionBrowser = QWidget(self.pageBrowser)
         self.mainSectionBrowser.setObjectName(u"mainSectionBrowser")
-        self.mainSectionBrowser.setGeometry(QRect(0, 0, 664, 380))
+        self.mainSectionBrowser.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionBrowser.setMinimumSize(QSize(0, 0))
         self.verticalLayout_11 = QVBoxLayout(self.mainSectionBrowser)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
@@ -1030,13 +1059,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.sectionQuestionBrowser)
 
-        self.stackedWidget.addWidget(self.pageBrowser)
+        self.mainStacked.addWidget(self.pageBrowser)
         self.pageMail = QWidget()
         self.pageMail.setObjectName(u"pageMail")
         self.pageMail.setMinimumSize(QSize(0, 0))
         self.mainSectionMail = QWidget(self.pageMail)
         self.mainSectionMail.setObjectName(u"mainSectionMail")
-        self.mainSectionMail.setGeometry(QRect(0, 0, 664, 380))
+        self.mainSectionMail.setGeometry(QRect(0, 0, 678, 418))
         self.mainSectionMail.setMinimumSize(QSize(0, 0))
         self.verticalLayout_9 = QVBoxLayout(self.mainSectionMail)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
@@ -1074,20 +1103,34 @@ class Ui_MainWindow(object):
 
         self.sectionButtonMail = QWidget(self.mainSectionMail)
         self.sectionButtonMail.setObjectName(u"sectionButtonMail")
-        self.sectionButtonMail.setStyleSheet(u"#sectionButtonMail > QPushButton {\n"
+        self.sectionButtonMail.setStyleSheet(u"#sectionButtonMail QPushButton {\n"
 "border: 1px solid rgba(21, 33, 73, 0.1);\n"
 "text-align: center;\n"
 "border-radius: 4px;\n"
 "}\n"
 "\n"
-"#sectionButtonMail > QPushButton:hover {\n"
+"#sectionButtonMail QPushButton:hover {\n"
 "background-color: rgba(26, 51, 115, 0.05);\n"
 "color: rgba(21, 33, 73, 0.6);\n"
+"}\n"
+"#sectionButtonMail > QPushButton {\n"
+"background-color: rgba(26, 51, 115, 0.05);\n"
+"}\n"
+"#sectionButtonMail > QPushButton:hover {\n"
+"font-weight: 600;\n"
+"background-color: rgba(128, 128, 128, 0.4);\n"
 "}")
-        self.horizontalLayout_6 = QHBoxLayout(self.sectionButtonMail)
+        self.mailStacked = QStackedWidget(self.sectionButtonMail)
+        self.mailStacked.setObjectName(u"mailStacked")
+        self.mailStacked.setGeometry(QRect(20, 0, 628, 145))
+        self.pageFirstMail = QWidget()
+        self.pageFirstMail.setObjectName(u"pageFirstMail")
+        self.widget = QWidget(self.pageFirstMail)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(0, 0, 628, 145))
+        self.horizontalLayout_6 = QHBoxLayout(self.widget)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.securityOutMailBtn = QPushButton(self.sectionButtonMail)
+        self.securityOutMailBtn = QPushButton(self.widget)
         self.securityOutMailBtn.setObjectName(u"securityOutMailBtn")
         self.securityOutMailBtn.setMaximumSize(QSize(16777215, 115))
         self.securityOutMailBtn.setFont(font3)
@@ -1099,7 +1142,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.securityOutMailBtn)
 
-        self.runOutMailBtn = QPushButton(self.sectionButtonMail)
+        self.runOutMailBtn = QPushButton(self.widget)
         self.runOutMailBtn.setObjectName(u"runOutMailBtn")
         self.runOutMailBtn.setMaximumSize(QSize(16777215, 115))
         self.runOutMailBtn.setFont(font3)
@@ -1110,7 +1153,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.runOutMailBtn)
 
-        self.fixOutMailBtn = QPushButton(self.sectionButtonMail)
+        self.fixOutMailBtn = QPushButton(self.widget)
         self.fixOutMailBtn.setObjectName(u"fixOutMailBtn")
         self.fixOutMailBtn.setMaximumSize(QSize(16777215, 115))
         self.fixOutMailBtn.setFont(font3)
@@ -1122,7 +1165,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.fixOutMailBtn)
 
-        self.signatureMailBtn = QPushButton(self.sectionButtonMail)
+        self.signatureMailBtn = QPushButton(self.widget)
         self.signatureMailBtn.setObjectName(u"signatureMailBtn")
         self.signatureMailBtn.setMinimumSize(QSize(0, 0))
         self.signatureMailBtn.setMaximumSize(QSize(16777215, 115))
@@ -1135,6 +1178,64 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_6.addWidget(self.signatureMailBtn)
 
+        self.mailStacked.addWidget(self.pageFirstMail)
+        self.pageSecondMail = QWidget()
+        self.pageSecondMail.setObjectName(u"pageSecondMail")
+        self.widget_3 = QWidget(self.pageSecondMail)
+        self.widget_3.setObjectName(u"widget_3")
+        self.widget_3.setGeometry(QRect(0, 0, 628, 145))
+        self.horizontalLayout_11 = QHBoxLayout(self.widget_3)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.archiveMailBtn = QPushButton(self.widget_3)
+        self.archiveMailBtn.setObjectName(u"archiveMailBtn")
+        self.archiveMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.archiveMailBtn.setFont(font3)
+        self.archiveMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.archiveMailBtn.setStyleSheet(u"")
+        icon22 = QIcon()
+        icon22.addFile(u":/icons/icons/mail-open.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.archiveMailBtn.setIcon(icon22)
+        self.archiveMailBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_11.addWidget(self.archiveMailBtn)
+
+        self.autoReplayMailBtn = QPushButton(self.widget_3)
+        self.autoReplayMailBtn.setObjectName(u"autoReplayMailBtn")
+        self.autoReplayMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.autoReplayMailBtn.setFont(font3)
+        self.autoReplayMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.autoReplayMailBtn.setStyleSheet(u"")
+        icon23 = QIcon()
+        icon23.addFile(u":/icons/icons/answer.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.autoReplayMailBtn.setIcon(icon23)
+        self.autoReplayMailBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_11.addWidget(self.autoReplayMailBtn)
+
+        self.offlineModeMailBtn = QPushButton(self.widget_3)
+        self.offlineModeMailBtn.setObjectName(u"offlineModeMailBtn")
+        self.offlineModeMailBtn.setMaximumSize(QSize(16777215, 115))
+        self.offlineModeMailBtn.setFont(font3)
+        self.offlineModeMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.offlineModeMailBtn.setStyleSheet(u"")
+        icon24 = QIcon()
+        icon24.addFile(u":/icons/icons/worldwide.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.offlineModeMailBtn.setIcon(icon24)
+        self.offlineModeMailBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_11.addWidget(self.offlineModeMailBtn)
+
+        self.mailStacked.addWidget(self.pageSecondMail)
+        self.returnMailBtn = QPushButton(self.sectionButtonMail)
+        self.returnMailBtn.setObjectName(u"returnMailBtn")
+        self.returnMailBtn.setGeometry(QRect(0, 50, 21, 50))
+        self.returnMailBtn.setFont(font5)
+        self.returnMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.nextMailBtn = QPushButton(self.sectionButtonMail)
+        self.nextMailBtn.setObjectName(u"nextMailBtn")
+        self.nextMailBtn.setGeometry(QRect(647, 50, 21, 50))
+        self.nextMailBtn.setFont(font5)
+        self.nextMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
         self.verticalLayout_9.addWidget(self.sectionButtonMail)
 
@@ -1151,43 +1252,10 @@ class Ui_MainWindow(object):
 "background-color: rgba(26, 51, 115, 0.05);\n"
 "color: rgba(21, 33, 73, 0.6);\n"
 "}")
-        self.archiveMailBtn = QPushButton(self.sectionQuestionMail)
-        self.archiveMailBtn.setObjectName(u"archiveMailBtn")
-        self.archiveMailBtn.setGeometry(QRect(0, 0, 159, 115))
-        self.archiveMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.archiveMailBtn.setFont(font3)
-        self.archiveMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.archiveMailBtn.setStyleSheet(u"")
-        icon22 = QIcon()
-        icon22.addFile(u":/icons/icons/mail-open.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.archiveMailBtn.setIcon(icon22)
-        self.archiveMailBtn.setIconSize(QSize(20, 20))
-        self.autoReplayMailBtn = QPushButton(self.sectionQuestionMail)
-        self.autoReplayMailBtn.setObjectName(u"autoReplayMailBtn")
-        self.autoReplayMailBtn.setGeometry(QRect(166, 0, 159, 115))
-        self.autoReplayMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.autoReplayMailBtn.setFont(font3)
-        self.autoReplayMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.autoReplayMailBtn.setStyleSheet(u"")
-        icon23 = QIcon()
-        icon23.addFile(u":/icons/icons/answer.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.autoReplayMailBtn.setIcon(icon23)
-        self.autoReplayMailBtn.setIconSize(QSize(20, 20))
-        self.offlineModeMailBtn = QPushButton(self.sectionQuestionMail)
-        self.offlineModeMailBtn.setObjectName(u"offlineModeMailBtn")
-        self.offlineModeMailBtn.setGeometry(QRect(330, 0, 159, 115))
-        self.offlineModeMailBtn.setMaximumSize(QSize(16777215, 115))
-        self.offlineModeMailBtn.setFont(font3)
-        self.offlineModeMailBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.offlineModeMailBtn.setStyleSheet(u"")
-        icon24 = QIcon()
-        icon24.addFile(u":/icons/icons/worldwide.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.offlineModeMailBtn.setIcon(icon24)
-        self.offlineModeMailBtn.setIconSize(QSize(20, 20))
 
         self.verticalLayout_9.addWidget(self.sectionQuestionMail)
 
-        self.stackedWidget.addWidget(self.pageMail)
+        self.mainStacked.addWidget(self.pageMail)
 
         self.horizontalLayout.addWidget(self.mainBody)
 
@@ -1352,7 +1420,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.mainStacked.setCurrentIndex(0)
+        self.printStacked.setCurrentIndex(0)
+        self.mailStacked.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1397,6 +1467,8 @@ class Ui_MainWindow(object):
 "\u0415\u0441\u043b\u0438 \u0441\u043f\u0438\u0441\u043e\u043a \u043f\u0440\u0438\u043d\u0442\u0435\u0440\u043e\u0432 \u043d\u0435 \u043e\u0442\u043a\u0440\u044b\u043b\u0441\u044f, \u043e\u0444\u043e\u0440\u043c\u0438\u0442\u0435 \u0437\u0430\u044f\u0432\u043a\u0443 \u0432 \u0421\u041f\u041f", None))
         self.label_11.setText("")
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u044f\u0432\u043a\u0438 \u0432 \u0421\u041f\u041f", None))
+        self.returnPrintBtn.setText(QCoreApplication.translate("MainWindow", u"<", None))
+        self.nextPrintBtn.setText(QCoreApplication.translate("MainWindow", u">", None))
 #if QT_CONFIG(tooltip)
         self.addPrinterPrintBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0438\u0437 \u043e\u0442\u043a\u0440\u044b\u0432\u0448\u0435\u0433\u043e\u0441\u044f \u0441\u043f\u0438\u0441\u043a\u0430 \u043d\u0443\u0436\u043d\u044b\u0439, \u0434\u0432\u043e\u0439\u043d\u044b\u043c \u043a\u043b\u0438\u043a\u043e\u043c \u043c\u044b\u0448\u043a\u0438</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -1479,7 +1551,7 @@ class Ui_MainWindow(object):
         self.problemVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b\u0435 \u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u0441 \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u044b\u043c \u0434\u043e\u0441\u0442\u0443\u043f\u043e\u043c (VPN)</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.problemVpnBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u041f\u041f - \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u0430 \u043d\u0430\n"
-"\u0443\u0434\u0430\u043b\u0451\u043d\u043e\u043c \u0434\u043e\u0441\u0442\u0443\u043f\u0435", None))
+"\u0443\u0434\u0430\u043b\u0451\u043d\u043d\u043e\u043c \u0434\u043e\u0441\u0442\u0443\u043f\u0435", None))
 #if QT_CONFIG(tooltip)
         self.refreshVpnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0444\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043f\u0438\u0441\u044c\u043c\u043e \u043d\u0430 \u0430\u0434\u0440\u0435\u0441 \u0421\u041f\u041f \u0434\u043b\u044f \u0441\u0431\u0440\u043e\u0441\u0430 \u0432\u0442\u043e\u0440\u043e\u0433\u043e \u0444\u0430\u043a\u0442\u043e\u0440\u0430</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -1529,9 +1601,6 @@ class Ui_MainWindow(object):
         self.signatureMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435\n"
 "\u043f\u043e\u0434\u043f\u0438\u0441\u0438", None))
 #if QT_CONFIG(tooltip)
-        self.sectionQuestionMail.setToolTip("")
-#endif // QT_CONFIG(tooltip)
-#if QT_CONFIG(tooltip)
         self.archiveMailBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u041e\u0442\u043a\u0440\u043e\u0435\u0442\u0441\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0435\u0439 \u043f\u043e \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 \u0430\u0440\u0445\u0438\u0432\u0430\u0446\u0438\u0438 \u0432 Outlook</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.archiveMailBtn.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\n"
@@ -1552,6 +1621,11 @@ class Ui_MainWindow(object):
 "\u043f\u043e \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044e\n"
 "\u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0433\u043e\n"
 "\u0440\u0435\u0436\u0438\u043c\u0430 \u0432 Outlook", None))
+        self.returnMailBtn.setText(QCoreApplication.translate("MainWindow", u"<", None))
+        self.nextMailBtn.setText(QCoreApplication.translate("MainWindow", u">", None))
+#if QT_CONFIG(tooltip)
+        self.sectionQuestionMail.setToolTip("")
+#endif // QT_CONFIG(tooltip)
         self.label_4.setText("")
         self.logoBottom.setText("")
         self.userLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0417:", None))
