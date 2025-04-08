@@ -304,13 +304,17 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def addPrinter(self):
         self.write_log('Button-AddPrinter', self.login, self.hostName, self.ipaddr)
-        if (len(self.hostName) != 0):
+        if len(self.hostName) != 0:
             self.loader("Подождите, идет подключение...")
-            slice_hostname = self.hostName[:6].upper()
-            add_new_printer(slice_hostname)
-            self.loader('', 4000)
+            slice_hostname = self.hostName[4:6]
+            message = add_new_printer(slice_hostname)
+            if message is None:
+                self.loader('', 4000)
+            else:
+                self.loader(message)
+                self.loader('', 4000)
         else:
-            self.loader("Имя ПК отсутствует в списке...")
+            self.loader("Имя ПК отсутствует...")
             self.loader('', 3000)
 
     def problem_scan_print(self):
