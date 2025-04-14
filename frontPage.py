@@ -8,6 +8,8 @@ from clearFirefox import clear_firefox_local, clear_firefox_cookies
 from runCommand import run_command, run_lazy_command
 from addNewPrinter import add_new_printer
 from mail_utils import send_mail, reboot_information
+from getExpiryDays import get_expiry_days
+from const import PATH_PC, PATH_SERVER
 from utils import create_empty_file, create_folder, find_directory, get_path, logging, get_path_home
 from command import (comandProblemPc, comandSignature, comandClearTemp, comandNetCache, comandCookies,
                      comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
@@ -98,6 +100,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.set_IpAddress(self.ipaddr)
         self.set_userName()
         self.set_reloadInformation()
+        QTimer.singleShot(2000, lambda: self.init_password_expiry())
         # create folder and file
         self.init_folder(self.file_path)
         # start log
@@ -124,6 +127,13 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def switch_to_failure_pageVpn(self):
         self.mainStacked.setCurrentIndex(4)
+
+    def init_password_expiry(self):
+        result = get_expiry_days(self.login)
+        if result == 0:
+            self.expiryDays.setText('Ошибка, домен не найден!')
+        else:
+            self.expiryDays.setText(str(result))
 
     #switch handler mail staked
     def next_mail_staked(self):
@@ -162,16 +172,31 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def loader(self, text, time=0):
         QTimer.singleShot(time, lambda: self.informationField.setText(text))
 
-    # create folder for loagging
+    # create folder for logging
     def init_folder(self, file_name):
-        if not find_directory(get_path()):
-            create_folder(get_path())
-            create_empty_file(get_path(file_name))
+        if not find_directory(get_path(PATH_PC)):
+            create_folder(get_path(PATH_PC))
+            create_empty_file(get_path(PATH_PC, file_name))
+            if not find_directory(get_path(PATH_SERVER)):
+                return
+            else:
+                if not find_directory(get_path(PATH_SERVER, self.file_path)):
+                    create_empty_file(get_path(PATH_SERVER, file_name))
+        else:
+            if not find_directory(get_path(PATH_SERVER)):
+                return
+            else:
+                if not find_directory(get_path(PATH_SERVER, self.file_path)):
+                    create_empty_file(get_path(PATH_SERVER, file_name))
 
     # write log
     def write_log(self, command, login, hostname, ip):
-        if find_directory(get_path(self.file_path)):
-           logging(get_path(self.file_path), command, login, hostname, ip)
+        if find_directory(get_path(PATH_PC, self.file_path)):
+            logging(get_path(PATH_PC, self.file_path), command, login, hostname, ip)
+            if not find_directory(get_path(PATH_SERVER)):
+                return
+            else:
+                logging(get_path(PATH_SERVER, self.file_path), command, login, hostname, ip)
 
     # handler PC pages
     def open_download_folderPc(self):

@@ -1,6 +1,12 @@
+future==1.0.0
+Nuitka==2.5.1
+ordered-set==4.1.0
 psutil==7.0.0
+pyad==0.6.0
 PySide6==6.8.2.1
 PySide6_Addons==6.8.2.1
 PySide6_Essentials==6.8.2.1
 pywin32==308
 shiboken6==6.8.2.1
+zstandard==0.23.0
+

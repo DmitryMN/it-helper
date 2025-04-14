@@ -1,19 +1,17 @@
 import pathlib
 import datetime
 
-PATH_DIRECTORY = r"C:\ithelper\logs"
-#find directory or file
-
+#return home user directory
 def get_path_home(path):
     return pathlib.Path.home().joinpath(path)
-
+#return true or false else don't find file or directory
 def find_directory(path):
     return pathlib.Path(path).exists()
-#get path for logging
-def get_path(file_name=''):
+#get path
+def get_path(path, file_name=''):
     if file_name:
-        return pathlib.Path(PATH_DIRECTORY, file_name)
-    return pathlib.Path(PATH_DIRECTORY)
+        return pathlib.Path(path, file_name)
+    return pathlib.Path(path)
 #create folder
 def create_folder(path):
     try:

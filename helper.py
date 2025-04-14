@@ -12,4 +12,4 @@ app = QApplication(sys.argv)
 window = MySideBar()
 
 window.show()
-app.exec()
+sys.exit(app.exec())

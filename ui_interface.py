@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacekrGSBr.ui'
+## Form generated from reading UI file 'interfacepNrIkl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -1295,7 +1295,7 @@ class Ui_MainWindow(object):
         self.blockInfoBottom.setMaximumSize(QSize(16777215, 16777215))
         self.blockInformation = QWidget(self.blockInfoBottom)
         self.blockInformation.setObjectName(u"blockInformation")
-        self.blockInformation.setGeometry(QRect(9, 10, 541, 91))
+        self.blockInformation.setGeometry(QRect(9, 10, 541, 101))
         self.blockInformation.setStyleSheet(u"#blockInformation {\n"
 "    background-color: rgba(0, 122, 255, 0.05);\n"
 "    border-radius: 4px;\n"
@@ -1303,14 +1303,14 @@ class Ui_MainWindow(object):
 "")
         self.logoBottom = QLabel(self.blockInformation)
         self.logoBottom.setObjectName(u"logoBottom")
-        self.logoBottom.setGeometry(QRect(10, 20, 24, 24))
+        self.logoBottom.setGeometry(QRect(10, 10, 24, 24))
         self.logoBottom.setMaximumSize(QSize(16777215, 16777215))
         self.logoBottom.setPixmap(QPixmap(u":/icons/icons/info-square-rounded.svg"))
         self.logoBottom.setScaledContents(True)
         self.logoBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.userLabelBottom = QLabel(self.blockInformation)
         self.userLabelBottom.setObjectName(u"userLabelBottom")
-        self.userLabelBottom.setGeometry(QRect(40, 20, 21, 21))
+        self.userLabelBottom.setGeometry(QRect(40, 10, 21, 21))
         self.userLabelBottom.setMinimumSize(QSize(0, 0))
         self.userLabelBottom.setMaximumSize(QSize(16777215, 16777215))
         self.userLabelBottom.setFont(font3)
@@ -1318,7 +1318,7 @@ class Ui_MainWindow(object):
         self.userLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.userBottom = QLabel(self.blockInformation)
         self.userBottom.setObjectName(u"userBottom")
-        self.userBottom.setGeometry(QRect(59, 20, 167, 22))
+        self.userBottom.setGeometry(QRect(59, 10, 167, 22))
         self.userBottom.setMaximumSize(QSize(16777215, 16777215))
         self.userBottom.setFont(font2)
         self.userBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
@@ -1329,7 +1329,7 @@ class Ui_MainWindow(object):
         self.userBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.pcLabelBottom = QLabel(self.blockInformation)
         self.pcLabelBottom.setObjectName(u"pcLabelBottom")
-        self.pcLabelBottom.setGeometry(QRect(230, 20, 24, 20))
+        self.pcLabelBottom.setGeometry(QRect(230, 10, 24, 20))
         self.pcLabelBottom.setMaximumSize(QSize(16777215, 16777215))
         self.pcLabelBottom.setFont(font3)
         self.pcLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
@@ -1337,7 +1337,7 @@ class Ui_MainWindow(object):
         self.pcLabelBottom.setMargin(0)
         self.pcNameBottom = QLabel(self.blockInformation)
         self.pcNameBottom.setObjectName(u"pcNameBottom")
-        self.pcNameBottom.setGeometry(QRect(250, 20, 121, 22))
+        self.pcNameBottom.setGeometry(QRect(250, 10, 121, 22))
         self.pcNameBottom.setMaximumSize(QSize(16777215, 16777215))
         self.pcNameBottom.setFont(font2)
         self.pcNameBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
@@ -1347,14 +1347,14 @@ class Ui_MainWindow(object):
         self.pcNameBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.ipLabelBottom = QLabel(self.blockInformation)
         self.ipLabelBottom.setObjectName(u"ipLabelBottom")
-        self.ipLabelBottom.setGeometry(QRect(370, 20, 61, 20))
+        self.ipLabelBottom.setGeometry(QRect(370, 10, 61, 20))
         self.ipLabelBottom.setMaximumSize(QSize(16777215, 16777215))
         self.ipLabelBottom.setFont(font3)
         self.ipLabelBottom.setStyleSheet(u"color: rgba(21, 33, 73, 0.66);")
         self.ipLabelBottom.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.ipBottom = QLabel(self.blockInformation)
         self.ipBottom.setObjectName(u"ipBottom")
-        self.ipBottom.setGeometry(QRect(430, 20, 111, 22))
+        self.ipBottom.setGeometry(QRect(430, 10, 111, 22))
         self.ipBottom.setMaximumSize(QSize(16777215, 16777215))
         self.ipBottom.setFont(font2)
         self.ipBottom.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
@@ -1364,20 +1364,40 @@ class Ui_MainWindow(object):
         self.ipBottom.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
         self.label_28 = QLabel(self.blockInformation)
         self.label_28.setObjectName(u"label_28")
-        self.label_28.setGeometry(QRect(10, 50, 24, 24))
+        self.label_28.setGeometry(QRect(10, 40, 24, 24))
         self.label_28.setPixmap(QPixmap(u":/icons/icons/alert-square-rounded.svg"))
         self.label_28.setScaledContents(True)
         self.label_29 = QLabel(self.blockInformation)
         self.label_29.setObjectName(u"label_29")
-        self.label_29.setGeometry(QRect(40, 50, 241, 22))
+        self.label_29.setGeometry(QRect(40, 40, 241, 22))
         self.label_29.setFont(font2)
         self.label_29.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
 "font-weight: 600;")
         self.reloadInformation = QLabel(self.blockInformation)
         self.reloadInformation.setObjectName(u"reloadInformation")
-        self.reloadInformation.setGeometry(QRect(290, 50, 121, 22))
+        self.reloadInformation.setGeometry(QRect(290, 40, 121, 22))
         self.reloadInformation.setFont(font2)
         self.reloadInformation.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+        self.label_33 = QLabel(self.blockInformation)
+        self.label_33.setObjectName(u"label_33")
+        self.label_33.setGeometry(QRect(10, 70, 24, 24))
+        self.label_33.setPixmap(QPixmap(u":/icons/icons/alert-square-rounded.svg"))
+        self.label_33.setScaledContents(True)
+        self.label_34 = QLabel(self.blockInformation)
+        self.label_34.setObjectName(u"label_34")
+        self.label_34.setGeometry(QRect(40, 70, 161, 22))
+        self.label_34.setFont(font2)
+        self.label_34.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+        self.expiryDays = QLabel(self.blockInformation)
+        self.expiryDays.setObjectName(u"expiryDays")
+        self.expiryDays.setGeometry(QRect(210, 70, 211, 22))
+        font6 = QFont()
+        font6.setPointSize(11)
+        font6.setWeight(QFont.DemiBold)
+        self.expiryDays.setFont(font6)
+        self.expiryDays.setStyleSheet(u"color: rgba(255, 2, 57, 1);\n"
 "font-weight: 600;")
 
         self.horizontalLayout_10.addWidget(self.blockInfoBottom)
@@ -1637,6 +1657,9 @@ class Ui_MainWindow(object):
         self.label_28.setText("")
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0430\u0448 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440 \u043d\u0435 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f c :", None))
         self.reloadInformation.setText("")
+        self.label_33.setText("")
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0430\u0440\u043e\u043b\u044c \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u0435\u043d \u0434\u043e:", None))
+        self.expiryDays.setText("")
 #if QT_CONFIG(tooltip)
         self.portalSppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430\u043b \u0421\u041f\u041f</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
