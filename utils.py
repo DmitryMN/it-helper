@@ -17,16 +17,16 @@ def create_folder(path):
     try:
         pathlib.Path(path).mkdir(parents=True, exist_ok=True)
     except IOError as e:
-        print(f'{e}')
+        return 0
 #create file
 def create_empty_file(path):
     try:
         pathlib.Path(path).touch(exist_ok=True)
     except IOError as e:
-        print(f'{e}')
+        return 0
 #write log
 def logging(path_file, command, login, hostname, ip):
     current_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
     log = f'{current_date};{command};{login};{hostname};{ip} \n'
-    with open(path_file, 'a', encoding='utf-8' ,buffering=1) as file:
+    with open(path_file, 'a', encoding='utf-8', buffering=1) as file:
         file.write(log)

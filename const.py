@@ -1,2 +1,3 @@
-PATH_PC = r"C:\ithelper\logs"
+PATH_PC = r"C:\ITHelper\logs"
 PATH_SERVER = r"\\S00-3800-FS01\ithelreplogs"
+PATH_ERROR = r"C:\ITHelper\error"

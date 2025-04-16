@@ -1,5 +1,6 @@
 import os
 import socket
+import platform
 from PySide6.QtWidgets import QMainWindow
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import QTimer
@@ -31,7 +32,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         # fix window size
         self.setFixedSize(860, 640)
         # hostname
-        self.hostName = socket.gethostname()
+        self.hostName = platform.uname().node
         # login
         self.login = os.getlogin()
         # ipaddr
@@ -102,7 +103,8 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.set_reloadInformation()
         QTimer.singleShot(2000, lambda: self.init_password_expiry())
         # create folder and file
-        self.init_folder(self.file_path)
+        self.create_file_pc(self.file_path)
+        self.create_file_server(self.file_path)
         # start log
         self.write_log('ithelper-start', self.login, self.hostName, self.ipaddr)
 
@@ -172,31 +174,27 @@ class MySideBar(QMainWindow, Ui_MainWindow):
     def loader(self, text, time=0):
         QTimer.singleShot(time, lambda: self.informationField.setText(text))
 
-    # create folder for logging
-    def init_folder(self, file_name):
+    # create folder and file for logging
+    def create_file_pc(self, file_name):
         if not find_directory(get_path(PATH_PC)):
             create_folder(get_path(PATH_PC))
             create_empty_file(get_path(PATH_PC, file_name))
-            if not find_directory(get_path(PATH_SERVER)):
-                return
-            else:
-                if not find_directory(get_path(PATH_SERVER, self.file_path)):
-                    create_empty_file(get_path(PATH_SERVER, file_name))
         else:
-            if not find_directory(get_path(PATH_SERVER)):
+            if find_directory(get_path(PATH_PC, file_name)):
                 return
             else:
-                if not find_directory(get_path(PATH_SERVER, self.file_path)):
-                    create_empty_file(get_path(PATH_SERVER, file_name))
+                create_empty_file(get_path(PATH_PC, file_name))
+
+    def create_file_server(self, file_name):
+        if find_directory(get_path(PATH_SERVER)):
+            if not find_directory(get_path(PATH_SERVER, file_name)):
+                create_empty_file(get_path(PATH_SERVER, file_name))
 
     # write log
     def write_log(self, command, login, hostname, ip):
-        if find_directory(get_path(PATH_PC, self.file_path)):
-            logging(get_path(PATH_PC, self.file_path), command, login, hostname, ip)
-            if not find_directory(get_path(PATH_SERVER)):
-                return
-            else:
-                logging(get_path(PATH_SERVER, self.file_path), command, login, hostname, ip)
+        logging(get_path(PATH_PC, self.file_path), command, login, hostname, ip)
+        if find_directory(get_path(PATH_SERVER, self.file_path)):
+            logging(get_path(PATH_SERVER, self.file_path), command, login, hostname, ip)
 
     # handler PC pages
     def open_download_folderPc(self):
