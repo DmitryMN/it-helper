@@ -2,6 +2,7 @@ import os
 import socket
 import platform
 from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import QTimer
 from ui_interface import Ui_MainWindow
@@ -16,7 +17,8 @@ from command import (comandProblemPc, comandSignature, comandClearTemp, comandNe
                      comandClearEdge, commandStopOutlook, comandClearYandex, commandChangeCartridge,
                      comandClearJava, commandAddNewPrinterSpp, commandRejectCitrixSpp, commandBidRemote,
                      commandProblemRemote, commandSettingsRemote, commandIBConfluence, commandProblemScanPrint,
-                     commandArchive, commandAutoReplay, commandOfflineMode)
+                     commandArchive, commandAutoReplay, commandOfflineMode, commandItEnvironment, commandForNewUser,
+                     commandAllConfluence, commandAdaptation)
 
 icon_filename = os.path.join(
     os.path.dirname(__file__), "icon\logo_main.ico"
@@ -43,6 +45,11 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.next_mail = 0
         # next staked print
         self.next_print = 0
+        #self timer
+        self.close_timer = QTimer()
+        self.close_timer.setSingleShot(True)
+        self.close_timer.timeout.connect(self.close_application)
+        self.close_timer.start(1800000)
 
         # Connect buttons to switch to different page
         self.failureBtn.clicked.connect(self.switch_to_failure_pagePC)
@@ -52,6 +59,7 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.documentBtn.clicked.connect(self.switch_to_failure_pageDocument)
         self.phishingBtn.clicked.connect(self.switch_to_failure_pagePhishing)
         self.vpnBtn.clicked.connect(self.switch_to_failure_pageVpn)
+        self.learningBtn.clicked.connect(self.switch_to_failure_pageLearning)
         # switch mail stacked
         self.nextMailBtn.clicked.connect(self.next_mail_staked)
         self.returnMailBtn.clicked.connect(self.return_mail_staked)
@@ -93,6 +101,11 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         self.problemVpnBtn.clicked.connect(self.link_problem_vpn)
         self.refreshVpnBtn.clicked.connect(self.refresh_vpn)
         self.settingVpnBtn.clicked.connect(self.settings_vpn)
+        #button learning
+        self.newUserLearningBtn.clicked.connect(self.link_for_new_user)
+        self.courseLearningBtn.clicked.connect(self.link_it_environment)
+        self.confluenceLearningBtn.clicked.connect(self.link_all_confluence)
+        self.adaptationLearningBtn.clicked.connect(self.link_adaptation)
         # buttons help
         self.feedbackBtn.clicked.connect(self.feedback)
         self.portalSppBtn.clicked.connect(self.link_PortalSpp)
@@ -129,6 +142,13 @@ class MySideBar(QMainWindow, Ui_MainWindow):
 
     def switch_to_failure_pageVpn(self):
         self.mainStacked.setCurrentIndex(4)
+
+    def switch_to_failure_pageLearning(self):
+        self.mainStacked.setCurrentIndex(7)
+
+    #close application
+    def close_application(self):
+        QApplication.quit()
 
     def init_password_expiry(self):
         result = get_expiry_days(self.login)
@@ -415,6 +435,31 @@ class MySideBar(QMainWindow, Ui_MainWindow):
         run_command(commandSettingsRemote)
         self.loader('', 3000)
         self.write_log('Link-VPN-Instuctions', self.login, self.hostName, self.ipaddr)
+
+    # handler learning page
+    def link_it_environment(self):
+        self.loader("Выполняется...")
+        run_command(commandItEnvironment)
+        self.loader('', 3000)
+        self.write_log('Link-It-Environment', self.login, self.hostName, self.ipaddr)
+
+    def link_for_new_user(self):
+        self.loader("Выполняется...")
+        run_command(commandForNewUser)
+        self.loader('', 3000)
+        self.write_log('Link-new-user', self.login, self.hostName, self.ipaddr)
+
+    def link_all_confluence(self):
+        self.loader("Выполняется...")
+        run_command(commandAllConfluence)
+        self.loader('', 3000)
+        self.write_log('Link-all-confluence', self.login, self.hostName, self.ipaddr)
+
+    def link_adaptation(self):
+        self.loader("Выполняется...")
+        run_command(commandAdaptation)
+        self.loader('', 3000)
+        self.write_log('Link-adaptation', self.login, self.hostName, self.ipaddr)
 
     # handler help btn
     def link_PortalSpp(self):

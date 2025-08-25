@@ -18,3 +18,7 @@ commandProblemScanPrint = "Start-Process 'http://help/OTWG/Login.aspx?lang=ru&si
 commandArchive = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=297259051&preview=/297259051/297259064/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B2%20Outlook.pdf'"
 commandAutoReplay = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=297259051&preview=/297259051/319906102/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B5%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0%20%D0%B2%20Microsoft%20Outlook.docx'"
 commandOfflineMode = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=297259051&preview=/297259051/319911091/%D0%9E%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%90%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D0%BE%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D0%B2%20Microsoft%20Outlook.pdf'"
+commandItEnvironment = "Start-Process 'http://webtutor.sogaz.ru/view_doc.html?mode=course&doc_id=&object_id=6798491904666509723'"
+commandForNewUser = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=269197200'"
+commandAllConfluence = "Start-Process 'https://confluence.sogaz.ru/pages/viewpage.action?pageId=269195989'"
+commandAdaptation = "Start-Process 'https://portal.sogaz.ru/Adaptation/SitePages/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D0%B5%D0%BC!.aspx'"

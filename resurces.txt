@@ -1,0 +1,1 @@
+python -m nuitka --mingw64 --enable-plugin=pyside6 --include-qt-plugins=sensible --windows-console-mode=disable --onefile --windows-icon-from-ico=icon/logo_main.ico --include-data-dir=icon=icon --product-name="it-helper" --product-version="2.0.1.5" --output-filename="IT-Helper" helper.py

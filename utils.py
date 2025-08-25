@@ -1,5 +1,8 @@
+import os.path
 import pathlib
 import datetime
+import shutil
+from typing import List
 
 #return home user directory
 def get_path_home(path):
@@ -30,3 +33,19 @@ def logging(path_file, command, login, hostname, ip):
     log = f'{current_date};{command};{login};{hostname};{ip} \n'
     with open(path_file, 'a', encoding='utf-8', buffering=1) as file:
         file.write(log)
+
+#get directory of user
+def get_env_path(env_path: str, *args):
+    return os.path.join(os.environ[env_path], *args)
+
+#clear directory and files and not remove exclude
+def clear_directory(env_path: str, exclude: List[str], *args):
+    try:
+        profile_path = get_env_path(env_path, *args)
+        for item in os.listdir(profile_path):
+            path_item = os.path.join(profile_path, item)
+            if item not in exclude:
+                shutil.rmtree(path_item)
+
+    except Exception as err:
+        print(err)

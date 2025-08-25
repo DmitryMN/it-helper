@@ -156,6 +156,10 @@ def add_new_printer(host_name):
             run_command(r'Start-Process "\\S00-7000-PX01\"')
         case "51":
             run_command(r'Start-Process "\\S00-5100-PX01\"')
+        case "18":
+            run_command(r'Start-Process "\\S00-1800-PS01\"')
+        case "76":
+            run_command(r'Start-Process "\\S00-7600-PX01\"')
         case _:
             return "Неопознаный компьютер!"
 

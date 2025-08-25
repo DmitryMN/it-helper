@@ -1,41 +1,37 @@
 import os
 import shutil
+from utils import get_env_path
+from const import PATH_LOCAL, PATH_ROAMING
+
+#get profiles firefox
+def get_firefox_profiles(env_path: str):
+    profile_path = get_env_path(env_path, 'Mozilla', 'Firefox', 'Profiles')
+    return [profile for profile in os.listdir(profile_path) if not profile.endswith('.default')]
 
 def clear_firefox_local():
     try:
-        profile_path_local = os.path.join(os.environ['LOCALAPPDATA'], 'Mozilla', 'Firefox', 'Profiles')
-        # Find the default profile directory
-        profiles = [d for d in os.listdir(profile_path_local) if d.endswith('.default-release')]
-        if not profiles:
-            raise FileNotFoundError("No default Firefox profile found")
-        profile_dir = os.path.join(profile_path_local, profiles[0])
-        # Delete thumbnails directory
-        cache_dir = os.path.join(profile_dir, 'thumbnails')
-        if os.path.exists(cache_dir):
-            shutil.rmtree(cache_dir)
-            print("cleared thumbnails")
-        # Delete cache2 directory
-        cache_dir = os.path.join(profile_dir, 'cache2')
-        if os.path.exists(cache_dir):
-            shutil.rmtree(cache_dir)
-            print("cleared cache2")
+        # get profiles name
+        profiles = get_firefox_profiles(PATH_LOCAL)
+        if profiles:
+            for profile in profiles:
+                profile_dir = get_env_path(PATH_LOCAL, 'Mozilla', 'Firefox', 'Profiles', profile)
+                for dir_name in ['thumbnails', 'cache2']:
+                    cash_path = os.path.join(profile_dir, dir_name)
+                    if os.path.exists(cash_path):
+                        shutil.rmtree(cash_path)
 
-    except Exception as e:
-        print(f"message: {e}")
+    except Exception as err:
+        pass
 
 def clear_firefox_cookies():
     try:
-        # Get profile path
-        profile_path_roaming = os.path.join(os.environ['APPDATA'], 'Mozilla', 'Firefox', 'Profiles')
-        # Find the default profile directory
-        profiles = [d for d in os.listdir(profile_path_roaming) if d.endswith('.default-release')]
-        if not profiles:
-            raise FileNotFoundError("No default Firefox profile found")
-        profile_dir = os.path.join(profile_path_roaming, profiles[0])
-        # Delete cookies (cookies.sqlite)
-        cookies_file = os.path.join(profile_dir, 'cookies.sqlite')
-        if os.path.exists(cookies_file):
-            os.remove(cookies_file)
-            print("Cleared Cookies")
-    except Exception as e:
-        print(f"message: {e}")
+        profiles = get_firefox_profiles(PATH_ROAMING)
+        for profile in profiles:
+            profile_dir = get_env_path(PATH_ROAMING, 'Mozilla', 'Firefox', 'Profiles', profile)
+            cookies_file = os.path.join(profile_dir, 'cookies.sqlite')
+            if os.path.exists(cookies_file):
+                os.remove(cookies_file)
+
+    except Exception as err:
+        pass
+

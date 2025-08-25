@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacepNrIkl.ui'
+## Form generated from reading UI file 'interfacetYpTBC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.2
 ##
@@ -65,6 +65,10 @@ class Ui_MainWindow(object):
 "#sectionTittleDocument {\n"
 "    background-color: rgba(222, 118"
                         ", 0, 0.05);\n"
+"    border-radius: 4px;\n"
+"}\n"
+"#sectionTittleLearning {\n"
+"    background-color: rgba(222, 118, 0, 0.05);\n"
 "    border-radius: 4px;\n"
 "}\n"
 "#firtsTitleVpn {\n"
@@ -269,6 +273,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.vpnBtn)
 
+        self.learningBtn = QPushButton(self.frame)
+        self.learningBtn.setObjectName(u"learningBtn")
+        self.learningBtn.setFont(font3)
+        self.learningBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/icons/school.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.learningBtn.setIcon(icon7)
+        self.learningBtn.setIconSize(QSize(24, 24))
+        self.learningBtn.setCheckable(True)
+
+        self.verticalLayout_4.addWidget(self.learningBtn)
+
 
         self.verticalLayout_3.addWidget(self.frame)
 
@@ -372,9 +388,9 @@ class Ui_MainWindow(object):
         self.clearCashePcBtn.setFont(font3)
         self.clearCashePcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.clearCashePcBtn.setStyleSheet(u"")
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/icons/broom.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.clearCashePcBtn.setIcon(icon7)
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/icons/broom.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.clearCashePcBtn.setIcon(icon8)
         self.clearCashePcBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_2.addWidget(self.clearCashePcBtn)
@@ -385,9 +401,9 @@ class Ui_MainWindow(object):
         self.openDownloadPcBtn.setFont(font3)
         self.openDownloadPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openDownloadPcBtn.setToolTipDuration(-2)
-        icon8 = QIcon()
-        icon8.addFile(u":/icons/icons/download.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.openDownloadPcBtn.setIcon(icon8)
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/icons/download.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.openDownloadPcBtn.setIcon(icon9)
         self.openDownloadPcBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_2.addWidget(self.openDownloadPcBtn)
@@ -398,9 +414,9 @@ class Ui_MainWindow(object):
         self.openRecycleFolderPcBtn.setFont(font3)
         self.openRecycleFolderPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.openRecycleFolderPcBtn.setToolTipDuration(-3)
-        icon9 = QIcon()
-        icon9.addFile(u":/icons/icons/trash-x.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.openRecycleFolderPcBtn.setIcon(icon9)
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/icons/trash-x.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.openRecycleFolderPcBtn.setIcon(icon10)
         self.openRecycleFolderPcBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_2.addWidget(self.openRecycleFolderPcBtn)
@@ -410,9 +426,9 @@ class Ui_MainWindow(object):
         self.problemSppPcBtn.setMaximumSize(QSize(16777215, 115))
         self.problemSppPcBtn.setFont(font3)
         self.problemSppPcBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/icons/headset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.problemSppPcBtn.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/icons/headset.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.problemSppPcBtn.setIcon(icon11)
         self.problemSppPcBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_2.addWidget(self.problemSppPcBtn)
@@ -521,9 +537,9 @@ class Ui_MainWindow(object):
         self.addPrinterPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.addPrinterPrintBtn.setFont(font3)
         self.addPrinterPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/icons/square-rounded-plus.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.addPrinterPrintBtn.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/icons/square-rounded-plus.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.addPrinterPrintBtn.setIcon(icon12)
         self.addPrinterPrintBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_12.addWidget(self.addPrinterPrintBtn)
@@ -543,7 +559,7 @@ class Ui_MainWindow(object):
         self.cartridgePrintBtn.setMaximumSize(QSize(16777215, 115))
         self.cartridgePrintBtn.setFont(font3)
         self.cartridgePrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.cartridgePrintBtn.setIcon(icon10)
+        self.cartridgePrintBtn.setIcon(icon11)
         self.cartridgePrintBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_12.addWidget(self.cartridgePrintBtn)
@@ -561,7 +577,7 @@ class Ui_MainWindow(object):
         self.connectPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.connectPrintBtn.setFont(font3)
         self.connectPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.connectPrintBtn.setIcon(icon10)
+        self.connectPrintBtn.setIcon(icon11)
         self.connectPrintBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_13.addWidget(self.connectPrintBtn)
@@ -571,7 +587,7 @@ class Ui_MainWindow(object):
         self.problemScanPrintBtn.setMaximumSize(QSize(16777215, 115))
         self.problemScanPrintBtn.setFont(font3)
         self.problemScanPrintBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.problemScanPrintBtn.setIcon(icon10)
+        self.problemScanPrintBtn.setIcon(icon11)
         self.problemScanPrintBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_13.addWidget(self.problemScanPrintBtn)
@@ -666,7 +682,7 @@ class Ui_MainWindow(object):
         self.javaDocumentBtn.setObjectName(u"javaDocumentBtn")
         self.javaDocumentBtn.setMaximumSize(QSize(16777215, 115))
         self.javaDocumentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.javaDocumentBtn.setIcon(icon7)
+        self.javaDocumentBtn.setIcon(icon8)
         self.javaDocumentBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_7.addWidget(self.javaDocumentBtn)
@@ -675,7 +691,7 @@ class Ui_MainWindow(object):
         self.citrixDocumentBtn.setObjectName(u"citrixDocumentBtn")
         self.citrixDocumentBtn.setMaximumSize(QSize(16777215, 115))
         self.citrixDocumentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.citrixDocumentBtn.setIcon(icon8)
+        self.citrixDocumentBtn.setIcon(icon9)
         self.citrixDocumentBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_7.addWidget(self.citrixDocumentBtn)
@@ -684,7 +700,7 @@ class Ui_MainWindow(object):
         self.clearCitrixDocumentBtn.setObjectName(u"clearCitrixDocumentBtn")
         self.clearCitrixDocumentBtn.setMaximumSize(QSize(16777215, 115))
         self.clearCitrixDocumentBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.clearCitrixDocumentBtn.setIcon(icon10)
+        self.clearCitrixDocumentBtn.setIcon(icon11)
         self.clearCitrixDocumentBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_7.addWidget(self.clearCitrixDocumentBtn)
@@ -774,9 +790,9 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "background-color: rgb(255, 55, 122);\n"
 "}")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/icons/spy.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.reportIbPhishingBtn.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/icons/spy.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.reportIbPhishingBtn.setIcon(icon13)
         self.reportIbPhishingBtn.setIconSize(QSize(26, 26))
 
         self.horizontalLayout_5.addWidget(self.reportIbPhishingBtn)
@@ -795,9 +811,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(26, 51, 115, 0.05);\n"
 "color: rgba(21, 33, 73, 0.6);\n"
 "}")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/icons/school.svg", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.teachIbCorsePhishingBtn.setIcon(icon13)
+        self.teachIbCorsePhishingBtn.setIcon(icon7)
         self.teachIbCorsePhishingBtn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_5.addWidget(self.teachIbCorsePhishingBtn)
@@ -901,7 +915,7 @@ class Ui_MainWindow(object):
         self.bidRemoteVpnBtn.setMaximumSize(QSize(16777215, 115))
         self.bidRemoteVpnBtn.setFont(font3)
         self.bidRemoteVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.bidRemoteVpnBtn.setIcon(icon10)
+        self.bidRemoteVpnBtn.setIcon(icon11)
         self.bidRemoteVpnBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_3.addWidget(self.bidRemoteVpnBtn)
@@ -911,7 +925,7 @@ class Ui_MainWindow(object):
         self.problemVpnBtn.setMaximumSize(QSize(16777215, 115))
         self.problemVpnBtn.setFont(font3)
         self.problemVpnBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.problemVpnBtn.setIcon(icon10)
+        self.problemVpnBtn.setIcon(icon11)
         self.problemVpnBtn.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_3.addWidget(self.problemVpnBtn)
@@ -1256,6 +1270,115 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addWidget(self.sectionQuestionMail)
 
         self.mainStacked.addWidget(self.pageMail)
+        self.pageLearning = QWidget()
+        self.pageLearning.setObjectName(u"pageLearning")
+        self.mainSectionLearning = QWidget(self.pageLearning)
+        self.mainSectionLearning.setObjectName(u"mainSectionLearning")
+        self.mainSectionLearning.setGeometry(QRect(0, 0, 678, 418))
+        self.mainSectionLearning.setMinimumSize(QSize(678, 418))
+        self.mainSectionLearning.setMaximumSize(QSize(0, 0))
+        self.verticalLayout_15 = QVBoxLayout(self.mainSectionLearning)
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.verticalLayout_15.setContentsMargins(0, 0, 10, 0)
+        self.sectionTittleLearning = QWidget(self.mainSectionLearning)
+        self.sectionTittleLearning.setObjectName(u"sectionTittleLearning")
+        self.sectionTittleLearning.setStyleSheet(u"")
+        self.verticalLayout_16 = QVBoxLayout(self.sectionTittleLearning)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.widget_16 = QWidget(self.sectionTittleLearning)
+        self.widget_16.setObjectName(u"widget_16")
+        self.widget_16.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.widget_16.sizePolicy().hasHeightForWidth())
+        self.widget_16.setSizePolicy(sizePolicy)
+        self.widget_16.setMinimumSize(QSize(0, 0))
+        self.widget_16.setMaximumSize(QSize(16777215, 100))
+        self.label_35 = QLabel(self.widget_16)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setGeometry(QRect(10, 30, 24, 24))
+        self.label_35.setStyleSheet(u"text-align: center;")
+        self.label_35.setPixmap(QPixmap(u":/icons/icons/alert-square-rounded.svg"))
+        self.label_35.setScaledContents(True)
+        self.label_35.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_35.setIndent(-1)
+        self.label_36 = QLabel(self.widget_16)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setGeometry(QRect(40, 10, 611, 86))
+        self.label_36.setFont(font1)
+        self.label_36.setToolTipDuration(-1)
+        self.label_36.setStyleSheet(u"color: rgba(21, 33, 73, 1);\n"
+"font-weight: 600;")
+
+        self.verticalLayout_16.addWidget(self.widget_16)
+
+
+        self.verticalLayout_15.addWidget(self.sectionTittleLearning)
+
+        self.sectionButtonLearning = QWidget(self.mainSectionLearning)
+        self.sectionButtonLearning.setObjectName(u"sectionButtonLearning")
+        self.sectionButtonLearning.setStyleSheet(u"#sectionButtonLearning > QPushButton {\n"
+"border: 1px solid rgba(21, 33, 73, 0.1);\n"
+"text-align: center;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"#sectionButtonLearning > QPushButton:hover {\n"
+"background-color: rgba(26, 51, 115, 0.05);\n"
+"color: rgba(21, 33, 73, 0.6);\n"
+"}")
+        self.horizontalLayout_4 = QHBoxLayout(self.sectionButtonLearning)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.newUserLearningBtn = QPushButton(self.sectionButtonLearning)
+        self.newUserLearningBtn.setObjectName(u"newUserLearningBtn")
+        self.newUserLearningBtn.setMaximumSize(QSize(16777215, 115))
+        self.newUserLearningBtn.setFont(font3)
+        self.newUserLearningBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.newUserLearningBtn.setStyleSheet(u"")
+        self.newUserLearningBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_4.addWidget(self.newUserLearningBtn)
+
+        self.courseLearningBtn = QPushButton(self.sectionButtonLearning)
+        self.courseLearningBtn.setObjectName(u"courseLearningBtn")
+        self.courseLearningBtn.setMaximumSize(QSize(16777215, 115))
+        self.courseLearningBtn.setFont(font3)
+        self.courseLearningBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.courseLearningBtn.setToolTipDuration(-2)
+        self.courseLearningBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_4.addWidget(self.courseLearningBtn)
+
+        self.confluenceLearningBtn = QPushButton(self.sectionButtonLearning)
+        self.confluenceLearningBtn.setObjectName(u"confluenceLearningBtn")
+        self.confluenceLearningBtn.setMaximumSize(QSize(16777215, 115))
+        self.confluenceLearningBtn.setFont(font3)
+        self.confluenceLearningBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.confluenceLearningBtn.setToolTipDuration(-3)
+        self.confluenceLearningBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_4.addWidget(self.confluenceLearningBtn)
+
+        self.adaptationLearningBtn = QPushButton(self.sectionButtonLearning)
+        self.adaptationLearningBtn.setObjectName(u"adaptationLearningBtn")
+        self.adaptationLearningBtn.setMaximumSize(QSize(16777215, 115))
+        self.adaptationLearningBtn.setFont(font3)
+        self.adaptationLearningBtn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.adaptationLearningBtn.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_4.addWidget(self.adaptationLearningBtn)
+
+
+        self.verticalLayout_15.addWidget(self.sectionButtonLearning)
+
+        self.sectionQuestionLearning = QWidget(self.mainSectionLearning)
+        self.sectionQuestionLearning.setObjectName(u"sectionQuestionLearning")
+        self.sectionQuestionLearning.setMaximumSize(QSize(16777215, 115))
+        self.sectionQuestionLearning.setToolTipDuration(-3)
+        self.sectionQuestionLearning.setStyleSheet(u"")
+
+        self.verticalLayout_15.addWidget(self.sectionQuestionLearning)
+
+        self.mainStacked.addWidget(self.pageLearning)
 
         self.horizontalLayout.addWidget(self.mainBody)
 
@@ -1462,6 +1585,7 @@ class Ui_MainWindow(object):
         self.documentBtn.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0443\u043c, 1C", None))
         self.phishingBtn.setText(QCoreApplication.translate("MainWindow", u"\u0424\u0438\u0448\u0438\u043d\u0433", None))
         self.vpnBtn.setText(QCoreApplication.translate("MainWindow", u"VPN", None))
+        self.learningBtn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0430\u043c\u044f\u0442\u043a\u0430", None))
         self.label.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0435 \u0437\u0430\u0431\u044b\u0432\u0430\u0439\u0442\u0435", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0435\u0440\u0438\u043e\u0434\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044c \u041f\u041a \u0434\u043b\u044f \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b \u0438\u00a0\u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u044f\n"
@@ -1646,6 +1770,26 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.sectionQuestionMail.setToolTip("")
 #endif // QT_CONFIG(tooltip)
+        self.label_35.setText("")
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0442\u0435\u0441\u044c \u0441 \u044d\u0442\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0435\u0439\n"
+" \u0438 \u043f\u0440\u043e\u0439\u0434\u0438\u0442\u0435 \u0443\u0447\u0435\u0431\u043d\u044b\u0435 \u043a\u0443\u0440\u0441\u044b \u043f\u0435\u0440\u0435\u0434 \u043d\u0430\u0447\u0430\u043b\u043e\u043c \u0440\u0430\u0431\u043e\u0442\u044b", None))
+#if QT_CONFIG(tooltip)
+        self.newUserLearningBtn.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.newUserLearningBtn.setText(QCoreApplication.translate("MainWindow", u"\u041d\u043e\u0432\u043e\u043c\u0443 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0443", None))
+#if QT_CONFIG(tooltip)
+        self.courseLearningBtn.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.courseLearningBtn.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0443\u0440\u0441 \"IT \u043e\u043a\u0440\u0443\u0436\u0435\u043d\u0438\u0435\"", None))
+#if QT_CONFIG(tooltip)
+        self.confluenceLearningBtn.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.confluenceLearningBtn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0438\u0435 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0430\n"
+" Confluence", None))
+#if QT_CONFIG(tooltip)
+        self.adaptationLearningBtn.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.adaptationLearningBtn.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0437\u0434\u0435\u043b \"\u0410\u0434\u0430\u043f\u0442\u0430\u0446\u0438\u044f\"", None))
         self.label_4.setText("")
         self.logoBottom.setText("")
         self.userLabelBottom.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0417:", None))
