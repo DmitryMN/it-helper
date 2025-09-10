@@ -1,4 +1,4 @@
-from PySide6.QtCore import QThread, Signal, Slot
+from PySide6.QtCore import QThread, Signal, Slot, QTimer
 
 class Worker(QThread):
     result = Signal(str)
@@ -10,7 +10,7 @@ class Worker(QThread):
 
     def run(self, ):
         try:
-            self._func(*self._args, **self._kwargs)
+            QTimer.singleShot(3000, Slot(self._func(*self._args, **self._kwargs)))
             self.result.emit('Задача завершена!')
         except Exception as err:
             self.result.emit(f'Error: {err}')
